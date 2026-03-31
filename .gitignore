@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+backend/node_modules/
+
+# build
+dist/
+
+# env files
+.env
+backend/.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# logs
+*.log

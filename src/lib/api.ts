@@ -1,0 +1,134 @@
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+
+const getToken = (): string | null => localStorage.getItem('biralstore_token');
+
+const headers = (withAuth = false): HeadersInit => {
+  const h: HeadersInit = { 'Content-Type': 'application/json' };
+  if (withAuth) {
+    const token = getToken();
+    if (token) h['Authorization'] = `Bearer ${token}`;
+  }
+  return h;
+};
+
+const handleResponse = async (res: Response) => {
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Xəta baş verdi');
+  return data;
+};
+
+// ─── AUTH ──────────────────────────────────────
+export const authAPI = {
+  register: async (body: { firstName: string; lastName: string; email: string; phone: string; password: string }) => {
+    const res = await fetch(`${API_URL}/auth/register`, { method: 'POST', headers: headers(), body: JSON.stringify(body) });
+    return handleResponse(res);
+  },
+  login: async (body: { email: string; password: string }) => {
+    const res = await fetch(`${API_URL}/auth/login`, { method: 'POST', headers: headers(), body: JSON.stringify(body) });
+    return handleResponse(res);
+  },
+  getMe: async () => {
+    const res = await fetch(`${API_URL}/auth/me`, { headers: headers(true) });
+    return handleResponse(res);
+  },
+  updateProfile: async (body: Record<string, unknown>) => {
+    const res = await fetch(`${API_URL}/auth/profile`, { method: 'PUT', headers: headers(true), body: JSON.stringify(body) });
+    return handleResponse(res);
+  },
+};
+
+// ─── PRODUCTS ──────────────────────────────────
+export const productsAPI = {
+  getAll: async (params?: Record<string, string>) => {
+    const query = params ? '?' + new URLSearchParams(params).toString() : '';
+    const res = await fetch(`${API_URL}/products${query}`);
+    return handleResponse(res);
+  },
+  getById: async (id: string) => {
+    const res = await fetch(`${API_URL}/products/${id}`);
+    return handleResponse(res);
+  },
+  getCategories: async () => {
+    const res = await fetch(`${API_URL}/products/categories`);
+    return handleResponse(res);
+  },
+  search: async (q: string) => {
+    const res = await fetch(`${API_URL}/products?search=${encodeURIComponent(q)}`);
+    return handleResponse(res);
+  },
+};
+
+// ─── ORDERS ────────────────────────────────────
+export const ordersAPI = {
+  create: async (body: Record<string, unknown>) => {
+    const res = await fetch(`${API_URL}/orders`, { method: 'POST', headers: headers(true), body: JSON.stringify(body) });
+    return handleResponse(res);
+  },
+  getAll: async () => {
+    const res = await fetch(`${API_URL}/orders`, { headers: headers(true) });
+    return handleResponse(res);
+  },
+  getById: async (id: string) => {
+    const res = await fetch(`${API_URL}/orders/${id}`, { headers: headers(true) });
+    return handleResponse(res);
+  },
+};
+
+// ─── USER (wishlist, addresses, cards, tickets) ──
+export const userAPI = {
+  // Wishlist
+  getWishlist: async () => {
+    const res = await fetch(`${API_URL}/users/wishlist`, { headers: headers(true) });
+    return handleResponse(res);
+  },
+  toggleWishlist: async (productId: string) => {
+    const res = await fetch(`${API_URL}/users/wishlist/${productId}`, { method: 'POST', headers: headers(true) });
+    return handleResponse(res);
+  },
+
+  // Addresses
+  getAddresses: async () => {
+    const res = await fetch(`${API_URL}/users/addresses`, { headers: headers(true) });
+    return handleResponse(res);
+  },
+  addAddress: async (body: Record<string, unknown>) => {
+    const res = await fetch(`${API_URL}/users/addresses`, { method: 'POST', headers: headers(true), body: JSON.stringify(body) });
+    return handleResponse(res);
+  },
+  updateAddress: async (id: string, body: Record<string, unknown>) => {
+    const res = await fetch(`${API_URL}/users/addresses/${id}`, { method: 'PUT', headers: headers(true), body: JSON.stringify(body) });
+    return handleResponse(res);
+  },
+  deleteAddress: async (id: string) => {
+    const res = await fetch(`${API_URL}/users/addresses/${id}`, { method: 'DELETE', headers: headers(true) });
+    return handleResponse(res);
+  },
+  setDefaultAddress: async (id: string) => {
+    const res = await fetch(`${API_URL}/users/addresses/${id}/default`, { method: 'PUT', headers: headers(true) });
+    return handleResponse(res);
+  },
+
+  // Cards
+  getCards: async () => {
+    const res = await fetch(`${API_URL}/users/cards`, { headers: headers(true) });
+    return handleResponse(res);
+  },
+  addCard: async (body: Record<string, unknown>) => {
+    const res = await fetch(`${API_URL}/users/cards`, { method: 'POST', headers: headers(true), body: JSON.stringify(body) });
+    return handleResponse(res);
+  },
+  deleteCard: async (id: string) => {
+    const res = await fetch(`${API_URL}/users/cards/${id}`, { method: 'DELETE', headers: headers(true) });
+    return handleResponse(res);
+  },
+
+  // Tickets
+  getTickets: async () => {
+    const res = await fetch(`${API_URL}/users/tickets`, { headers: headers(true) });
+    return handleResponse(res);
+  },
+  createTicket: async (body: { subject: string; message: string }) => {
+    const res = await fetch(`${API_URL}/users/tickets`, { method: 'POST', headers: headers(true), body: JSON.stringify(body) });
+    return handleResponse(res);
+  },
+};
