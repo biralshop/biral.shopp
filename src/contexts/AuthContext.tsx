@@ -3,11 +3,14 @@ import { authAPI } from '@/lib/api';
 
 interface User {
   _id: string;
+  username?: string;
   firstName: string;
   lastName: string;
   email: string;
   phone: string;
   role: string;
+  emailVerified?: boolean;
+  phoneVerified?: boolean;
   deliveryNote?: string;
   notifications?: { sms: boolean; email: boolean; campaigns: boolean; oneClick: boolean };
   createdAt: string;
@@ -18,7 +21,7 @@ interface AuthContextType {
   isAuthenticated: boolean;
   isLoading: boolean;
   login: (email: string, password: string) => Promise<void>;
-  register: (data: { firstName: string; lastName: string; email: string; phone: string; password: string }) => Promise<void>;
+  register: (data: { firstName: string; lastName: string; email: string; username?: string; phone?: string; password: string }) => Promise<void>;
   logout: () => void;
   updateProfile: (data: Record<string, unknown>) => Promise<void>;
 }
@@ -50,7 +53,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     setUser(user);
   };
 
-  const register = async (data: { firstName: string; lastName: string; email: string; phone: string; password: string }) => {
+  const register = async (data: { firstName: string; lastName: string; email: string; username?: string; phone?: string; password: string }) => {
     const { user, token } = await authAPI.register(data);
     localStorage.setItem('biralstore_token', token);
     setUser(user);

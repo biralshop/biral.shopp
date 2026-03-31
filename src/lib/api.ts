@@ -19,7 +19,7 @@ const handleResponse = async (res: Response) => {
 
 // ─── AUTH ──────────────────────────────────────
 export const authAPI = {
-  register: async (body: { firstName: string; lastName: string; email: string; phone: string; password: string }) => {
+  register: async (body: { firstName: string; lastName: string; email: string; username?: string; phone?: string; password: string }) => {
     const res = await fetch(`${API_URL}/auth/register`, { method: 'POST', headers: headers(), body: JSON.stringify(body) });
     return handleResponse(res);
   },
@@ -33,6 +33,14 @@ export const authAPI = {
   },
   updateProfile: async (body: Record<string, unknown>) => {
     const res = await fetch(`${API_URL}/auth/profile`, { method: 'PUT', headers: headers(true), body: JSON.stringify(body) });
+    return handleResponse(res);
+  },
+  verifyEmail: async (code: string) => {
+    const res = await fetch(`${API_URL}/auth/verify-email`, { method: 'POST', headers: headers(true), body: JSON.stringify({ code }) });
+    return handleResponse(res);
+  },
+  resendOTP: async () => {
+    const res = await fetch(`${API_URL}/auth/resend-otp`, { method: 'POST', headers: headers(true) });
     return handleResponse(res);
   },
 };
