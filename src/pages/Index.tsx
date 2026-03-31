@@ -43,9 +43,9 @@ const Homepage = () => {
                 </Button>
               </Link>
             </div>
-            <div className="flex items-center gap-6 mt-8 text-sm">
-              <span className="flex items-center gap-1"><Star className="h-4 w-4 fill-accent text-accent" /> 4.8 orta reytinq</span>
-              <span>12,000+ məmnun müştəri</span>
+            <div className="flex flex-wrap items-center gap-3 md:gap-6 mt-8 text-xs md:text-sm">
+              <span className="flex items-center gap-1"><Star className="h-4 w-4 fill-accent text-accent" /> 4.8 reytinq</span>
+              <span>12,000+ müştəri</span>
               <span>500+ məhsul</span>
             </div>
           </div>
@@ -103,9 +103,9 @@ const Homepage = () => {
 
       {/* Promo */}
       <section className="container mx-auto px-4 py-10">
-        <div className="bg-primary text-primary-foreground rounded-2xl p-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold">İlk sifarişinizə 10% endirim!</h2>
-          <p className="mt-2 text-primary-foreground/80">PRAKTIK10 kodunu istifadə edin • Checkout səhifəsində tətbiq edin</p>
+        <div className="bg-primary text-primary-foreground rounded-2xl p-6 md:p-8 text-center overflow-hidden">
+          <h2 className="text-xl md:text-3xl font-bold">İlk sifarişinizə 10% endirim!</h2>
+          <p className="mt-2 text-primary-foreground/80 text-sm md:text-base">PRAKTIK10 kodunu istifadə edin</p>
           <Link to="/kampaniyalar">
             <Button className="mt-4 bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">Kampaniyaya bax</Button>
           </Link>

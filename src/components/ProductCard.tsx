@@ -70,7 +70,7 @@ const ProductCard = ({ product, compact }: ProductCardProps) => {
         {/* Wishlist button */}
         <button
           onClick={handleToggleWishlist}
-          className="absolute top-2 right-2 bg-white/80 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-all hover:bg-white shadow-sm"
+          className="absolute top-2 right-2 bg-white/80 backdrop-blur-sm rounded-full p-1.5 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all hover:bg-white shadow-sm"
         >
           <Heart className={`h-4 w-4 transition-colors ${wishlisted ? 'fill-red-500 text-red-500' : 'text-muted-foreground'}`} />
         </button>
