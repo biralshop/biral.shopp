@@ -35,6 +35,7 @@ import AdminDelivery from "./pages/admin/AdminDelivery";
 import AdminSupport from "./pages/admin/AdminSupport";
 import AdminBrand from "./pages/admin/AdminBrand";
 import AdminRoles from "./pages/admin/AdminRoles";
+import AdminGuard from "./components/AdminGuard";
 
 const queryClient = new QueryClient();
 
@@ -61,22 +62,22 @@ const App = () => (
                   <Route path="/hesab" element={<AccountPage />} />
                   <Route path="/hesab/hardadir/:orderId" element={<TrackingPage />} />
                   <Route path="/giris" element={<LoginPage />} />
-                  {/* Admin panel */}
-                  <Route path="/admin" element={<AdminDashboard />} />
-                  <Route path="/admin/mehsullar" element={<AdminProducts />} />
-                  <Route path="/admin/mehsullar/:id" element={<AdminProductEditor />} />
-                  <Route path="/admin/kateqoriyalar" element={<AdminCategories />} />
-                  <Route path="/admin/sehifeler" element={<AdminHomeBuilder />} />
-                  <Route path="/admin/sehife-kitabxanasi" element={<AdminPageLibrary />} />
-                  <Route path="/admin/kampaniyalar" element={<AdminPromotions />} />
-                  <Route path="/admin/musteriler" element={<AdminCustomers />} />
-                  <Route path="/admin/musteriler/:id" element={<AdminCustomerProfile />} />
-                  <Route path="/admin/sifarisler" element={<AdminOrders />} />
-                  <Route path="/admin/sifarisler/:id" element={<AdminOrderDetail />} />
-                  <Route path="/admin/catdirilma" element={<AdminDelivery />} />
-                  <Route path="/admin/destek" element={<AdminSupport />} />
-                  <Route path="/admin/brend" element={<AdminBrand />} />
-                  <Route path="/admin/rollar" element={<AdminRoles />} />
+                  {/* Admin panel — yalnız admin rollu istifadəçilər */}
+                  <Route path="/admin" element={<AdminGuard><AdminDashboard /></AdminGuard>} />
+                  <Route path="/admin/mehsullar" element={<AdminGuard><AdminProducts /></AdminGuard>} />
+                  <Route path="/admin/mehsullar/:id" element={<AdminGuard><AdminProductEditor /></AdminGuard>} />
+                  <Route path="/admin/kateqoriyalar" element={<AdminGuard><AdminCategories /></AdminGuard>} />
+                  <Route path="/admin/sehifeler" element={<AdminGuard><AdminHomeBuilder /></AdminGuard>} />
+                  <Route path="/admin/sehife-kitabxanasi" element={<AdminGuard><AdminPageLibrary /></AdminGuard>} />
+                  <Route path="/admin/kampaniyalar" element={<AdminGuard><AdminPromotions /></AdminGuard>} />
+                  <Route path="/admin/musteriler" element={<AdminGuard><AdminCustomers /></AdminGuard>} />
+                  <Route path="/admin/musteriler/:id" element={<AdminGuard><AdminCustomerProfile /></AdminGuard>} />
+                  <Route path="/admin/sifarisler" element={<AdminGuard><AdminOrders /></AdminGuard>} />
+                  <Route path="/admin/sifarisler/:id" element={<AdminGuard><AdminOrderDetail /></AdminGuard>} />
+                  <Route path="/admin/catdirilma" element={<AdminGuard><AdminDelivery /></AdminGuard>} />
+                  <Route path="/admin/destek" element={<AdminGuard><AdminSupport /></AdminGuard>} />
+                  <Route path="/admin/brend" element={<AdminGuard><AdminBrand /></AdminGuard>} />
+                  <Route path="/admin/rollar" element={<AdminGuard><AdminRoles /></AdminGuard>} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </BrowserRouter>
