@@ -95,12 +95,12 @@ const ProductDetail = () => {
     <Layout showCategoryNav={false}>
       <div className="container mx-auto px-4 py-6">
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
-          <Link to="/" className="hover:text-foreground">Ana səhifə</Link>
-          <span>/</span>
-          <Link to={`/kateqoriyalar?cat=${product.categorySlug}`} className="hover:text-foreground">{product.category}</Link>
-          <span>/</span>
-          <span className="text-foreground">{product.title}</span>
+        <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-6 overflow-hidden">
+          <Link to="/" className="hover:text-foreground shrink-0">Ana səhifə</Link>
+          <span className="shrink-0">/</span>
+          <Link to={`/kateqoriyalar?cat=${product.categorySlug}`} className="hover:text-foreground shrink-0">{product.category}</Link>
+          <span className="shrink-0">/</span>
+          <span className="text-foreground truncate">{product.title}</span>
         </nav>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -142,10 +142,10 @@ const ProductDetail = () => {
             {product.variants && product.variants.length > 0 && (
               <div className="mt-6">
                 <h3 className="text-sm font-semibold mb-2">Rəng seçin</h3>
-                <div className="flex gap-2">
+                <div className="flex flex-wrap gap-2">
                   {product.variants.map((v, i) => (
                     <button key={v} onClick={() => setSelectedVariant(i)}
-                      className={`px-4 py-2 rounded-lg border text-sm font-medium transition-colors ${i === selectedVariant ? 'border-primary bg-primary/5 text-primary' : 'border-border hover:border-primary/50'}`}
+                      className={`px-3 py-1.5 rounded-lg border text-sm font-medium transition-colors ${i === selectedVariant ? 'border-primary bg-primary/5 text-primary' : 'border-border hover:border-primary/50'}`}
                     >{v}</button>
                   ))}
                 </div>
@@ -167,27 +167,28 @@ const ProductDetail = () => {
             )}
 
             {/* Quantity + Add to cart */}
-            <div className="flex items-center gap-4 mt-8">
-              <div className="flex items-center border rounded-lg">
-                <button onClick={() => setQuantity(Math.max(1, quantity - 1))} className="p-2.5 hover:bg-muted"><Minus className="h-4 w-4" /></button>
-                <span className="px-4 font-semibold">{quantity}</span>
-                <button onClick={() => setQuantity(quantity + 1)} className="p-2.5 hover:bg-muted"><Plus className="h-4 w-4" /></button>
+            <div className="flex items-center gap-3 mt-8">
+              <div className="flex items-center border rounded-lg shrink-0">
+                <button onClick={() => setQuantity(Math.max(1, quantity - 1))} className="p-2 hover:bg-muted"><Minus className="h-4 w-4" /></button>
+                <span className="px-3 font-semibold text-sm">{quantity}</span>
+                <button onClick={() => setQuantity(quantity + 1)} className="p-2 hover:bg-muted"><Plus className="h-4 w-4" /></button>
               </div>
-              <Button onClick={handleAddToCart} size="lg" className="flex-1 font-semibold">
-                <ShoppingCart className="h-4 w-4 mr-2" /> Səbətə at • {(product.price * quantity).toFixed(2)}₼
+              <Button onClick={handleAddToCart} size="lg" className="flex-1 font-semibold min-w-0">
+                <ShoppingCart className="h-4 w-4 mr-1 shrink-0" />
+                <span className="truncate">Səbətə at • {(product.price * quantity).toFixed(2)}₼</span>
               </Button>
             </div>
 
             {/* Actions */}
-            <div className="flex gap-3 mt-4">
-              <Button variant="outline" onClick={() => { toggleWishlist(pid); toast(wishlisted ? 'Silindi' : 'Əlavə edildi', { icon: wishlisted ? '💔' : '❤️' }); }}>
-                <Heart className={`h-4 w-4 mr-1 ${wishlisted ? 'fill-red-500 text-red-500' : ''}`} /> Seçilənlərə
+            <div className="flex flex-wrap gap-2 mt-4">
+              <Button variant="outline" size="sm" className="text-xs" onClick={() => { toggleWishlist(pid); toast(wishlisted ? 'Silindi' : 'Əlavə edildi', { icon: wishlisted ? '💔' : '❤️' }); }}>
+                <Heart className={`h-3.5 w-3.5 mr-1 ${wishlisted ? 'fill-red-500 text-red-500' : ''}`} /> Seçilənlərə
               </Button>
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button variant="outline"><Gift className="h-4 w-4 mr-1" /> Hədiyyə et</Button>
+                  <Button variant="outline" size="sm" className="text-xs"><Gift className="h-3.5 w-3.5 mr-1" /> Hədiyyə et</Button>
                 </DialogTrigger>
-                <DialogContent>
+                <DialogContent className="max-w-[calc(100vw-2rem)] sm:max-w-lg">
                   <DialogHeader><DialogTitle>Hədiyyə göndər 🎁</DialogTitle></DialogHeader>
                   <div className="space-y-3 mt-2">
                     <Input placeholder="Alan şəxsin adı" />
@@ -197,17 +198,17 @@ const ProductDetail = () => {
                   </div>
                 </DialogContent>
               </Dialog>
-              <Button variant="outline" onClick={handleShare}><Share2 className="h-4 w-4 mr-1" /> Paylaş</Button>
+              <Button variant="outline" size="sm" className="text-xs" onClick={handleShare}><Share2 className="h-3.5 w-3.5 mr-1" /> Paylaş</Button>
             </div>
 
             {/* Delivery info */}
-            <div className="grid grid-cols-3 gap-3 mt-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-6">
               {[
                 { icon: Truck, text: '1-2 gün çatdırılma' },
                 { icon: RotateCcw, text: '14 gün qaytarma' },
                 { icon: ShieldCheck, text: 'Rəsmi zəmanət' },
               ].map((i) => (
-                <div key={i.text} className="flex items-center gap-2 text-xs text-muted-foreground bg-muted/50 rounded-lg p-3">
+                <div key={i.text} className="flex items-center gap-2 text-xs text-muted-foreground bg-muted/50 rounded-lg p-2.5">
                   <i.icon className="h-4 w-4 text-primary shrink-0" /> {i.text}
                 </div>
               ))}
@@ -217,10 +218,10 @@ const ProductDetail = () => {
 
         {/* Tabs */}
         <div className="mt-12">
-          <div className="flex gap-6 border-b">
+          <div className="flex gap-4 md:gap-6 border-b overflow-x-auto no-scrollbar">
             {tabs.map((tab, i) => (
               <button key={tab} onClick={() => setActiveTab(i)}
-                className={`pb-3 text-sm font-medium transition-colors ${i === activeTab ? 'text-primary border-b-2 border-primary' : 'text-muted-foreground hover:text-foreground'}`}
+                className={`pb-3 text-sm font-medium transition-colors whitespace-nowrap shrink-0 ${i === activeTab ? 'text-primary border-b-2 border-primary' : 'text-muted-foreground hover:text-foreground'}`}
               >{tab}{i === 2 ? ` (${product.reviewCount})` : ''}</button>
             ))}
           </div>
