@@ -180,25 +180,27 @@ const ProductDetail = () => {
             </div>
 
             {/* Actions */}
-            <div className="flex flex-wrap gap-2 mt-4">
-              <Button variant="outline" size="sm" className="text-xs" onClick={() => { toggleWishlist(pid); toast(wishlisted ? 'Silindi' : 'Əlavə edildi', { icon: wishlisted ? '💔' : '❤️' }); }}>
-                <Heart className={`h-3.5 w-3.5 mr-1 ${wishlisted ? 'fill-red-500 text-red-500' : ''}`} /> Seçilənlərə
-              </Button>
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button variant="outline" size="sm" className="text-xs"><Gift className="h-3.5 w-3.5 mr-1" /> Hədiyyə et</Button>
-                </DialogTrigger>
-                <DialogContent className="max-w-[calc(100vw-2rem)] sm:max-w-lg">
-                  <DialogHeader><DialogTitle>Hədiyyə göndər 🎁</DialogTitle></DialogHeader>
-                  <div className="space-y-3 mt-2">
-                    <Input placeholder="Alan şəxsin adı" />
-                    <Input placeholder="Telefon nömrəsi" />
-                    <Textarea placeholder="Hədiyyə mesajı (istəyə bağlı)" />
-                    <Button className="w-full" onClick={() => toast.success('Hədiyyə sifariş üçün hazırdır!')}>Hədiyyə olaraq səbətə at</Button>
-                  </div>
-                </DialogContent>
-              </Dialog>
-              <Button variant="outline" size="sm" className="text-xs" onClick={handleShare}><Share2 className="h-3.5 w-3.5 mr-1" /> Paylaş</Button>
+            <div className="mt-4 space-y-2">
+              <div className="grid grid-cols-2 gap-2">
+                <Button variant="outline" size="sm" className="text-xs w-full" onClick={() => { toggleWishlist(pid); toast(wishlisted ? 'Silindi' : 'Əlavə edildi', { icon: wishlisted ? '💔' : '❤️' }); }}>
+                  <Heart className={`h-3.5 w-3.5 mr-1 shrink-0 ${wishlisted ? 'fill-red-500 text-red-500' : ''}`} /> Seçilənlərə
+                </Button>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button variant="outline" size="sm" className="text-xs w-full"><Gift className="h-3.5 w-3.5 mr-1 shrink-0" /> Hədiyyə et</Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-[calc(100vw-2rem)] sm:max-w-lg">
+                    <DialogHeader><DialogTitle>Hədiyyə göndər 🎁</DialogTitle></DialogHeader>
+                    <div className="space-y-3 mt-2">
+                      <Input placeholder="Alan şəxsin adı" />
+                      <Input placeholder="Telefon nömrəsi" />
+                      <Textarea placeholder="Hədiyyə mesajı (istəyə bağlı)" />
+                      <Button className="w-full" onClick={() => toast.success('Hədiyyə sifariş üçün hazırdır!')}>Hədiyyə olaraq səbətə at</Button>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </div>
+              <Button variant="outline" size="sm" className="text-xs w-full" onClick={handleShare}><Share2 className="h-3.5 w-3.5 mr-1 shrink-0" /> Paylaş</Button>
             </div>
 
             {/* Delivery info */}

@@ -31,9 +31,9 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-primary text-primary-foreground sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-3">
-        <div className="flex items-center gap-4 md:gap-8">
+    <header className="bg-primary text-primary-foreground sticky top-0 z-50 w-full overflow-hidden">
+      <div className="container mx-auto px-4 py-3 max-w-full">
+        <div className="flex items-center gap-2 md:gap-8">
           {/* Mobile menu */}
           <Sheet>
             <SheetTrigger asChild>

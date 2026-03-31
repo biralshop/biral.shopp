@@ -19,8 +19,8 @@ const MobileBottomNav = () => {
   ];
 
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-card border-t z-50 safe-area-bottom">
-      <div className="flex items-center justify-around py-2">
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-card border-t z-50 safe-area-bottom w-full max-w-[100vw] overflow-hidden">
+      <div className="flex items-center justify-around py-2 w-full">
         {items.map((item) => {
           const isActive = pathname === item.to || (item.to !== '/' && pathname.startsWith(item.to));
           return (
