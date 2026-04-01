@@ -30,7 +30,7 @@ const sendVerificationEmail = async (to, code) => {
             <!-- Header with Blue background from the logo -->
             <div style="background-color: #2196F3; padding: 30px 20px; text-align: center;">
               <!-- Make sure the logo URL is valid once uploaded -->
-              <img src="https://biral.store/logo.png" alt="1Al Store" style="max-height: 50px; margin: 0 auto;" />
+              <img src="https://biral.store/logo-circle.png" alt="1Al Store" style="max-height: 50px; margin: 0 auto;" />
             </div>
 
             <div style="padding: 40px 32px; text-align: center;">

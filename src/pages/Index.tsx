@@ -23,28 +23,28 @@ const Homepage = () => {
     <Layout>
       {/* Hero */}
       <section className="bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 py-12 md:py-20">
-          <div className="max-w-2xl">
-            <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+        <div className="container mx-auto px-4 py-16 md:py-24 text-center">
+          <div className="max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
               Gündəlik həyatınız üçün ən yaxşı məhsullar
             </h1>
-            <p className="mt-4 text-primary-foreground/80 text-base md:text-lg leading-relaxed">
+            <p className="mt-6 text-primary-foreground/90 text-lg md:text-xl leading-relaxed">
               Mətbəxdən baxçaya, həyətdən maşına — viral tapıntılar və sübut olunmuş keyfiyyət bir yerdə. BiralStore ilə həyatınızı asanlaşdırın.
             </p>
-            <div className="flex flex-wrap gap-3 mt-6">
+            <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
               <Link to="/kateqoriyalar">
-                <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold">
+                <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-bold text-base px-8 h-12">
                   Məhsullara bax
                 </Button>
               </Link>
               <Link to="/kampaniyalar">
-                <Button size="lg" variant="outline" className="border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10">
+                <Button size="lg" variant="outline" className="border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 font-bold text-base px-8 h-12">
                   Kampaniyalar
                 </Button>
               </Link>
             </div>
-            <div className="flex flex-wrap items-center gap-3 md:gap-6 mt-8 text-xs md:text-sm">
-              <span className="flex items-center gap-1"><Star className="h-4 w-4 fill-accent text-accent" /> 4.8 reytinq</span>
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 mt-10 text-sm font-medium">
+              <span className="flex items-center gap-1.5"><Star className="h-5 w-5 fill-accent text-accent" /> 4.8 reytinq</span>
               <span>12,000+ müştəri</span>
               <span>500+ məhsul</span>
             </div>

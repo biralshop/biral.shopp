@@ -82,7 +82,7 @@ const Header = () => {
 
           {/* Logo */}
           <Link to="/" className="shrink-0 flex items-center">
-            <img src="/logo.png" alt="1Al Store" className="h-8 md:h-12 w-auto" />
+            <img src="/logo-circle.png" alt="1Al Store" className="h-10 md:h-14 w-auto" />
           </Link>
 
           {/* Search */}
@@ -101,7 +101,7 @@ const Header = () => {
           {/* Right Section: Nav & Icons */}
           <div className="flex items-center gap-1 sm:gap-2 ml-auto lg:ml-0">
             {/* Nav links desktop */}
-            <nav className="hidden lg:flex items-center gap-5 mr-4">
+            <nav className="hidden lg:flex items-center gap-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.to}
