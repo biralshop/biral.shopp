@@ -1,14 +1,17 @@
 const { Resend } = require('resend');
 
-const apiKey = process.env.RESEND_API_KEY;
-if (!apiKey) {
-  console.error('⚠️ RESEND_API_KEY is not set! Email verification will not work.');
-}
-const resend = new Resend(apiKey);
+let resend = null;
+const getResend = () => {
+  if (!resend && process.env.RESEND_API_KEY) {
+    resend = new Resend(process.env.RESEND_API_KEY);
+  }
+  return resend;
+};
 
 const sendVerificationEmail = async (to, code) => {
   try {
-    if (!apiKey) {
+    const client = getResend();
+    if (!client) {
       console.error('❌ Cannot send email: RESEND_API_KEY is missing');
       return false;
     }
@@ -16,7 +19,7 @@ const sendVerificationEmail = async (to, code) => {
     const fromEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
     console.log(`📧 Sending OTP to ${to} from ${fromEmail}...`);
 
-    const { data, error } = await resend.emails.send({
+    const { data, error } = await client.emails.send({
       from: `BiralStore <${fromEmail}>`,
       to: [to],
       subject: `${code} — BiralStore təsdiq kodu`,
