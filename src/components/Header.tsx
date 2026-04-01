@@ -83,6 +83,19 @@ const Header = () => {
           <Link to="/" className="shrink-0 flex items-center">
             <img src="/logo-circle.png" alt="1Al Store" className="h-10 md:h-14 w-auto" />
           </Link>
+
+          {/* Nav links desktop */}
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 whitespace-nowrap">
+            {navLinks.map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="text-foreground/80 hover:text-primary text-[15px] font-semibold transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
         </div>
 
           {/* Center Section: Search */}
@@ -100,21 +113,8 @@ const Header = () => {
             </form>
           </div>
 
-          {/* Right Section: Nav & Icons */}
-          <div className="flex items-center justify-end gap-1 sm:gap-2 md:flex-1">
-            {/* Nav links desktop */}
-            <nav className="hidden lg:flex items-center gap-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  className="text-foreground/80 hover:text-primary text-sm font-medium transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-
+          {/* Right Section: Icons */}
+          <div className="flex items-center justify-end gap-1 sm:gap-2 md:flex-1 shrink-0">
             {/* Mobile Search Icon */}
             <Button variant="ghost" size="icon" className="text-foreground hover:bg-muted md:hidden" onClick={() => navigate('/axtaris')}>
               <Search className="h-5 w-5" />

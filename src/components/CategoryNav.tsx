@@ -8,7 +8,7 @@ const CategoryNav = () => {
   return (
     <div className="bg-card border-b">
       <div className="container mx-auto px-4">
-        <div className="flex items-center gap-2 py-3 overflow-x-auto no-scrollbar">
+        <div className="flex items-center gap-2 md:gap-4 py-3 overflow-x-auto no-scrollbar md:justify-center">
           <Link
             to="/kateqoriyalar"
             className={`shrink-0 px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
