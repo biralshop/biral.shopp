@@ -33,9 +33,9 @@ const Header = () => {
   return (
     <header className="bg-background text-foreground border-b border-border sticky top-0 z-50 w-full overflow-hidden shadow-sm">
       <div className="container mx-auto px-4 py-3 max-w-full">
-        <div className="flex items-center gap-2 md:gap-4 lg:gap-8 justify-between">
-          {/* Mobile menu */}
-          <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-4 justify-between w-full">
+          {/* Left Section: Mobile Menu + Logo */}
+          <div className="flex items-center gap-4 md:flex-1 shrink-0">
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="text-foreground hover:bg-muted">
@@ -78,28 +78,30 @@ const Header = () => {
               </nav>
             </SheetContent>
           </Sheet>
-          </div>
 
           {/* Logo */}
           <Link to="/" className="shrink-0 flex items-center">
             <img src="/logo-circle.png" alt="1Al Store" className="h-10 md:h-14 w-auto" />
           </Link>
+        </div>
 
-          {/* Search */}
-          <form onSubmit={handleSearch} className="flex-1 max-w-2xl px-4 hidden md:flex">
-            <div className="relative w-full">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-              <Input
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Məhsul axtar..."
-                className="pl-10 bg-muted/60 hover:bg-muted focus:bg-background text-foreground border-transparent focus-visible:border-primary rounded-lg h-10 transition-colors"
-              />
-            </div>
-          </form>
+          {/* Center Section: Search */}
+          <div className="flex-[2] max-w-2xl px-4 hidden md:flex justify-center">
+            <form onSubmit={handleSearch} className="w-full">
+              <div className="relative w-full">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                <Input
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Məhsul axtar..."
+                  className="pl-10 bg-muted/60 hover:bg-muted focus:bg-background text-foreground border-transparent focus-visible:border-primary rounded-lg h-10 transition-colors w-full"
+                />
+              </div>
+            </form>
+          </div>
 
           {/* Right Section: Nav & Icons */}
-          <div className="flex items-center gap-1 sm:gap-2 ml-auto lg:ml-0">
+          <div className="flex items-center justify-end gap-1 sm:gap-2 md:flex-1">
             {/* Nav links desktop */}
             <nav className="hidden lg:flex items-center gap-6">
               {navLinks.map((link) => (
