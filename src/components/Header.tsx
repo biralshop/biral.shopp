@@ -31,16 +31,17 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-primary text-primary-foreground sticky top-0 z-50 w-full overflow-hidden">
+    <header className="bg-background text-foreground border-b border-border sticky top-0 z-50 w-full overflow-hidden shadow-sm">
       <div className="container mx-auto px-4 py-3 max-w-full">
-        <div className="flex items-center gap-2 md:gap-8">
+        <div className="flex items-center gap-2 md:gap-4 lg:gap-8 justify-between">
           {/* Mobile menu */}
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden text-primary-foreground hover:bg-primary/80">
-                <Menu className="h-5 w-5" />
-              </Button>
-            </SheetTrigger>
+          <div className="flex items-center gap-2 md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="text-foreground hover:bg-muted">
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </SheetTrigger>
             <SheetContent side="left" className="w-72">
               <div className="mt-6 mb-6 flex items-center">
                 <img src="/logo-circle.png" alt="1Al Store" className="h-12 w-auto" />
@@ -77,41 +78,43 @@ const Header = () => {
               </nav>
             </SheetContent>
           </Sheet>
+          </div>
 
           {/* Logo */}
           <Link to="/" className="shrink-0 flex items-center">
-            <img src="/logo.png" alt="1Al Store" className="h-8 md:h-10 w-auto" />
+            <img src="/logo.png" alt="1Al Store" className="h-8 md:h-12 w-auto" />
           </Link>
 
           {/* Search */}
-          <form onSubmit={handleSearch} className="flex-1 max-w-xl hidden md:flex">
+          <form onSubmit={handleSearch} className="flex-1 max-w-2xl px-4 hidden md:flex">
             <div className="relative w-full">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Məhsul axtar..."
-                className="pl-10 bg-primary-foreground text-foreground border-0 rounded-lg h-10"
+                className="pl-10 bg-muted/60 hover:bg-muted focus:bg-background text-foreground border-transparent focus-visible:border-primary rounded-lg h-10 transition-colors"
               />
             </div>
           </form>
 
-          {/* Nav links desktop */}
-          <nav className="hidden lg:flex items-center gap-5">
-            {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className="text-primary-foreground/90 hover:text-primary-foreground text-sm font-medium transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+          {/* Right Section: Nav & Icons */}
+          <div className="flex items-center gap-1 sm:gap-2 ml-auto lg:ml-0">
+            {/* Nav links desktop */}
+            <nav className="hidden lg:flex items-center gap-5 mr-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="text-foreground/80 hover:text-primary text-sm font-medium transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
 
-          {/* Icons */}
-          <div className="flex items-center gap-1 ml-auto md:ml-0">
-            <Button variant="ghost" size="icon" className="text-primary-foreground hover:bg-primary/80 md:hidden" onClick={() => navigate('/axtaris')}>
+            {/* Mobile Search Icon */}
+            <Button variant="ghost" size="icon" className="text-foreground hover:bg-muted md:hidden" onClick={() => navigate('/axtaris')}>
               <Search className="h-5 w-5" />
             </Button>
 
@@ -119,8 +122,8 @@ const Header = () => {
             {isAuthenticated ? (
               <Popover>
                 <PopoverTrigger asChild>
-                  <Button variant="ghost" size="icon" className="text-primary-foreground hover:bg-primary/80">
-                    <div className="w-7 h-7 rounded-full bg-primary-foreground/20 flex items-center justify-center text-xs font-bold">
+                  <Button variant="ghost" size="icon" className="text-foreground hover:bg-muted">
+                    <div className="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xs font-bold">
                       {user?.firstName?.[0]}
                     </div>
                   </Button>
@@ -139,7 +142,7 @@ const Header = () => {
               </Popover>
             ) : (
               <Link to="/giris">
-                <Button variant="ghost" size="icon" className="text-primary-foreground hover:bg-primary/80">
+                <Button variant="ghost" size="icon" className="text-foreground hover:bg-muted">
                   <User className="h-5 w-5" />
                 </Button>
               </Link>
@@ -147,7 +150,7 @@ const Header = () => {
 
             {/* Wishlist */}
             <Link to="/hesab" className="relative hidden md:inline-flex">
-              <Button variant="ghost" size="icon" className="text-primary-foreground hover:bg-primary/80">
+              <Button variant="ghost" size="icon" className="text-foreground hover:bg-muted">
                 <Heart className="h-5 w-5" />
               </Button>
               {wishlistCount > 0 && (
@@ -159,7 +162,7 @@ const Header = () => {
 
             {/* Cart */}
             <Link to="/sebet" className="relative">
-              <Button variant="ghost" size="icon" className="text-primary-foreground hover:bg-primary/80">
+              <Button variant="ghost" size="icon" className="text-foreground hover:bg-muted">
                 <ShoppingCart className="h-5 w-5" />
               </Button>
               {totalItems > 0 && (
