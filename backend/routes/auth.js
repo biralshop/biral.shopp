@@ -151,10 +151,30 @@ router.post('/login', async (req, res) => {
 
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '30d' });
 
+    // If email not verified, send new OTP and require verification
+    if (!user.emailVerified) {
+      const code = generateOTP();
+      await OTP.deleteMany({ email: user.email, type: 'email_verify' });
+      await OTP.create({
+        email: user.email,
+        code,
+        type: 'email_verify',
+        expiresAt: new Date(Date.now() + 10 * 60 * 1000),
+      });
+      await sendVerificationEmail(user.email, code);
+
+      return res.json({
+        token,
+        user: user.toSafeJSON(),
+        requiresVerification: true,
+        message: 'Email təsdiqlənməyib. Yeni kod göndərildi.',
+      });
+    }
+
     res.json({
       token,
       user: user.toSafeJSON(),
-      requiresVerification: !user.emailVerified,
+      requiresVerification: false,
     });
   } catch (error) {
     console.error('Login error:', error);

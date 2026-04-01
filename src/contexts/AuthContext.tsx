@@ -48,9 +48,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   const login = async (email: string, password: string) => {
-    const { user, token } = await authAPI.login({ email, password });
-    localStorage.setItem('biralstore_token', token);
-    setUser(user);
+    const data = await authAPI.login({ email, password });
+    localStorage.setItem('biralstore_token', data.token);
+    setUser(data.user);
+    if (data.requiresVerification) {
+      throw { requiresVerification: true, message: data.message || 'Email təsdiqlənməyib' };
+    }
   };
 
   const register = async (data: { firstName: string; lastName: string; email: string; username?: string; phone?: string; password: string }) => {

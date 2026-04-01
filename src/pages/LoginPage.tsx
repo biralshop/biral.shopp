@@ -40,7 +40,12 @@ const LoginPage = () => {
       toast.success('Uğurla daxil oldunuz!');
       navigate('/hesab');
     } catch (err: any) {
-      toast.error(err.message || 'Giriş uğursuz oldu');
+      if (err.requiresVerification) {
+        toast.info('Email təsdiqlənməyib. Kod göndərildi.');
+        setMode('verify');
+      } else {
+        toast.error(err.message || 'Giriş uğursuz oldu');
+      }
     } finally {
       setLoading(false);
     }
