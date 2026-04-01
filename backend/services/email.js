@@ -24,21 +24,37 @@ const sendVerificationEmail = async (to, code) => {
       to: [to],
       subject: `${code} — BiralStore təsdiq kodu`,
       html: `
-        <div style="font-family: 'Segoe UI', sans-serif; max-width: 480px; margin: 0 auto; padding: 32px; background: #f8fafc; border-radius: 16px;">
-          <div style="text-align: center; margin-bottom: 24px;">
-            <h1 style="color: #1e293b; font-size: 24px; margin: 0;">🛍️ BiralStore</h1>
-            <p style="color: #64748b; font-size: 14px; margin-top: 4px;">Praktik Məhsullar Mağazası</p>
-          </div>
-          <div style="background: white; border-radius: 12px; padding: 32px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-            <p style="color: #475569; font-size: 15px; margin: 0 0 20px;">Təsdiq kodunuz:</p>
-            <div style="background: #f1f5f9; border-radius: 12px; padding: 20px; margin: 0 auto; max-width: 200px;">
-              <span style="font-size: 32px; font-weight: 700; letter-spacing: 8px; color: #0f172a;">${code}</span>
+        <div style="font-family: 'Inter', 'Segoe UI', sans-serif; background-color: #f0fdf4; padding: 40px 20px; min-height: 100vh;">
+          <div style="max-width: 500px; margin: 0 auto; background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
+            
+            <!-- Header with Blue background from the logo -->
+            <div style="background-color: #2196F3; padding: 30px 20px; text-align: center;">
+              <!-- Make sure the logo URL is valid once uploaded -->
+              <img src="https://biral.store/logo.png" alt="1Al Store" style="max-height: 50px; margin: 0 auto;" />
             </div>
-            <p style="color: #94a3b8; font-size: 13px; margin-top: 20px;">Bu kod <strong>10 dəqiqə</strong> ərzində keçərlidir.</p>
+
+            <div style="padding: 40px 32px; text-align: center;">
+              <h2 style="color: #0f172a; font-size: 22px; margin: 0 0 10px; font-weight: 700;">Xoş Gəlmisiniz! 👋</h2>
+              <p style="color: #64748b; font-size: 15px; margin: 0 0 30px; line-height: 1.5;">Hesabınızı təsdiqləmək üçün aşağıdakı təsdiq kodundan istifadə edin:</p>
+              
+              <div style="background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 16px; padding: 24px; margin: 0 auto; max-width: 250px;">
+                <span style="font-size: 36px; font-weight: 800; letter-spacing: 12px; color: #3b82f6;">${code}</span>
+              </div>
+              
+              <p style="color: #94a3b8; font-size: 14px; margin-top: 24px;">Bu kod <strong style="color: #475569;">10 dəqiqə</strong> ərzində keçərlidir.</p>
+            </div>
+
+            <div style="background: #f8fafc; padding: 24px; text-align: center; border-top: 1px solid #f1f5f9;">
+              <p style="color: #64748b; font-size: 14px; margin: 0 0 16px;">Bizi sosial şəbəkələrdə izləyin:</p>
+              <a href="https://instagram.com/biral.store" style="display: inline-flex; align-items: center; text-decoration: none; color: #e1306c; font-weight: 600; font-size: 15px;">
+                📸 @biral.store
+              </a>
+              <p style="color: #cbd5e1; font-size: 12px; margin-top: 24px; margin-bottom: 0;">
+                Əgər siz bu kodu tələb etməmisinizsə, lütfən bu mesajı nəzərə almayın.
+              </p>
+            </div>
+
           </div>
-          <p style="color: #94a3b8; font-size: 12px; text-align: center; margin-top: 20px;">
-            Əgər siz bu kodu tələb etməmisinizsə, bu mesajı nəzərə almayın.
-          </p>
         </div>
       `,
     });

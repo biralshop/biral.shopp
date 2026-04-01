@@ -42,8 +42,8 @@ const Header = () => {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="w-72">
-              <div className="mt-6 mb-6">
-                <p className="text-xl font-bold text-primary">BiralStore</p>
+              <div className="mt-6 mb-6 flex items-center">
+                <img src="/logo-circle.png" alt="1Al Store" className="h-12 w-auto" />
               </div>
               {/* Mobile search */}
               <form onSubmit={handleSearch} className="mb-6">
@@ -79,8 +79,8 @@ const Header = () => {
           </Sheet>
 
           {/* Logo */}
-          <Link to="/" className="text-xl md:text-2xl font-bold tracking-tight shrink-0">
-            BiralStore
+          <Link to="/" className="shrink-0 flex items-center">
+            <img src="/logo.png" alt="1Al Store" className="h-8 md:h-10 w-auto" />
           </Link>
 
           {/* Search */}

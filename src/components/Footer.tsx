@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div>
-            <h3 className="text-xl font-bold mb-3">BiralStore</h3>
+            <img src="/logo.png" alt="1Al Store" className="h-10 w-auto mb-4 invert brightness-0" />
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
               Gündəlik həyatınızı asanlaşdıran praktik məhsullar. Mətbəxdən baxçaya, həyətdən maşına — hər şey bir yerdə.
             </p>
