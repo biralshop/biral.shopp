@@ -106,6 +106,7 @@ const AdminProductEditor = () => {
         ...formData,
         categorySlug: formData.categorySlug || formData.category.toLowerCase().replace(/[^a-z0-9]/g, '-'),
         features: formData.features.split('\n').map(f => f.trim()).filter(f => f !== ''),
+        image: formData.images[0] || 'https://via.placeholder.com/600'
       };
 
       if (isNew) {

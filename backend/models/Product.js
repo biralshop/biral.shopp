@@ -7,6 +7,7 @@ const productSchema = new mongoose.Schema({
   oldPrice: { type: Number },
   discount: { type: Number },
   image: { type: String, required: true },
+  images: [{ type: String }],
   category: { type: String, required: true },
   categorySlug: { type: String, required: true },
   badge: { type: String, enum: ['new', 'viral', 'trend', 'campaign', null] },
