@@ -41,8 +41,8 @@ const AdminCustomers = () => {
     try {
       await adminAPI.deleteUser(id);
       setUsers(users.filter(u => u._id !== id));
-    } catch (err) {
-      alert('Silinmə zamanı xəta baş verdi');
+    } catch (err: any) {
+      alert(err.message || 'Silinmə zamanı xəta baş verdi');
     }
   };
 
