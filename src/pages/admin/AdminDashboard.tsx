@@ -18,12 +18,11 @@ const chartData = [
 ];
 
 const quickActions = [
-  { label: 'Yeni məhsul', color: 'text-green-600 border-green-200 bg-green-50' },
-  { label: 'Banner dəyiş', color: 'text-primary border-primary/20 bg-primary/5' },
-  { label: 'Şəxsi kupon', color: 'text-amber-600 border-amber-200 bg-amber-50' },
-  { label: 'Hədiyyə qaydası', color: 'text-purple-600 border-purple-200 bg-purple-50' },
-  { label: 'Status yenilə', color: 'text-green-600 border-green-200 bg-green-50' },
-  { label: 'FAQ cavabı', color: 'text-primary border-primary/20 bg-primary/5' },
+  { label: 'Yeni məhsul', color: 'text-green-600 border-green-200 bg-green-50', link: '/admin/mehsullar/yeni' },
+  { label: 'Mağazaya bax', color: 'text-primary border-primary/20 bg-primary/5', link: '/' },
+  { label: 'Sifarişlər', color: 'text-amber-600 border-amber-200 bg-amber-50', link: '/admin/sifarisler' },
+  { label: 'Kateqoriyalar', color: 'text-purple-600 border-purple-200 bg-purple-50', link: '/admin/kateqoriyalar' },
+  { label: 'Müştərilər', color: 'text-green-600 border-green-200 bg-green-50', link: '/admin/musteriler' }
 ];
 
 const lowStock = [
@@ -94,7 +93,9 @@ const AdminDashboard = () => (
           <p className="text-xs text-muted-foreground mb-3">Kod yazmadan ən çox işlənən əməliyyatlar</p>
           <div className="grid grid-cols-2 gap-2">
             {quickActions.map((a) => (
-              <Button key={a.label} variant="outline" size="sm" className={`text-xs h-8 ${a.color}`}>{a.label}</Button>
+              <Button key={a.label} variant="outline" size="sm" className={`text-xs h-8 ${a.color}`} asChild>
+                <a href={a.link}>{a.label}</a>
+              </Button>
             ))}
           </div>
         </div>

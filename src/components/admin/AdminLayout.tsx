@@ -113,7 +113,9 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input placeholder="Məhsul, sifariş, kupon, istifadəçi axtar..." className="pl-9 w-80 h-9 text-sm" />
             </div>
-            <Button size="sm" className="bg-primary hover:bg-primary/90 text-sm h-9">Yeni əlavə et</Button>
+            <Button size="sm" className="bg-primary hover:bg-primary/90 text-sm h-9" asChild>
+              <Link to="/admin/mehsullar/yeni">Yeni əlavə et</Link>
+            </Button>
             <Link to="/" target="_blank">
               <Button size="sm" variant="outline" className="text-primary border-primary/30 h-9 text-sm">
                 <ExternalLink className="h-3.5 w-3.5 mr-1" />
