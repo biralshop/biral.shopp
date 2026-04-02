@@ -1,6 +1,5 @@
 {
   "rewrites": [
-    { "source": "/sitemap.xml", "destination": "https://biralstore-api.onrender.com/sitemap.xml" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
