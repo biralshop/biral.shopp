@@ -13,11 +13,13 @@ const headers = (withAuth = false): HeadersInit => {
 
 const handleResponse = async (res: Response) => {
   let data;
+  let text = '';
   try {
-    const text = await res.text();
+    text = await res.text();
     data = text ? JSON.parse(text) : {};
   } catch (err) {
-    if (!res.ok) throw new Error('Sistemdə kiçik yenilənmə gedir (Təqribən 1 dəqiqə), zəhmət olmasa birazdan təkrar yoxlayın.');
+    if (res.status === 413) throw new Error("Şəkil həcmi və ya mətn çox böyükdür! Zəhmət olmasa qısa şəkil linki istifadə edin (Maks 1-2 MB).");
+    if (!res.ok) throw new Error(`[Sistem Xətası ${res.status}] Zəhmət olmasa göndərdiyiniz məlumata diqqət edin və ya URL-in düzgünlüyünü yoxlayın. (Gələn məlumat: ${text.substring(0, 30)})`);
     console.error('JSON parse error:', err);
     throw new Error('Serverdən etibarsız məlumat gəldi');
   }
