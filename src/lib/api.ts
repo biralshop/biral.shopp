@@ -12,7 +12,16 @@ const headers = (withAuth = false): HeadersInit => {
 };
 
 const handleResponse = async (res: Response) => {
-  const data = await res.json();
+  let data;
+  try {
+    const text = await res.text();
+    data = text ? JSON.parse(text) : {};
+  } catch (err) {
+    if (!res.ok) throw new Error('Sistemdə kiçik yenilənmə gedir (Təqribən 1 dəqiqə), zəhmət olmasa birazdan təkrar yoxlayın.');
+    console.error('JSON parse error:', err);
+    throw new Error('Serverdən etibarsız məlumat gəldi');
+  }
+
   if (!res.ok) throw new Error(data.error || 'Xəta baş verdi');
   return data;
 };
