@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Switch } from '@/components/ui/switch';
-import { TrendingUp, Gift, Tag, Percent, Search } from 'lucide-react';
+import { TrendingUp, Gift, Tag, Percent, Search, Trash2, Plus } from 'lucide-react';
 import { adminAPI } from '@/lib/api';
 
 const kpis = [
@@ -24,24 +24,22 @@ const campaigns = [
   { name: 'RETURN-WIN', type: 'Kupon', scope: 'Təkrar alış yox 30 gün', value: '12%', status: 'Planlı' },
 ];
 
-const statusColor: Record<string, string> = {
-  'Aktiv': 'bg-green-100 text-green-700',
-  'Draft': 'bg-amber-100 text-amber-700',
-  'Planlı': 'bg-blue-100 text-blue-700',
-};
-
-const giftRules = [
-  { name: 'Səbət > AZN 100', gift: 'Mini mop hədiyyə', status: 'Aktiv' },
-  { name: 'VIP ilk alış', gift: 'Pulsuz çatdırılma', status: 'Aktiv' },
-  { name: '3 maşın aksesuarı al', gift: 'Hədiyyə air freshener', status: 'Draft' },
-  { name: 'Ad günü ayı', gift: 'AZN 10 kupon', status: 'Aktiv' },
-];
-
 const AdminPromotions = () => {
   const [users, setUsers] = useState<any[]>([]);
   const [searchPhone, setSearchPhone] = useState('');
   const [selectedUser, setSelectedUser] = useState<any>(null);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [discountValue, setDiscountValue] = useState('25%');
+  const [maxDiscount, setMaxDiscount] = useState('15');
+
+  // Gift Rules state
+  const [giftRules, setGiftRules] = useState([
+    { id: 1, name: 'Səbət > AZN 100', gift: 'Pulsuz Çatdırılma', status: 'Aktiv' },
+    { id: 2, name: 'İlk Alış', gift: 'Güzgü hədiyyə', status: 'Aktiv' },
+    { id: 3, name: 'Ad günü ayı', gift: 'AZN 10 kupon endirim', status: 'Draft' },
+  ]);
+  const [newRuleName, setNewRuleName] = useState('');
+  const [newRuleGift, setNewRuleGift] = useState('');
 
   useEffect(() => {
     adminAPI.getAllUsers().then(res => setUsers(res.users || [])).catch(console.error);
@@ -52,9 +50,32 @@ const AdminPromotions = () => {
       alert('Zəhmət olmasa bir istifadəçi seçin');
       return;
     }
-    alert(`${selectedUser.firstName} ${selectedUser.lastName} (${selectedUser.phone || selectedUser.email}) üçün fərdi kampaniya tətbiq edildi!`);
+    const maxDesc = discountValue.includes('%') && maxDiscount ? ` (Maksimal: ${maxDiscount} ₼)` : '';
+    alert(`${selectedUser.firstName} ${selectedUser.lastName} (${selectedUser.phone || selectedUser.email}) üçün ${discountValue}${maxDesc} dəyərində fərdi kampaniya təyin edildi!`);
     setSearchPhone('');
     setSelectedUser(null);
+  };
+
+  const handleAddGiftRule = () => {
+    if (!newRuleName || !newRuleGift) return;
+    const newId = giftRules.length > 0 ? Math.max(...giftRules.map(r => r.id)) + 1 : 1;
+    setGiftRules([...giftRules, { id: newId, name: newRuleName, gift: newRuleGift, status: 'Aktiv' }]);
+    setNewRuleName('');
+    setNewRuleGift('');
+  };
+
+  const handleDeleteGiftRule = (id: number) => {
+    setGiftRules(giftRules.filter(r => r.id !== id));
+  };
+
+  const handleToggleGiftRule = (id: number) => {
+    setGiftRules(giftRules.map(r => r.id === id ? { ...r, status: r.status === 'Aktiv' ? 'Draft' : 'Aktiv' } : r));
+  };
+
+  const statusColor = (status: string) => {
+    if (status === 'Aktiv') return 'bg-green-100 text-green-700';
+    if (status === 'Draft') return 'bg-gray-100 text-gray-700';
+    return 'bg-blue-100 text-blue-700';
   };
 
   return (
@@ -103,12 +124,12 @@ const AdminPromotions = () => {
           </thead>
           <tbody>
             {campaigns.map((c) => (
-              <tr key={c.name} className="border-b border-border last:border-0">
+              <tr key={c.name} className="border-b border-border last:border-0 hover:bg-muted/30">
                 <td className="p-4 font-semibold">{c.name}</td>
                 <td className="p-4 text-muted-foreground">{c.type}</td>
                 <td className="p-4 text-muted-foreground">{c.scope}</td>
                 <td className="p-4">{c.value}</td>
-                <td className="p-4"><Badge className={`${statusColor[c.status]} border-0 text-xs`}>{c.status}</Badge></td>
+                <td className="p-4"><Badge className={`${statusColor(c.status)} border-0 text-xs`}>{c.status}</Badge></td>
                 <td className="p-4"><Button size="sm" variant="outline" className="text-xs h-7 text-primary border-primary/30">Redaktə</Button></td>
               </tr>
             ))}
@@ -122,6 +143,7 @@ const AdminPromotions = () => {
 
       {/* Side panels */}
       <div className="space-y-4">
+        {/* Personal Benefit Builder */}
         <div className="bg-white rounded-xl border border-border p-5 shadow-sm">
           <h3 className="font-bold mb-1">Fərdi fayda qurucusu</h3>
           <p className="text-xs text-muted-foreground mb-3">Müəyyən istifadəçiyə və ya seqmentə endirim/hədiyyə ver</p>
@@ -184,9 +206,25 @@ const AdminPromotions = () => {
             )}
           </div>
 
-          <div className="grid grid-cols-3 gap-3 mb-3">
+          <div className="grid grid-cols-2 gap-3 mb-3">
+            <div><p className="text-xs text-muted-foreground mb-1">Dəyər (Məs: 25%)</p>
+            <Input value={discountValue} onChange={e => setDiscountValue(e.target.value)} className="text-xs" /></div>
+            <div>
+              <p className="text-xs text-muted-foreground mb-1 flex items-center justify-between">
+                <span>Max Endirim</span>
+                <span className="text-[10px] text-gray-400">(Azn ilə)</span>
+              </p>
+              <Input 
+                placeholder="Məs: 15" 
+                value={maxDiscount} 
+                onChange={e => setMaxDiscount(e.target.value)} 
+                className="text-xs" 
+                disabled={!discountValue.includes('%')}
+              />
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-3 mb-3">
             <div><p className="text-xs text-muted-foreground mb-1">Fayda növü</p><Input defaultValue="Kupon" className="text-xs" /></div>
-            <div><p className="text-xs text-muted-foreground mb-1">Dəyər</p><Input defaultValue="15%" className="text-xs" /></div>
             <div><p className="text-xs text-muted-foreground mb-1">Müddət</p><Input defaultValue="7 gün" className="text-xs" /></div>
           </div>
           <div className="space-y-2 mb-3">
@@ -198,19 +236,58 @@ const AdminPromotions = () => {
           </Button>
         </div>
 
+        {/* Gift Rules Manager */}
         <div className="bg-white rounded-xl border border-border p-5 shadow-sm">
-          <h3 className="font-bold mb-1">Hədiyyə qaydaları</h3>
-          <p className="text-xs text-muted-foreground mb-3">Səbət, seqment və məhsul qaydaına bağlı hədiyyələr</p>
-          <div className="space-y-3">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="font-bold">Hədiyyə & Bonus Qaydaları</h3>
+          </div>
+          <p className="text-xs text-muted-foreground mb-4">Səbət və ya xüsusi günlər(məs: Ad günü, İlk alış) üçün dinamik qaydalar</p>
+          
+          <div className="grid grid-cols-2 gap-2 mb-3">
+            <Input 
+               placeholder="Qayda növü (Məs: Ad günü)" 
+               className="text-xs" 
+               value={newRuleName} 
+               onChange={e => setNewRuleName(e.target.value)} 
+            />
+            <Input 
+               placeholder="Veriləcək hədiyyə" 
+               className="text-xs" 
+               value={newRuleGift} 
+               onChange={e => setNewRuleGift(e.target.value)} 
+            />
+          </div>
+          <Button size="sm" variant="outline" className="w-full text-xs h-8 mb-4 border-dashed border-primary text-primary" onClick={handleAddGiftRule}>
+            <Plus className="h-4 w-4 mr-1" />
+            Yeni Qayda Əlavə Et
+          </Button>
+
+          <div className="space-y-3 max-h-[300px] overflow-y-auto pr-1">
             {giftRules.map((r) => (
-              <div key={r.name} className="flex items-center justify-between">
-                <div>
+              <div key={r.id} className="flex gap-2 items-center p-3 border border-border rounded-lg bg-gray-50 hover:bg-white transition-colors">
+                <Switch 
+                  checked={r.status === 'Aktiv'} 
+                  onCheckedChange={() => handleToggleGiftRule(r.id)} 
+                  className="scale-75"
+                />
+                <div className="flex-1">
                   <p className="text-sm font-semibold">{r.name}</p>
-                  <p className="text-xs text-muted-foreground">{r.gift}</p>
+                  <p className="text-[11px] text-muted-foreground">{r.gift}</p>
                 </div>
-                <Badge className={`${statusColor[r.status]} border-0 text-xs`}>{r.status}</Badge>
+                <Badge className={`${statusColor(r.status)} border-0 text-[10px] px-1 py-0`}>{r.status}</Badge>
+                <Button 
+                   size="icon" 
+                   variant="ghost" 
+                   className="h-7 w-7 text-red-400 hover:text-red-600 hover:bg-red-50 ml-1"
+                   onClick={() => handleDeleteGiftRule(r.id)}
+                >
+                  <Trash2 className="h-3.5 w-3.5" />
+                </Button>
               </div>
             ))}
+            {giftRules.length === 0 && (
+               <p className="text-xs text-center text-muted-foreground py-4">Heç bir hədiyyə qaydası tapılmadı.</p>
+            )}
           </div>
         </div>
       </div>
