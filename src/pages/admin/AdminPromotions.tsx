@@ -265,20 +265,22 @@ const AdminPromotions = () => {
           <div className="space-y-3 max-h-[300px] overflow-y-auto pr-1">
             {giftRules.map((r) => (
               <div key={r.id} className="flex gap-2 items-center p-3 border border-border rounded-lg bg-gray-50 hover:bg-white transition-colors">
-                <Switch 
-                  checked={r.status === 'Aktiv'} 
-                  onCheckedChange={() => handleToggleGiftRule(r.id)} 
-                  className="scale-75"
-                />
                 <div className="flex-1">
                   <p className="text-sm font-semibold">{r.name}</p>
                   <p className="text-[11px] text-muted-foreground">{r.gift}</p>
                 </div>
-                <Badge className={`${statusColor(r.status)} border-0 text-[10px] px-1 py-0`}>{r.status}</Badge>
+                <button
+                  onClick={() => handleToggleGiftRule(r.id)}
+                  className={`px-2 py-0.5 rounded text-[10px] font-medium transition-colors ${
+                    r.status === 'Aktiv' ? 'bg-green-100 text-green-700 hover:bg-green-200' : 'bg-red-100 text-red-700 hover:bg-red-200'
+                  }`}
+                >
+                  {r.status === 'Aktiv' ? 'Aktiv' : 'Deaktiv'}
+                </button>
                 <Button 
                    size="icon" 
                    variant="ghost" 
-                   className="h-7 w-7 text-red-400 hover:text-red-600 hover:bg-red-50 ml-1"
+                   className="h-7 w-7 text-red-400 hover:text-red-600 hover:bg-red-50 ml-1 shrink-0"
                    onClick={() => handleDeleteGiftRule(r.id)}
                 >
                   <Trash2 className="h-3.5 w-3.5" />
