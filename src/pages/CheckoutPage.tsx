@@ -221,10 +221,25 @@ const CheckoutPage = () => {
                       />
                       {errors.city && <p className="text-xs text-destructive mt-1 flex items-center gap-1"><AlertCircle className="h-3 w-3" />{errors.city}</p>}
                       
-                      {showPostOptions && postSearch && (
+                      {showPostOptions && postSearch && (() => {
+                        const normalizeAz = (str: string) => str.toLowerCase()
+                          .replace(/[əə]/g, 'e')
+                          .replace(/[ıi]/g, 'i')
+                          .replace(/[öo]/g, 'o')
+                          .replace(/[ğg]/g, 'g')
+                          .replace(/[üu]/g, 'u')
+                          .replace(/[şs]/g, 's')
+                          .replace(/[çc]/g, 'c');
+                          
+                        const searchWords = normalizeAz(postSearch).split(' ').filter(w => w.trim().length > 0);
+                        const filteredOptions = azpostData.filter(p => {
+                          const normalizedLabel = normalizeAz(p.label);
+                          return searchWords.every(word => normalizedLabel.includes(word));
+                        });
+
+                        return (
                         <div className="absolute z-10 w-full mt-1 bg-card border rounded-md shadow-lg max-h-60 overflow-y-auto">
-                          {azpostData
-                            .filter(p => p.label.toLowerCase().includes(postSearch.toLowerCase()))
+                          {filteredOptions
                             .slice(0, 20)
                             .map((p, idx) => (
                               <div
@@ -240,11 +255,12 @@ const CheckoutPage = () => {
                                 {p.label}
                               </div>
                             ))}
-                          {azpostData.filter(p => p.label.toLowerCase().includes(postSearch.toLowerCase())).length === 0 && (
+                          {filteredOptions.length === 0 && (
                             <div className="px-4 py-3 text-sm text-muted-foreground">Nəticə tapılmadı...</div>
                           )}
                         </div>
-                      )}
+                        );
+                      })()}
                     </div>
                   )}
 
