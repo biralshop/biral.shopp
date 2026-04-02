@@ -13,6 +13,13 @@ const userSchema = new mongoose.Schema({
   phoneVerified: { type: Boolean, default: false },
   verifiedPhone: { type: String, default: '' },
   deliveryNote: { type: String },
+  savedCart: [{
+    productId: String,
+    quantity: Number,
+    price: Number,
+    productTitle: String
+  }],
+  lastCartUpdate: { type: Date },
   wishlist: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Product' }],
   addresses: [{
     label: String,

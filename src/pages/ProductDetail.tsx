@@ -131,6 +131,62 @@ const ProductDetail = () => {
     }
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Ana səhifə",
+        "item": "https://biral.store"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": product.category,
+        "item": `https://biral.store/kateqoriyalar?cat=${product.categorySlug}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": product.title,
+        "item": `https://biral.store/mehsul/${pid}`
+      }
+    ]
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": `${product.title} çatdırılması varmı?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bəli, Biral.store vasitəsilə bütün məhsullarımız sürətli və etibarlı şəkildə ünvanınıza çatdırılır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `Ödəniş necə edilir?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Siz həm nağd (qapıda ödəniş), həm də onlayn kartla ödəniş yollarından istifadə edə bilərsiniz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `Məhsulun zəmanəti varmı?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Biral.store-dan alınan bütün məhsullara rəsmi və ya mağaza tərəfindən müəyyən edilmiş zəmanət talonu təqdim olunur."
+        }
+      }
+    ]
+  };
+
   return (
     <Layout showCategoryNav={false}>
       <Helmet>
@@ -140,6 +196,8 @@ const ProductDetail = () => {
         <meta property="og:description" content={product.description.substring(0, 160)} />
         <meta property="og:image" content={product.image} />
         <script type="application/ld+json">{JSON.stringify(seoSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       
       <div className="container mx-auto px-4 py-6">

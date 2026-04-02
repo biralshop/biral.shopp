@@ -67,6 +67,10 @@ const CheckoutPage = () => {
   const updateForm = (key: string, value: string) => {
     setForm((prev) => ({ ...prev, [key]: value }));
     if (errors[key]) setErrors((prev) => ({ ...prev, [key]: '' }));
+    
+    // Ghost tracking: Save guest info to localStorage to trigger Abandoned Cart Sync in CartContext
+    if (key === 'phone') localStorage.setItem('guest_checkout_phone', value);
+    if (key === 'name') localStorage.setItem('guest_checkout_name', value);
   };
 
   const handleApplyPromo = () => {

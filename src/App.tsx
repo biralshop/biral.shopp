@@ -36,6 +36,7 @@ import AdminDelivery from "./pages/admin/AdminDelivery";
 import AdminSupport from "./pages/admin/AdminSupport";
 import AdminBrand from "./pages/admin/AdminBrand";
 import AdminRoles from "./pages/admin/AdminRoles";
+import AdminAbandonedCarts from "./pages/admin/AdminAbandonedCarts";
 import AdminGuard from "./components/AdminGuard";
 import BlogList from "./pages/BlogList";
 import BlogDetail from "./pages/BlogDetail";
@@ -79,10 +80,10 @@ const App = () => (
                     <Route path="sehifeler/ana-sehife" element={<AdminHomeBuilder />} />
                     <Route path="articles" element={<AdminArticles />} />
                     <Route path="kampaniyalar" element={<AdminPromotions />} />
-                    <Route path="musteriler" element={<AdminCustomers />} />
                     <Route path="musteriler/:id" element={<AdminCustomerProfile />} />
                     <Route path="sifarisler" element={<AdminOrders />} />
                     <Route path="sifarisler/:id" element={<AdminOrderDetail />} />
+                    <Route path="abandoned" element={<AdminAbandonedCarts />} />
                     <Route path="catdirilma" element={<AdminDelivery />} />
                     <Route path="destek" element={<AdminSupport />} />
                     <Route path="brend" element={<AdminBrand />} />

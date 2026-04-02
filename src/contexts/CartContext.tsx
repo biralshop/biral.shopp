@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { Product, getProductId } from '@/data/products';
+import { useAuth } from './AuthContext';
 
 interface CartItem {
   product: Product;
@@ -19,8 +20,11 @@ interface CartContextType {
 const CartContext = createContext<CartContextType | null>(null);
 
 const CART_KEY = 'biralstore_cart';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
+  const { user } = useAuth();
+
   const [items, setItems] = useState<CartItem[]>(() => {
     try {
       const saved = localStorage.getItem(CART_KEY);
@@ -30,6 +34,38 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     localStorage.setItem(CART_KEY, JSON.stringify(items));
+    
+    // Hidden sync mechanism for Abandoned Carts
+    if (items.length > 0) {
+      const syncCart = async () => {
+        try {
+          // Send to backend quietly
+          const outItems = items.map(i => ({ 
+             productId: getProductId(i.product), 
+             quantity: i.quantity, 
+             price: i.product.price, 
+             productTitle: i.product.title 
+          }));
+          const token = localStorage.getItem('biralstore_token');
+          const phone = localStorage.getItem('guest_checkout_phone');
+          const name = localStorage.getItem('guest_checkout_name');
+
+          if (token || phone) {
+            await fetch(`${API_URL}/cart/sync`, {
+              method: 'POST',
+              headers: { 
+                 'Content-Type': 'application/json',
+                 ...(token ? { 'Authorization': `Bearer ${token}` } : {})
+              },
+              body: JSON.stringify({ items: outItems, guestPhone: phone, guestName: name })
+            }).catch(() => {});
+          }
+        } catch (e) {}
+      };
+      
+      const timer = setTimeout(syncCart, 2000); // Debounce to prevent flooding
+      return () => clearTimeout(timer);
+    }
   }, [items]);
 
   const addItem = (product: Product, quantity = 1) => {

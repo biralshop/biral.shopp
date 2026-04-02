@@ -19,6 +19,7 @@ const navItems = [
   { key: 'promotions', label: 'Kampaniyalar', icon: Megaphone, path: '/admin/kampaniyalar' },
   { key: 'customers', label: 'Müştərilər', icon: Users, path: '/admin/musteriler' },
   { key: 'orders', label: 'Sifarişlər', icon: ShoppingCart, path: '/admin/sifarisler' },
+  { key: 'abandoned', label: 'Tərk Edilmiş Səbətlər', icon: Megaphone, path: '/admin/abandoned' },
   { key: 'delivery', label: 'Çatdırılma & Ödəniş', icon: Truck, path: '/admin/catdirilma' },
   { key: 'support', label: 'Dəstək', icon: HeadphonesIcon, path: '/admin/destek' },
   { key: 'brand', label: 'Brend & Ayarlar', icon: Palette, path: '/admin/brend' },
