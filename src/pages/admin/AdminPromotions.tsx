@@ -15,13 +15,13 @@ const kpis = [
   { label: 'Konversiya uplift', value: '14.8%', change: '+2.1%', icon: TrendingUp, color: 'bg-amber-500' },
 ];
 
-const campaigns = [
-  { name: 'WELCOME10', type: 'Kupon', scope: 'Yeni istifadəçilər', value: '10%', status: 'Aktiv' },
-  { name: 'VIP-APRIL', type: 'Fərdi kupon', scope: 'VIP segment', value: 'AZN 15', status: 'Aktiv' },
-  { name: 'GIFT-100', type: 'Hədiyyə', scope: 'Səbət > AZN 100', value: '1 məhsul', status: 'Aktiv' },
-  { name: '3AL2ÖDƏ', type: 'Bundle', scope: 'Seçilmiş məhsullar', value: '3 al 2 ödə', status: 'Draft' },
-  { name: 'FREESHIP', type: 'Avtomatik endirim', scope: 'Bakı daxili', value: 'Pulsuz çatdırılma', status: 'Aktiv' },
-  { name: 'RETURN-WIN', type: 'Kupon', scope: 'Təkrar alış yox 30 gün', value: '12%', status: 'Planlı' },
+const initialCampaigns = [
+  { id: 1, name: 'WELCOME10', type: 'Kupon', scope: 'Yeni istifadəçilər', value: '10%', status: 'Aktiv' },
+  { id: 2, name: 'VIP-APRIL', type: 'Fərdi kupon', scope: 'VIP segment', value: 'AZN 15', status: 'Aktiv' },
+  { id: 3, name: 'GIFT-100', type: 'Hədiyyə', scope: 'Səbət > AZN 100', value: '1 məhsul', status: 'Aktiv' },
+  { id: 4, name: '3AL2ÖDƏ', type: 'Bundle', scope: 'Seçilmiş məhsullar', value: '3 al 2 ödə', status: 'Draft' },
+  { id: 5, name: 'FREESHIP', type: 'Avtomatik endirim', scope: 'Bakı daxili', value: 'Pulsuz çatdırılma', status: 'Aktiv' },
+  { id: 6, name: 'RETURN-WIN', type: 'Kupon', scope: 'Təkrar alış yox 30 gün', value: '12%', status: 'Planlı' },
 ];
 
 const AdminPromotions = () => {
@@ -31,6 +31,16 @@ const AdminPromotions = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [discountValue, setDiscountValue] = useState('25%');
   const [maxDiscount, setMaxDiscount] = useState('15');
+
+  // Campaigns state
+  const [campaigns, setCampaigns] = useState(initialCampaigns);
+  const [campaignFilter, setCampaignFilter] = useState('Hamısı');
+  const [showNewCampaignForm, setShowNewCampaignForm] = useState(false);
+  
+  const [newCampName, setNewCampName] = useState('');
+  const [newCampType, setNewCampType] = useState('Kupon');
+  const [newCampScope, setNewCampScope] = useState('');
+  const [newCampValue, setNewCampValue] = useState('');
 
   // Gift Rules state
   const [giftRules, setGiftRules] = useState([
@@ -45,6 +55,7 @@ const AdminPromotions = () => {
     adminAPI.getAllUsers().then(res => setUsers(res.users || [])).catch(console.error);
   }, []);
 
+  // Benefits handler
   const handleApplyBenefit = () => {
     if (!selectedUser) {
       alert('Zəhmət olmasa bir istifadəçi seçin');
@@ -56,6 +67,7 @@ const AdminPromotions = () => {
     setSelectedUser(null);
   };
 
+  // Gift handlers
   const handleAddGiftRule = () => {
     if (!newRuleName || !newRuleGift) return;
     const newId = giftRules.length > 0 ? Math.max(...giftRules.map(r => r.id)) + 1 : 1;
@@ -71,6 +83,36 @@ const AdminPromotions = () => {
   const handleToggleGiftRule = (id: number) => {
     setGiftRules(giftRules.map(r => r.id === id ? { ...r, status: r.status === 'Aktiv' ? 'Draft' : 'Aktiv' } : r));
   };
+
+  // Campaign handlers
+  const handleAddCampaign = () => {
+    if (!newCampName || !newCampScope || !newCampValue) {
+      alert("Zəhmət olmasa bütün sahələri doldurun!");
+      return;
+    }
+    const newId = campaigns.length > 0 ? Math.max(...campaigns.map(c => c.id)) + 1 : 1;
+    setCampaigns([{ 
+      id: newId, 
+      name: newCampName, 
+      type: newCampType, 
+      scope: newCampScope, 
+      value: newCampValue, 
+      status: 'Aktiv' 
+    }, ...campaigns]);
+    setNewCampName('');
+    setNewCampType('Kupon');
+    setNewCampScope('');
+    setNewCampValue('');
+    setShowNewCampaignForm(false);
+  };
+
+  const handleDeleteCampaign = (id: number) => {
+    if(window.confirm('Bu kampaniyanı silmək istədiyinizə əminsiniz?')) {
+      setCampaigns(campaigns.filter(c => c.id !== id));
+    }
+  };
+
+  const filteredCampaigns = campaigns.filter(c => campaignFilter === 'Hamısı' || c.type === campaignFilter);
 
   const statusColor = (status: string) => {
     if (status === 'Aktiv') return 'bg-green-100 text-green-700';
@@ -101,43 +143,106 @@ const AdminPromotions = () => {
 
     <div className="grid grid-cols-3 gap-6">
       {/* Campaign table */}
-      <div className="col-span-2 bg-white rounded-xl border border-border shadow-sm">
-        <div className="p-5 border-b border-border">
-          <h2 className="font-bold">Kampaniya mərkəzi</h2>
-          <p className="text-xs text-muted-foreground">Kupon, hədiyyə və avtomatik endirim qaydaları</p>
-          <div className="flex gap-2 mt-3">
-            {['Hamısı', 'Kupon', 'Avtomatik endirim', 'Hədiyyə', 'Bundle'].map((t, i) => (
-              <Button key={t} size="sm" variant={i === 0 ? 'default' : 'outline'} className="text-xs h-7">{t}</Button>
-            ))}
+      <div className="col-span-2 space-y-4">
+        <div className="bg-white rounded-xl border border-border shadow-sm">
+          <div className="p-5 border-b border-border">
+            <h2 className="font-bold">Kampaniya mərkəzi</h2>
+            <p className="text-xs text-muted-foreground">Kupon, hədiyyə və avtomatik endirim qaydaları</p>
+            <div className="flex gap-2 mt-3 overflow-x-auto pb-1">
+              {['Hamısı', 'Kupon', 'Fərdi kupon', 'Avtomatik endirim', 'Hədiyyə', 'Bundle'].map((t) => (
+                <Button 
+                   key={t} 
+                   size="sm" 
+                   variant={campaignFilter === t ? 'default' : 'outline'} 
+                   className="text-xs h-7 whitespace-nowrap"
+                   onClick={() => setCampaignFilter(t)}
+                >
+                  {t}
+                </Button>
+              ))}
+            </div>
           </div>
-        </div>
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="border-b border-border text-xs text-muted-foreground">
-              <th className="text-left p-4 font-medium">Ad</th>
-              <th className="text-left p-4 font-medium">Növ</th>
-              <th className="text-left p-4 font-medium">Tətbiq sahəsi</th>
-              <th className="text-left p-4 font-medium">Dəyər</th>
-              <th className="text-left p-4 font-medium">Status</th>
-              <th className="text-left p-4 font-medium">Əməliyyat</th>
-            </tr>
-          </thead>
-          <tbody>
-            {campaigns.map((c) => (
-              <tr key={c.name} className="border-b border-border last:border-0 hover:bg-muted/30">
-                <td className="p-4 font-semibold">{c.name}</td>
-                <td className="p-4 text-muted-foreground">{c.type}</td>
-                <td className="p-4 text-muted-foreground">{c.scope}</td>
-                <td className="p-4">{c.value}</td>
-                <td className="p-4"><Badge className={`${statusColor(c.status)} border-0 text-xs`}>{c.status}</Badge></td>
-                <td className="p-4"><Button size="sm" variant="outline" className="text-xs h-7 text-primary border-primary/30">Redaktə</Button></td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        <div className="p-4 flex gap-2">
-          <Button size="sm" className="bg-primary text-xs">Yeni kampaniya</Button>
-          <Button size="sm" variant="outline" className="text-xs">Kupon bulk import</Button>
+          
+          {showNewCampaignForm && (
+            <div className="p-4 bg-gray-50 border-b border-border">
+              <h3 className="text-sm font-semibold mb-3">Yeni Kampaniya Yarat</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-3">
+                <div>
+                  <p className="text-[10px] text-muted-foreground mb-1 shadow-none">Ad/Kod</p>
+                  <Input placeholder="Məs: ENDİRİM20" value={newCampName} onChange={e => setNewCampName(e.target.value)} className="h-8 text-xs"/>
+                </div>
+                <div>
+                  <p className="text-[10px] text-muted-foreground mb-1 shadow-none">Növ</p>
+                  <Select value={newCampType} onValueChange={setNewCampType}>
+                    <SelectTrigger className="h-8 text-xs"><SelectValue /></SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="Kupon">Kupon</SelectItem>
+                      <SelectItem value="Fərdi kupon">Fərdi kupon</SelectItem>
+                      <SelectItem value="Avtomatik endirim">Avtomatik endirim</SelectItem>
+                      <SelectItem value="Hədiyyə">Hədiyyə</SelectItem>
+                      <SelectItem value="Bundle">Bundle</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div>
+                  <p className="text-[10px] text-muted-foreground mb-1 shadow-none">Tətbiq Sahəsi</p>
+                  <Input placeholder="Məs: Bütün sayt" value={newCampScope} onChange={e => setNewCampScope(e.target.value)} className="h-8 text-xs"/>
+                </div>
+                <div>
+                  <p className="text-[10px] text-muted-foreground mb-1 shadow-none">Dəyər</p>
+                  <Input placeholder="Məs: 20%" value={newCampValue} onChange={e => setNewCampValue(e.target.value)} className="h-8 text-xs"/>
+                </div>
+              </div>
+              <div className="flex gap-2 justify-end">
+                <Button size="sm" variant="ghost" className="h-7 text-xs" onClick={() => setShowNewCampaignForm(false)}>Ləğv et</Button>
+                <Button size="sm" className="h-7 text-xs" onClick={handleAddCampaign}>Yadda Saxla</Button>
+              </div>
+            </div>
+          )}
+
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-border text-xs text-muted-foreground">
+                  <th className="text-left p-4 font-medium">Ad</th>
+                  <th className="text-left p-4 font-medium">Növ</th>
+                  <th className="text-left p-4 font-medium">Tətbiq sahəsi</th>
+                  <th className="text-left p-4 font-medium">Dəyər</th>
+                  <th className="text-left p-4 font-medium">Status</th>
+                  <th className="text-right p-4 font-medium">Əməliyyat</th>
+                </tr>
+              </thead>
+              <tbody>
+                {filteredCampaigns.map((c) => (
+                  <tr key={c.id} className="border-b border-border last:border-0 hover:bg-muted/30">
+                    <td className="p-4 font-semibold">{c.name}</td>
+                    <td className="p-4 text-muted-foreground">{c.type}</td>
+                    <td className="p-4 text-muted-foreground">{c.scope}</td>
+                    <td className="p-4">{c.value}</td>
+                    <td className="p-4"><Badge className={`${statusColor(c.status)} border-0 text-xs`}>{c.status}</Badge></td>
+                    <td className="p-4 flex gap-1 justify-end">
+                      <Button size="sm" variant="outline" className="text-xs h-7 text-primary border-primary/30">Redaktə</Button>
+                      <Button size="icon" variant="ghost" className="h-7 w-7 text-red-500 hover:bg-red-50" onClick={() => handleDeleteCampaign(c.id)}>
+                        <Trash2 className="h-3.5 w-3.5" />
+                      </Button>
+                    </td>
+                  </tr>
+                ))}
+                {filteredCampaigns.length === 0 && (
+                  <tr>
+                    <td colSpan={6} className="p-8 text-center text-muted-foreground text-sm">Axtarışa uyğun kampaniya tapılmadı.</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+          <div className="p-4 flex gap-2">
+            <Button size="sm" className="bg-primary text-xs" onClick={() => setShowNewCampaignForm(true)}>
+              <Plus className="h-3.5 w-3.5 mr-1" />
+              Yeni kampaniya
+            </Button>
+            <Button size="sm" variant="outline" className="text-xs">Kupon bulk import</Button>
+          </div>
         </div>
       </div>
 
