@@ -40,7 +40,7 @@ export default function AdminArticles() {
   const handleSave = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      if (isEditing) {
+      if (currentId) {
         await articlesAPI.update(currentId, form);
         toast.success('Məqalə yeniləndi');
       } else {
