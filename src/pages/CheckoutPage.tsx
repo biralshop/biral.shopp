@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import Layout from '@/components/Layout';
 import { useCart } from '@/contexts/CartContext';
 import { useOrders } from '@/contexts/OrderContext';
+import { useAuth } from '@/contexts/AuthContext';
 import { getProductId } from '@/data/products';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -15,7 +16,8 @@ import azpostData from '@/data/azpost.json';
 
 const CheckoutPage = () => {
   const { items, totalPrice, clearCart } = useCart();
-  const { createOrder } = useOrders();
+  const { orders, createOrder } = useOrders();
+  const { user } = useAuth();
   const navigate = useNavigate();
   const [deliveryMethod, setDeliveryMethod] = useState('baku');
   const [paymentMethod, setPaymentMethod] = useState('card');
@@ -171,6 +173,22 @@ const CheckoutPage = () => {
             </div>
           ))}
         </div>
+
+        {(!user?.phoneVerified && orders.length === 0) && (
+          <div className="bg-amber-50 border border-amber-200 text-amber-800 rounded-lg p-4 mb-6 flex gap-3 items-start animate-fade-in">
+            <AlertCircle className="h-5 w-5 text-amber-500 shrink-0 mt-0.5" />
+            <div>
+              <p className="font-semibold text-sm">İlk Sifariş Fürsəti!</p>
+              <p className="text-sm mt-1">Giriş edib nömrənizi təsdiqləyərək <strong>pulsuz çatdırılmadan</strong> yararlana bilərsiniz.</p>
+              {!user && (
+                <Link to="/login" className="text-amber-700 hover:text-amber-900 text-sm font-medium underline mt-1.5 inline-block">Daxil ol / Qeydiyyat</Link>
+              )}
+              {user && !user.phoneVerified && (
+                <Link to="/hesab" className="text-amber-700 hover:text-amber-900 text-sm font-medium underline mt-1.5 inline-block">Hesaba keçib təsdiqlə</Link>
+              )}
+            </div>
+          </div>
+        )}
 
         <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
