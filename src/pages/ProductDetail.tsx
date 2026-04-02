@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
 import ProductCard from '@/components/ProductCard';
 import { Product, getProductId, getProductById, getProductsByCategory } from '@/data/products';
@@ -91,8 +92,34 @@ const ProductDetail = () => {
     }
   };
 
+  const seoSchema = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": product.title,
+    "image": product.image,
+    "description": product.description,
+    "sku": pid,
+    "offers": {
+      "@type": "Offer",
+      "url": "https://biralstore.az/mehsul/" + pid,
+      "priceCurrency": "AZN",
+      "price": product.price,
+      "itemCondition": "https://schema.org/NewCondition",
+      "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"
+    }
+  };
+
   return (
     <Layout showCategoryNav={false}>
+      <Helmet>
+        <title>{product.title} - BiralStore</title>
+        <meta name="description" content={product.description.substring(0, 160)} />
+        <meta property="og:title" content={product.title} />
+        <meta property="og:description" content={product.description.substring(0, 160)} />
+        <meta property="og:image" content={product.image} />
+        <script type="application/ld+json">{JSON.stringify(seoSchema)}</script>
+      </Helmet>
+      
       <div className="container mx-auto px-4 py-6">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-6 overflow-hidden">

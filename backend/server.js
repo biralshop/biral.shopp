@@ -47,6 +47,61 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', time: new Date().toISOString() });
 });
 
+// Dynamic Sitemap Generator for SEO
+app.get('/sitemap.xml', async (req, res) => {
+  try {
+    const Product = require('./models/Product');
+    const Category = require('./models/Category');
+    
+    const [products, categories] = await Promise.all([
+      Product.find({ active: true }).select('slug updatedAt'),
+      Category.find({ isActive: true }).select('slug updatedAt')
+    ]);
+
+    const baseUrl = 'https://biralstore.az';
+    
+    let xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>${baseUrl}/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>${baseUrl}/kateqoriyalar</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>`;
+
+    categories.forEach(cat => {
+      xml += `
+  <url>
+    <loc>${baseUrl}/kateqoriya/${cat.slug}</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>`;
+    });
+
+    products.forEach(prod => {
+      xml += `
+  <url>
+    <loc>${baseUrl}/mehsul/${prod.slug}</loc>
+    <lastmod>${new Date(prod.updatedAt).toISOString()}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>`;
+    });
+
+    xml += `\n</urlset>`;
+
+    res.header('Content-Type', 'application/xml');
+    res.send(xml);
+  } catch (err) {
+    console.error('Sitemap Error:', err);
+    res.status(500).end();
+  }
+});
+
 // Error handler
 app.use((err, req, res, next) => {
   if (err.type === 'entity.parse.failed') {
