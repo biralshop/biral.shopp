@@ -188,4 +188,15 @@ router.put('/admin/:id/status', require('../middleware/auth').adminAuth, async (
   }
 });
 
+// DELETE /api/users/admin/:id
+router.delete('/admin/:id', require('../middleware/auth').adminAuth, async (req, res) => {
+  try {
+    const user = await User.findByIdAndDelete(req.params.id);
+    if (!user) return res.status(404).json({ error: 'İstifadəçi tapılmadı' });
+    res.json({ success: true, id: req.params.id });
+  } catch (err) {
+    res.status(500).json({ error: 'Server xətası' });
+  }
+});
+
 module.exports = router;

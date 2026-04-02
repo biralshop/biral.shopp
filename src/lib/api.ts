@@ -205,4 +205,8 @@ export const adminAPI = {
     const res = await fetch(`${API_URL}/users/admin/${id}/status`, { method: 'PUT', headers: headers(true), body: JSON.stringify({ status }) });
     return handleResponse(res);
   },
+  deleteUser: async (id: string) => {
+    const res = await fetch(`${API_URL}/users/admin/${id}`, { method: 'DELETE', headers: headers(true) });
+    return handleResponse(res);
+  },
 };

@@ -3,6 +3,7 @@ import AdminLayout from '@/components/admin/AdminLayout';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { Trash2 } from 'lucide-react';
 import { adminAPI } from '@/lib/api';
 
 const segments = ['Hamısı', 'Aktiv', 'Bloklanmış'];
@@ -32,6 +33,16 @@ const AdminCustomers = () => {
       setUsers(users.map(u => u._id === id ? { ...u, isBlocked: !isBlocked } : u));
     } catch (err) {
       alert('Xəta baş verdi');
+    }
+  };
+
+  const handleDelete = async (id: string) => {
+    if (!window.confirm('Bu istifadəçini həmişəlik silmək istədiyinizə əminsiniz? (Qaytarmaq mümkün deyil)')) return;
+    try {
+      await adminAPI.deleteUser(id);
+      setUsers(users.filter(u => u._id !== id));
+    } catch (err) {
+      alert('Silinmə zamanı xəta baş verdi');
     }
   };
 
@@ -92,9 +103,18 @@ const AdminCustomers = () => {
                    onClick={() => handleToggleBlock(u._id, u.isBlocked)}
                    size="sm" 
                    variant={u.isBlocked ? 'default' : 'outline'} 
-                   className={`text-xs h-7 ${!u.isBlocked ? 'text-red-500 border-red-200 hover:bg-red-50' : 'bg-green-600 hover:bg-green-700'}`}
+                   className={`text-xs h-7 ${!u.isBlocked ? 'text-amber-500 border-amber-200 hover:bg-amber-50' : 'bg-green-600 hover:bg-green-700'}`}
                 >
                   {u.isBlocked ? 'Aç' : 'Blokla'}
+                </Button>
+                <Button 
+                   onClick={() => handleDelete(u._id)}
+                   size="icon" 
+                   variant="outline" 
+                   className="h-7 w-7 text-red-500 border-red-200 hover:bg-red-50"
+                  title="Tamamilə Sil"
+                >
+                  <Trash2 className="h-4 w-4" />
                 </Button>
               </div>
             </div>
