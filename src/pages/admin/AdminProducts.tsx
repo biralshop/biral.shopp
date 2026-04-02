@@ -1,23 +1,14 @@
+import React, { useEffect, useState } from 'react';
 import AdminLayout from '@/components/admin/AdminLayout';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Package, Search, Download, Upload } from 'lucide-react';
+import { Package, Search, Download, Upload, Plus } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { productsAPI } from '@/lib/api';
 
 const statusFilters = ['Hamısı', 'Aktiv', 'Qaralama', 'Tükənir', 'Gizli'];
-
-const products = [
-  { id: 1, name: 'Çoxfunksiyalı çəkməcə organizer', sku: 'PT-2401', cat: 'Mətbəx', price: 29.90, stock: 128, status: 'Aktiv' },
-  { id: 2, name: 'Portativ avto tozsoran', sku: 'PT-2402', cat: 'Maşın', price: 44.90, stock: 18, status: 'Yenilənib' },
-  { id: 3, name: 'Qapaqlı saxlama qabı dəsti', sku: 'PT-2403', cat: 'Saxlama', price: 34.90, stock: 6, status: 'Tükənir' },
-  { id: 4, name: 'Bağça su püskürdücü set', sku: 'PT-2404', cat: 'Bağça', price: 24.90, stock: 67, status: 'Aktiv' },
-  { id: 5, name: 'Silikon spatula organizer', sku: 'PT-2405', cat: 'Mətbəx', price: 19.90, stock: 0, status: 'Gizli' },
-  { id: 6, name: 'Avto oturacaq organizer', sku: 'PT-2406', cat: 'Maşın', price: 44.90, stock: 51, status: 'Aktiv' },
-  { id: 7, name: 'Diver mətbəx rafı', sku: 'PT-2407', cat: 'Mətbəx', price: 39.90, stock: 21, status: 'Aktiv' },
-  { id: 8, name: 'Mini mop təmizləyici', sku: 'PT-2408', cat: 'Ev', price: 15.90, stock: 89, status: 'Aktiv' },
-];
 
 const statusColor: Record<string, string> = {
   'Aktiv': 'bg-green-100 text-green-700',
@@ -30,17 +21,29 @@ const stockColor = (s: number) => s === 0 ? 'text-red-600 bg-red-50' : s < 20 ? 
 
 const bulkActions = ['Qiymətə +10% əlavə et', 'Kateqoriyanı dəyiş', 'Statusu aktiv/gizli et', 'Stok xəbərdarlığı qur', 'SEO title yenilə'];
 
-const lowStockItems = [
-  { sku: 'PT-2403', count: '6 ədəd', color: 'text-amber-600' },
-  { sku: 'PT-2405', count: '0 ədəd', color: 'text-red-600' },
-  { sku: 'PT-2411', count: '4 ədəd', color: 'text-amber-600' },
-];
+const AdminProducts = () => {
+  const [products, setProducts] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
-const AdminProducts = () => (
+  useEffect(() => {
+    productsAPI.getAll()
+      .then(res => setProducts(res.products))
+      .catch(err => console.error(err))
+      .finally(() => setLoading(false));
+  }, []);
+
+  const lowStockItems = products.filter(p => p.stock < 20).slice(0, 3);
+
+  return (
   <AdminLayout>
-    <div className="mb-6">
-      <h1 className="text-2xl font-bold">Məhsul kataloqu</h1>
-      <p className="text-sm text-muted-foreground">SKU, stok, qiymət, variant və görünürlüyü kodsuz idarə et</p>
+    <div className="mb-6 flex items-center justify-between">
+      <div>
+        <h1 className="text-2xl font-bold">Məhsul kataloqu</h1>
+        <p className="text-sm text-muted-foreground">SKU, stok, qiymət, variant və görünürlüyü kodsuz idarə et</p>
+      </div>
+      <Link to="/admin/mehsullar/yeni">
+        <Button className="font-semibold px-6 shadow-sm"><Plus className="w-5 h-5 mr-2" />Yeni Məhsul Əlavə Et</Button>
+      </Link>
     </div>
 
     {/* Filters */}
@@ -61,13 +64,12 @@ const AdminProducts = () => (
       <div className="col-span-3 bg-white rounded-xl border border-border shadow-sm">
         <div className="p-5 border-b border-border">
           <h2 className="font-bold">Məhsul siyahısı</h2>
-          <p className="text-xs text-muted-foreground">Bütün vitrin məhsulları, variant və stok məlumatı</p>
+          <p className="text-xs text-muted-foreground">Bütün vitrin məhsulları, variant və stok məlumatı {loading && '(Yüklənir...)'}</p>
         </div>
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-border text-muted-foreground text-xs">
               <th className="text-left p-4 font-medium">Məhsul</th>
-              <th className="text-left p-4 font-medium">SKU</th>
               <th className="text-left p-4 font-medium">Kateqoriya</th>
               <th className="text-left p-4 font-medium">Qiymət</th>
               <th className="text-left p-4 font-medium">Stok</th>
@@ -77,30 +79,42 @@ const AdminProducts = () => (
           </thead>
           <tbody>
             {products.map((p) => (
-              <tr key={p.id} className="border-b border-border last:border-0 hover:bg-muted/30">
+              <tr key={p._id} className="border-b border-border last:border-0 hover:bg-muted/30">
                 <td className="p-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Package className="h-4 w-4 text-primary" />
+                  <div className="flex items-center gap-3 w-64">
+                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0 overflow-hidden">
+                      {p.images && p.images[0] ? (
+                        <img src={p.images[0]} alt={p.title} className="w-full h-full object-cover" />
+                      ) : (
+                        <Package className="h-5 w-5 text-primary" />
+                      )}
                     </div>
                     <div>
-                      <p className="font-semibold text-sm">{p.name}</p>
-                      <p className="text-[11px] text-muted-foreground">4 şəkil • 2 variant • SEO hazır</p>
+                      <p className="font-semibold text-sm line-clamp-1">{p.title}</p>
+                      <p className="text-[11px] text-muted-foreground line-clamp-1">{p.images?.length || 0} şəkil</p>
                     </div>
                   </div>
                 </td>
-                <td className="p-4 text-muted-foreground">{p.sku}</td>
-                <td className="p-4">{p.cat}</td>
-                <td className="p-4 font-semibold">AZN {p.price.toFixed(2)}</td>
+                <td className="p-4">{p.category}</td>
+                <td className="p-4 font-semibold">AZN {p.price?.toFixed(2)}</td>
                 <td className="p-4"><Badge className={`${stockColor(p.stock)} border-0 text-xs`}>{p.stock} ədəd</Badge></td>
-                <td className="p-4"><Badge className={`${statusColor[p.status] || ''} border-0 text-xs`}>{p.status}</Badge></td>
                 <td className="p-4">
-                  <Link to={`/admin/mehsullar/${p.id}`}>
+                  <Badge className={`${p.stock > 0 ? statusColor['Aktiv'] : statusColor['Tükənir']} border-0 text-xs`}>
+                    {p.stock > 0 ? 'Aktiv' : 'Tükənir'}
+                  </Badge>
+                </td>
+                <td className="p-4">
+                  <Link to={`/admin/mehsullar/${p._id}`}>
                     <Button size="sm" variant="outline" className="text-xs h-7 text-primary border-primary/30">Redaktə</Button>
                   </Link>
                 </td>
               </tr>
             ))}
+            {products.length === 0 && !loading && (
+              <tr>
+                <td colSpan={6} className="text-center p-8 text-muted-foreground">Heç bir məhsul tapılmadı. Yeni məhsul əlavə edin.</td>
+              </tr>
+            )}
           </tbody>
         </table>
       </div>
@@ -122,9 +136,9 @@ const AdminProducts = () => (
           <p className="text-xs text-muted-foreground mb-3">Minimum limitdən aşağı düşən SKU-lar</p>
           <div className="space-y-2">
             {lowStockItems.map((item) => (
-              <div key={item.sku} className="flex items-center justify-between text-sm">
-                <span className="font-medium">{item.sku}</span>
-                <Badge className={`${item.color} bg-opacity-10 border-0 text-xs`}>{item.count}</Badge>
+              <div key={item._id} className="flex items-center justify-between text-sm">
+                <span className="font-medium">{item.sku || 'N/A'}</span>
+                <Badge className={`${stockColor(item.stock)} bg-opacity-20 border-0 text-xs`}>{item.stock} ədəd</Badge>
               </div>
             ))}
           </div>
@@ -142,6 +156,7 @@ const AdminProducts = () => (
       </div>
     </div>
   </AdminLayout>
-);
+  );
+};
 
 export default AdminProducts;

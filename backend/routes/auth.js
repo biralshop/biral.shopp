@@ -41,7 +41,7 @@ router.post('/register', async (req, res) => {
     });
     await user.save();
 
-    // Generate OTP and send email
+    // Generate OTP and send email (async, non-blocking)
     const code = generateOTP();
     await OTP.create({
       email: email.toLowerCase(),
@@ -50,7 +50,7 @@ router.post('/register', async (req, res) => {
       expiresAt: new Date(Date.now() + 10 * 60 * 1000), // 10 min
     });
 
-    await sendVerificationEmail(email, code);
+    sendVerificationEmail(email, code).catch(err => console.error('Email send failed:', err));
 
     // Generate token (limited until verified)
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '30d' });
@@ -151,24 +151,10 @@ router.post('/login', async (req, res) => {
 
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '30d' });
 
-    // If email not verified, send new OTP and require verification
+    // Mark email as verified if they successfully entered password (auto-verification)
     if (!user.emailVerified) {
-      const code = generateOTP();
-      await OTP.deleteMany({ email: user.email, type: 'email_verify' });
-      await OTP.create({
-        email: user.email,
-        code,
-        type: 'email_verify',
-        expiresAt: new Date(Date.now() + 10 * 60 * 1000),
-      });
-      await sendVerificationEmail(user.email, code);
-
-      return res.json({
-        token,
-        user: user.toSafeJSON(),
-        requiresVerification: true,
-        message: 'Email təsdiqlənməyib. Yeni kod göndərildi.',
-      });
+      user.emailVerified = true;
+      await user.save();
     }
 
     res.json({

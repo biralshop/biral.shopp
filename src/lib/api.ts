@@ -140,3 +140,69 @@ export const userAPI = {
     return handleResponse(res);
   },
 };
+
+// ─── ADMIN ──────────────────────────────────────
+export const adminAPI = {
+  // Upload
+  uploadImage: async (file: File) => {
+    const formData = new FormData();
+    formData.append('image', file);
+    const token = getToken();
+    const h: HeadersInit = {};
+    if (token) h['Authorization'] = `Bearer ${token}`;
+    const res = await fetch(`${API_URL}/upload`, { method: 'POST', headers: h, body: formData });
+    return handleResponse(res);
+  },
+
+  // Products
+  createProduct: async (body: Record<string, unknown>) => {
+    const res = await fetch(`${API_URL}/products`, { method: 'POST', headers: headers(true), body: JSON.stringify(body) });
+    return handleResponse(res);
+  },
+  updateProduct: async (id: string, body: Record<string, unknown>) => {
+    const res = await fetch(`${API_URL}/products/${id}`, { method: 'PUT', headers: headers(true), body: JSON.stringify(body) });
+    return handleResponse(res);
+  },
+  deleteProduct: async (id: string) => {
+    const res = await fetch(`${API_URL}/products/${id}`, { method: 'DELETE', headers: headers(true) });
+    return handleResponse(res);
+  },
+
+  // Orders
+  getAllOrders: async () => {
+    const res = await fetch(`${API_URL}/orders/admin/all`, { headers: headers(true) });
+    return handleResponse(res);
+  },
+  updateOrderStatus: async (id: string, status: string) => {
+    const res = await fetch(`${API_URL}/orders/${id}/status`, { method: 'PUT', headers: headers(true), body: JSON.stringify({ status }) });
+    return handleResponse(res);
+  },
+
+  // Categories
+  getAllCategories: async () => {
+    const res = await fetch(`${API_URL}/categories`);
+    return handleResponse(res);
+  },
+  createCategory: async (body: Record<string, unknown>) => {
+    const res = await fetch(`${API_URL}/categories`, { method: 'POST', headers: headers(true), body: JSON.stringify(body) });
+    return handleResponse(res);
+  },
+  updateCategory: async (id: string, body: Record<string, unknown>) => {
+    const res = await fetch(`${API_URL}/categories/${id}`, { method: 'PUT', headers: headers(true), body: JSON.stringify(body) });
+    return handleResponse(res);
+  },
+  deleteCategory: async (id: string) => {
+    const res = await fetch(`${API_URL}/categories/${id}`, { method: 'DELETE', headers: headers(true) });
+    return handleResponse(res);
+  },
+
+  // Users
+  getAllUsers: async () => {
+    const res = await fetch(`${API_URL}/users/admin/all`, { headers: headers(true) });
+    return handleResponse(res);
+  },
+  updateUserStatus: async (id: string, status: string) => {
+    const res = await fetch(`${API_URL}/users/admin/${id}/status`, { method: 'PUT', headers: headers(true), body: JSON.stringify({ status }) });
+    return handleResponse(res);
+  },
+};

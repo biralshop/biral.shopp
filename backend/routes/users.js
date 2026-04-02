@@ -159,4 +159,33 @@ router.post('/tickets', auth, async (req, res) => {
   }
 });
 
+// --- ADMIN ---
+
+// GET /api/users/admin/all
+router.get('/admin/all', require('../middleware/auth').adminAuth, async (req, res) => {
+  try {
+    const users = await User.find().select('-password').sort({ createdAt: -1 });
+    res.json({ users });
+  } catch (err) {
+    res.status(500).json({ error: 'Server xətası' });
+  }
+});
+
+// PUT /api/users/admin/:id/status
+router.put('/admin/:id/status', require('../middleware/auth').adminAuth, async (req, res) => {
+  try {
+    const { status } = req.body;
+    const updateStats = {};
+    if (status === 'blocked') updateStats.isBlocked = true;
+    else if (status === 'active') updateStats.isBlocked = false;
+
+    const user = await User.findByIdAndUpdate(req.params.id, updateStats, { new: true }).select('-password');
+    if (!user) return res.status(404).json({ error: 'İstifadəçi tapılmadı' });
+    
+    res.json({ user, status: user.isBlocked ? 'blocked' : 'active' });
+  } catch (err) {
+    res.status(500).json({ error: 'Server xətası' });
+  }
+});
+
 module.exports = router;
