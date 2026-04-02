@@ -29,7 +29,9 @@ const AdminProductEditor = () => {
     rating: 5,
     stock: 0,
     images: [] as string[],
-    badge: ''
+    badge: '',
+    shippingPrice: 0,
+    features: ''
   });
 
   const [imageUrlInput, setImageUrlInput] = useState('');
@@ -49,7 +51,9 @@ const AdminProductEditor = () => {
             rating: res.product.rating || 5,
             stock: res.product.stock || 0,
             images: res.product.images || [],
-            badge: res.product.badge || ''
+            badge: res.product.badge || '',
+            shippingPrice: res.product.shippingPrice || 0,
+            features: (res.product.features || []).join('\n')
           });
         })
         .catch(console.error)
@@ -61,7 +65,7 @@ const AdminProductEditor = () => {
     const { name, value } = e.target;
     setFormData(prev => ({ 
       ...prev, 
-      [name]: name === 'price' || name === 'oldPrice' || name === 'stock' || name === 'rating' ? Number(value) : value 
+      [name]: ['price', 'oldPrice', 'stock', 'rating', 'shippingPrice'].includes(name) ? Number(value) : value 
     }));
   };
 
@@ -100,7 +104,8 @@ const AdminProductEditor = () => {
       // Generate slug if empty
       const payload = {
         ...formData,
-        categorySlug: formData.categorySlug || formData.category.toLowerCase().replace(/[^a-z0-9]/g, '-')
+        categorySlug: formData.categorySlug || formData.category.toLowerCase().replace(/[^a-z0-9]/g, '-'),
+        features: formData.features.split('\n').map(f => f.trim()).filter(f => f !== ''),
       };
 
       if (isNew) {
@@ -183,10 +188,21 @@ const AdminProductEditor = () => {
                 <Input name="categorySlug" value={formData.categorySlug} onChange={handleChange} placeholder="Məs: metbex" />
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
               <div><Label className="text-xs">Qiymət (AZN)</Label><Input type="number" step="0.01" name="price" value={formData.price} onChange={handleChange} /></div>
               <div><Label className="text-xs">Köhnə Qiymət (AZN)</Label><Input type="number" step="0.01" name="oldPrice" value={formData.oldPrice} onChange={handleChange} /></div>
               <div><Label className="text-xs">Stok Miqdarı</Label><Input type="number" name="stock" value={formData.stock} onChange={handleChange} /></div>
+              <div><Label className="text-xs">Çatdırılma (AZN)</Label><Input type="number" step="0.01" name="shippingPrice" value={formData.shippingPrice} onChange={handleChange} /></div>
+            </div>
+            <div className="mt-4">
+              <Label className="text-xs">Xüsusiyyətlər (Hər sətrə bir xüsusiyyət yazın)</Label>
+              <Textarea 
+                name="features" 
+                value={formData.features} 
+                onChange={handleChange} 
+                placeholder="Məs:&#10;Material: Paslanmaz polad&#10;Ölçü: 20x30 sm&#10;Rəng: Qara" 
+                rows={4} 
+              />
             </div>
           </div>
         </div>

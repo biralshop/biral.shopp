@@ -15,6 +15,7 @@ const productSchema = new mongoose.Schema({
   inStock: { type: Boolean, default: true },
   variants: [{ type: String }],
   features: [{ type: String }],
+  shippingPrice: { type: Number, default: 0 },
 }, { timestamps: true });
 
 productSchema.index({ title: 'text', description: 'text', category: 'text' });
