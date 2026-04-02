@@ -5,4 +5,4 @@ Disallow: /admin/
 Disallow: /hesab/
 Disallow: /sifaris-ugurlu/
 
-Sitemap: https://biralstore.az/sitemap.xml
+Sitemap: https://biral.store/sitemap.xml

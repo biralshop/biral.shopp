@@ -101,7 +101,7 @@ const ProductDetail = () => {
     "sku": pid,
     "offers": {
       "@type": "Offer",
-      "url": "https://biralstore.az/mehsul/" + pid,
+      "url": "https://biral.store/mehsul/" + pid,
       "priceCurrency": "AZN",
       "price": product.price,
       "itemCondition": "https://schema.org/NewCondition",

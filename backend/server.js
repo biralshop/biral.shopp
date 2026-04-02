@@ -58,7 +58,7 @@ app.get('/sitemap.xml', async (req, res) => {
       Category.find({ isActive: true }).select('slug updatedAt')
     ]);
 
-    const baseUrl = 'https://biralstore.az';
+    const baseUrl = 'https://biral.store';
     
     let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
