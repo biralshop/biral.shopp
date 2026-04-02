@@ -3,10 +3,10 @@ import AdminLayout from '@/components/admin/AdminLayout';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { Trash2 } from 'lucide-react';
+import { Trash2, AlertCircle } from 'lucide-react';
 import { adminAPI } from '@/lib/api';
 
-const segments = ['Hamısı', 'Aktiv', 'Bloklanmış'];
+const segments = ['Hamısı', 'Aktiv', 'Bloklanmış', 'Təsdiqlənməmiş'];
 
 const AdminCustomers = () => {
   const [users, setUsers] = useState<any[]>([]);
@@ -49,6 +49,7 @@ const AdminCustomers = () => {
   const filteredUsers = users.filter(u => {
     if (filter === 'Aktiv') return !u.isBlocked;
     if (filter === 'Bloklanmış') return u.isBlocked;
+    if (filter === 'Təsdiqlənməmiş') return u.phone && !u.phoneVerified;
     return true; // Hamısı
   });
 
@@ -79,7 +80,7 @@ const AdminCustomers = () => {
             </Button>
           ))}
         </div>
-        <div className="space-y-2">
+        <div className="space-y-2 max-h-[600px] overflow-y-auto pr-2">
           {filteredUsers.map((u) => {
             const name = `${u.firstName || ''} ${u.lastName || ''}`.trim() || 'Bilinməyən İstifadəçi';
             const initials = name.substring(0, 2).toUpperCase();
@@ -92,7 +93,20 @@ const AdminCustomers = () => {
               </Avatar>
               <div className="flex-1 min-w-[200px]">
                 <p className="text-sm font-semibold">{name}</p>
-                <p className="text-xs text-muted-foreground">{u.email} {u.phone ? `• ${u.phone}` : ''}</p>
+                <div className="text-xs text-muted-foreground flex items-center gap-1 mt-0.5">
+                  <span>{u.email}</span>
+                  {u.phone && (
+                    <span className="flex items-center gap-1">
+                      <span className="mx-1">•</span>
+                      {u.phone}
+                      {!u.phoneVerified && (
+                        <span title="Nömrə təsdiqlənməyib">
+                          <AlertCircle className="h-3.5 w-3.5 text-amber-500 ml-1" />
+                        </span>
+                      )}
+                    </span>
+                  )}
+                </div>
               </div>
               
               <div className="flex items-center gap-2">
@@ -121,12 +135,12 @@ const AdminCustomers = () => {
           )})}
           
           {filteredUsers.length === 0 && !loading && (
-             <div className="text-center p-8 text-muted-foreground text-sm border border-dashed rounded-lg">İstifadəçi tapılmadı</div>
+             <div className="p-8 text-center text-muted-foreground">İstifadəçi tapılmadı.</div>
           )}
         </div>
       </div>
 
-      {/* Side panels */}
+      {/* Analytics side panel */}
       <div className="space-y-4">
         <div className="bg-white rounded-xl border border-border p-5 shadow-sm border-l-4 border-l-primary">
           <h3 className="font-bold mb-1">Sistem İdarəetməsi</h3>
