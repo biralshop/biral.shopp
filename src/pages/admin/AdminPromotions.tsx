@@ -36,6 +36,7 @@ const AdminPromotions = () => {
   const [campaigns, setCampaigns] = useState(initialCampaigns);
   const [campaignFilter, setCampaignFilter] = useState('Hamısı');
   const [showNewCampaignForm, setShowNewCampaignForm] = useState(false);
+  const [editingCampId, setEditingCampId] = useState<number | null>(null);
   
   const [newCampName, setNewCampName] = useState('');
   const [newCampType, setNewCampType] = useState('Kupon');
@@ -85,20 +86,38 @@ const AdminPromotions = () => {
   };
 
   // Campaign handlers
+  const handleEditClick = (c: any) => {
+    setEditingCampId(c.id);
+    setNewCampName(c.name);
+    setNewCampType(c.type);
+    setNewCampScope(c.scope);
+    setNewCampValue(c.value);
+    setShowNewCampaignForm(true);
+  };
+
   const handleAddCampaign = () => {
     if (!newCampName || !newCampScope || !newCampValue) {
       alert("Zəhmət olmasa bütün sahələri doldurun!");
       return;
     }
-    const newId = campaigns.length > 0 ? Math.max(...campaigns.map(c => c.id)) + 1 : 1;
-    setCampaigns([{ 
-      id: newId, 
-      name: newCampName, 
-      type: newCampType, 
-      scope: newCampScope, 
-      value: newCampValue, 
-      status: 'Aktiv' 
-    }, ...campaigns]);
+
+    if (editingCampId !== null) {
+      setCampaigns(campaigns.map(c => c.id === editingCampId ? {
+        ...c, name: newCampName, type: newCampType, scope: newCampScope, value: newCampValue
+      } : c));
+      setEditingCampId(null);
+    } else {
+      const newId = campaigns.length > 0 ? Math.max(...campaigns.map(c => c.id)) + 1 : 1;
+      setCampaigns([{ 
+        id: newId, 
+        name: newCampName, 
+        type: newCampType, 
+        scope: newCampScope, 
+        value: newCampValue, 
+        status: 'Aktiv' 
+      }, ...campaigns]);
+    }
+    
     setNewCampName('');
     setNewCampType('Kupon');
     setNewCampScope('');
@@ -110,6 +129,15 @@ const AdminPromotions = () => {
     if(window.confirm('Bu kampaniyanı silmək istədiyinizə əminsiniz?')) {
       setCampaigns(campaigns.filter(c => c.id !== id));
     }
+  };
+
+  const handleCancelCampaignForm = () => {
+    setEditingCampId(null);
+    setNewCampName('');
+    setNewCampType('Kupon');
+    setNewCampScope('');
+    setNewCampValue('');
+    setShowNewCampaignForm(false);
   };
 
   const filteredCampaigns = campaigns.filter(c => campaignFilter === 'Hamısı' || c.type === campaignFilter);
@@ -165,7 +193,7 @@ const AdminPromotions = () => {
           
           {showNewCampaignForm && (
             <div className="p-4 bg-gray-50 border-b border-border">
-              <h3 className="text-sm font-semibold mb-3">Yeni Kampaniya Yarat</h3>
+              <h3 className="text-sm font-semibold mb-3">{editingCampId !== null ? 'Kampaniyanı Redaktə Et' : 'Yeni Kampaniya Yarat'}</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-3">
                 <div>
                   <p className="text-[10px] text-muted-foreground mb-1 shadow-none">Ad/Kod</p>
@@ -194,7 +222,7 @@ const AdminPromotions = () => {
                 </div>
               </div>
               <div className="flex gap-2 justify-end">
-                <Button size="sm" variant="ghost" className="h-7 text-xs" onClick={() => setShowNewCampaignForm(false)}>Ləğv et</Button>
+                <Button size="sm" variant="ghost" className="h-7 text-xs" onClick={handleCancelCampaignForm}>Ləğv et</Button>
                 <Button size="sm" className="h-7 text-xs" onClick={handleAddCampaign}>Yadda Saxla</Button>
               </div>
             </div>
@@ -221,7 +249,7 @@ const AdminPromotions = () => {
                     <td className="p-4">{c.value}</td>
                     <td className="p-4"><Badge className={`${statusColor(c.status)} border-0 text-xs`}>{c.status}</Badge></td>
                     <td className="p-4 flex gap-1 justify-end">
-                      <Button size="sm" variant="outline" className="text-xs h-7 text-primary border-primary/30">Redaktə</Button>
+                      <Button size="sm" variant="outline" className="text-xs h-7 text-primary border-primary/30" onClick={() => handleEditClick(c)}>Redaktə</Button>
                       <Button size="icon" variant="ghost" className="h-7 w-7 text-red-500 hover:bg-red-50" onClick={() => handleDeleteCampaign(c.id)}>
                         <Trash2 className="h-3.5 w-3.5" />
                       </Button>
@@ -237,11 +265,11 @@ const AdminPromotions = () => {
             </table>
           </div>
           <div className="p-4 flex gap-2">
-            <Button size="sm" className="bg-primary text-xs" onClick={() => setShowNewCampaignForm(true)}>
+            <Button size="sm" className="bg-primary text-xs" onClick={() => { setEditingCampId(null); setShowNewCampaignForm(true); }}>
               <Plus className="h-3.5 w-3.5 mr-1" />
               Yeni kampaniya
             </Button>
-            <Button size="sm" variant="outline" className="text-xs">Kupon bulk import</Button>
+            <Button size="sm" variant="outline" className="text-xs" onClick={() => alert('Tezliklə: Excel və ya CSV faylı vasitəsilə eyni anda 1000-lərlə unikal fərdi kuponların sistemə yüklənməsi xüsusiyyəti.')}>Kupon bulk import</Button>
           </div>
         </div>
       </div>
