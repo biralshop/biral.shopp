@@ -16,6 +16,7 @@ const productSchema = new mongoose.Schema({
   inStock: { type: Boolean, default: true },
   variants: [{ type: String }],
   features: [{ type: String }],
+  weight: { type: Number, default: 0.5 }, // kg
   shippingPrice: { type: Number, default: 0 },
 }, { timestamps: true });
 

@@ -27,7 +27,22 @@ const CheckoutPage = () => {
     name: '', phone: '', city: 'Bakı', postal: '', address: '', notes: '',
   });
 
-  const shipping = deliveryMethod === 'express' ? 7.99 : totalPrice >= 50 ? 0 : 4.99;
+  const totalWeight = items.reduce((acc, { product, quantity }) => acc + ((product.weight || 0.5) * quantity), 0);
+
+  const calculatePostalFee = (weightInKg: number) => {
+    let base = 0;
+    if (weightInKg <= 1) base = 2.00;
+    else if (weightInKg <= 3) base = 3.00;
+    else if (weightInKg <= 5) base = 4.00;
+    else if (weightInKg <= 10) base = 6.00;
+    else base = 6.00 + Math.ceil(weightInKg - 10) * 0.80;
+    return base + 0.50; // 0.50 AZN yuvarlaqlaşdırma margin
+  };
+
+  const bakuFee = totalPrice >= 50 ? 0 : 5.00;
+  const postFee = calculatePostalFee(totalWeight);
+
+  const shipping = deliveryMethod === 'baku' ? bakuFee : postFee;
   const finalTotal = totalPrice - promoDiscount + shipping;
 
   const steps = [
@@ -165,8 +180,8 @@ const CheckoutPage = () => {
                     {errors.phone && <p className="text-xs text-destructive mt-1 flex items-center gap-1"><AlertCircle className="h-3 w-3" />{errors.phone}</p>}
                   </div>
                   <div>
-                    <Label htmlFor="city">Şəhər *</Label>
-                    <Input id="city" placeholder="Bakı" value={form.city} onChange={(e) => updateForm('city', e.target.value)} className={`mt-1 ${errors.city ? 'border-destructive' : ''}`} />
+                    <Label htmlFor="city">Şəhər / Rayon *</Label>
+                    <Input id="city" placeholder="Məs: Bakı, Gəncə, Quba" value={form.city} onChange={(e) => updateForm('city', e.target.value)} className={`mt-1 ${errors.city ? 'border-destructive' : ''}`} />
                     {errors.city && <p className="text-xs text-destructive mt-1 flex items-center gap-1"><AlertCircle className="h-3 w-3" />{errors.city}</p>}
                   </div>
                   <div>
@@ -190,20 +205,20 @@ const CheckoutPage = () => {
                 <h2 className="text-lg font-bold mb-4">Çatdırılma üsulu</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {[
-                    { key: 'standard', label: 'Standart çatdırılma', desc: '1-2 iş günü', price: totalPrice >= 50 ? 'Pulsuz' : '4.99₼' },
-                    { key: 'express', label: 'Ekspres çatdırılma', desc: 'Eyni gün', price: '7.99₼' },
+                    { key: 'baku', label: 'Qapıya çatdırılma (Bakı)', desc: '1-2 iş günü', price: bakuFee === 0 ? 'Pulsuz' : `${bakuFee.toFixed(2)}₼` },
+                    { key: 'post', label: 'Bölgəyə çatdırılma (Poçt)', desc: `Ümumi çəki: ${totalWeight} kq`, price: `${postFee.toFixed(2)}₼` },
                   ].map((m) => (
                     <button
                       key={m.key}
                       type="button"
                       onClick={() => setDeliveryMethod(m.key)}
                       className={`text-left rounded-lg border-2 p-4 transition-colors ${
-                        deliveryMethod === m.key ? 'border-primary bg-primary/5' : 'border-border hover:border-primary/30'
+                        deliveryMethod === m.key ? 'border-primary bg-primary/10' : 'border-border hover:border-primary/30'
                       }`}
                     >
                       <div className="flex justify-between">
                         <span className="font-semibold text-sm">{m.label}</span>
-                        <span className="text-sm font-medium">{m.price}</span>
+                        <span className="text-sm font-medium text-primary">{m.price}</span>
                       </div>
                       <p className="text-xs text-muted-foreground mt-1">{m.desc}</p>
                     </button>

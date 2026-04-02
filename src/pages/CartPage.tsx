@@ -17,10 +17,9 @@ const CartPage = () => {
   const [promoDiscount, setPromoDiscount] = useState(0);
   const [promoApplied, setPromoApplied] = useState('');
 
-  const shipping = totalPrice >= 50 ? 0 : 4.99;
-  const finalTotal = totalPrice - promoDiscount + shipping;
+  const shipping = 0; // Hesablanır in checkout
+  const finalTotal = totalPrice - promoDiscount;
   const [upsellProducts, setUpsellProducts] = useState<Product[]>([]);
-  const freeShippingProgress = Math.min((totalPrice / 50) * 100, 100);
 
   useEffect(() => {
     productsAPI.getAll({ limit: '4' })
@@ -87,18 +86,7 @@ const CartPage = () => {
           ))}
         </div>
 
-        {/* Free shipping bar */}
-        {totalPrice < 50 && (
-          <div className="bg-card rounded-lg border p-4 mb-6">
-            <div className="flex items-center gap-2 text-sm">
-              <Truck className="h-4 w-4 text-primary" />
-              <span>Pulsuz çatdırılma üçün daha <strong>{(50 - totalPrice).toFixed(2)}₼</strong> əlavə edin</span>
-            </div>
-            <div className="w-full bg-secondary rounded-full h-2 mt-2">
-              <div className="bg-primary h-2 rounded-full transition-all" style={{ width: `${freeShippingProgress}%` }} />
-            </div>
-          </div>
-        )}
+
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Cart items */}
@@ -174,7 +162,7 @@ const CartPage = () => {
                 {promoDiscount > 0 && (
                   <div className="flex justify-between text-primary"><span>Endirim</span><span>-{promoDiscount.toFixed(2)}₼</span></div>
                 )}
-                <div className="flex justify-between"><span className="text-muted-foreground">Çatdırılma</span><span>{shipping === 0 ? 'Pulsuz' : `${shipping}₼`}</span></div>
+                <div className="flex justify-between"><span className="text-muted-foreground">Çatdırılma</span><span className="text-muted-foreground text-xs font-medium pt-1">Ödəniş səhifəsində hesablanacaq</span></div>
               </div>
               <div className="border-t pt-3 flex justify-between font-bold text-lg">
                 <span>Yekun</span>

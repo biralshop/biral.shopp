@@ -15,6 +15,7 @@ export interface Product {
   inStock?: boolean;
   features?: string[];
   variants?: string[];
+  weight?: number;
 }
 
 export const getProductId = (p: Product): string => p._id || p.id || '';

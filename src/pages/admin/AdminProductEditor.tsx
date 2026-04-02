@@ -30,7 +30,7 @@ const AdminProductEditor = () => {
     stock: 0,
     images: [] as string[],
     badge: '',
-    shippingPrice: 0,
+    weight: 0.5,
     features: ''
   });
 
@@ -50,9 +50,9 @@ const AdminProductEditor = () => {
             oldPrice: res.product.oldPrice || 0,
             rating: res.product.rating || 5,
             stock: res.product.stock || 0,
-            images: res.product.images || [],
+            images: res.product.images || (res.product.image ? [res.product.image] : []),
             badge: res.product.badge || '',
-            shippingPrice: res.product.shippingPrice || 0,
+            weight: res.product.weight || 0.5,
             features: (res.product.features || []).join('\n')
           });
         })
@@ -65,7 +65,7 @@ const AdminProductEditor = () => {
     const { name, value } = e.target;
     setFormData(prev => ({ 
       ...prev, 
-      [name]: ['price', 'oldPrice', 'stock', 'rating', 'shippingPrice'].includes(name) ? Number(value) : value 
+      [name]: ['price', 'oldPrice', 'stock', 'rating', 'weight'].includes(name) ? Number(value) : value 
     }));
   };
 
@@ -193,7 +193,7 @@ const AdminProductEditor = () => {
               <div><Label className="text-xs">Qiymət (AZN)</Label><Input type="number" step="0.01" name="price" value={formData.price} onChange={handleChange} /></div>
               <div><Label className="text-xs">Köhnə Qiymət (AZN)</Label><Input type="number" step="0.01" name="oldPrice" value={formData.oldPrice} onChange={handleChange} /></div>
               <div><Label className="text-xs">Stok Miqdarı</Label><Input type="number" name="stock" value={formData.stock} onChange={handleChange} /></div>
-              <div><Label className="text-xs">Çatdırılma (AZN)</Label><Input type="number" step="0.01" name="shippingPrice" value={formData.shippingPrice} onChange={handleChange} /></div>
+              <div><Label className="text-xs">Çəki (kq) - Poçt üçün</Label><Input type="number" step="0.01" name="weight" value={formData.weight} onChange={handleChange} /></div>
             </div>
             <div className="mt-4">
               <Label className="text-xs">Xüsusiyyətlər (Hər sətrə bir xüsusiyyət yazın)</Label>
