@@ -102,6 +102,51 @@ app.get('/sitemap.xml', async (req, res) => {
   }
 });
 
+// Google Merchant Center (Shopping) Feed Generator
+app.get('/google-shopping-feed.xml', async (req, res) => {
+  try {
+    const Product = require('./models/Product');
+    const products = await Product.find({ active: true });
+    
+    const baseUrl = 'https://biral.store';
+    
+    let xml = `<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+  <channel>
+    <title>BiralStore Az</title>
+    <link>${baseUrl}</link>
+    <description>BiralStore - Praktik aça, ev, maşın məhsulları</description>`;
+
+    products.forEach(prod => {
+      const title = (prod.title || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      const desc = (prod.description || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').substring(0, 4900);
+      
+      xml += `
+    <item>
+      <g:id>${prod.slug}</g:id>
+      <g:title>${title}</g:title>
+      <g:description>${desc}</g:description>
+      <g:link>${baseUrl}/mehsul/${prod.slug}</g:link>
+      <g:image_link>${prod.image}</g:image_link>
+      <g:availability>${prod.inStock ? 'in_stock' : 'out_of_stock'}</g:availability>
+      <g:price>${prod.price} AZN</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>BiralStore</g:brand>
+    </item>`;
+    });
+
+    xml += `
+  </channel>
+</rss>`;
+
+    res.header('Content-Type', 'application/xml');
+    res.send(xml);
+  } catch (err) {
+    console.error('Google Feed Error:', err);
+    res.status(500).end();
+  }
+});
+
 // Error handler
 app.use((err, req, res, next) => {
   if (err.type === 'entity.parse.failed') {
