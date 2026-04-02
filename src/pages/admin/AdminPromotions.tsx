@@ -1,10 +1,12 @@
+import React, { useEffect, useState } from 'react';
 import AdminLayout from '@/components/admin/AdminLayout';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Switch } from '@/components/ui/switch';
-import { TrendingUp, Gift, Tag, Percent } from 'lucide-react';
+import { TrendingUp, Gift, Tag, Percent, Search } from 'lucide-react';
+import { adminAPI } from '@/lib/api';
 
 const kpis = [
   { label: 'Aktiv kampaniya', value: '12', change: '+3', icon: Tag, color: 'bg-primary' },
@@ -35,7 +37,27 @@ const giftRules = [
   { name: 'Ad günü ayı', gift: 'AZN 10 kupon', status: 'Aktiv' },
 ];
 
-const AdminPromotions = () => (
+const AdminPromotions = () => {
+  const [users, setUsers] = useState<any[]>([]);
+  const [searchPhone, setSearchPhone] = useState('');
+  const [selectedUser, setSelectedUser] = useState<any>(null);
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  useEffect(() => {
+    adminAPI.getAllUsers().then(res => setUsers(res.users || [])).catch(console.error);
+  }, []);
+
+  const handleApplyBenefit = () => {
+    if (!selectedUser) {
+      alert('Zəhmət olmasa bir istifadəçi seçin');
+      return;
+    }
+    alert(`${selectedUser.firstName} ${selectedUser.lastName} (${selectedUser.phone || selectedUser.email}) üçün fərdi kampaniya tətbiq edildi!`);
+    setSearchPhone('');
+    setSelectedUser(null);
+  };
+
+  return (
   <AdminLayout>
     <div className="mb-6">
       <h1 className="text-2xl font-bold">Kampaniyalar, kuponlar, hədiyyə qaydaları</h1>
@@ -103,10 +125,65 @@ const AdminPromotions = () => (
         <div className="bg-white rounded-xl border border-border p-5 shadow-sm">
           <h3 className="font-bold mb-1">Fərdi fayda qurucusu</h3>
           <p className="text-xs text-muted-foreground mb-3">Müəyyən istifadəçiyə və ya seqmentə endirim/hədiyyə ver</p>
-          <div className="grid grid-cols-2 gap-3 mb-3">
-            <Input placeholder="Müştəri axtar: 050..." className="text-xs" />
-            <Select defaultValue="vip"><SelectTrigger className="text-xs"><SelectValue /></SelectTrigger><SelectContent><SelectItem value="vip">VIP segment</SelectItem></SelectContent></Select>
+          
+          <div className="grid grid-cols-1 gap-3 mb-3">
+            <div className="relative">
+              <Search className="absolute left-2.5 top-2 h-4 w-4 text-muted-foreground" />
+              <Input 
+                placeholder="Müştəri axtar (Nömrə və ya Adla)..." 
+                className="text-xs pl-8" 
+                value={searchPhone}
+                onFocus={() => setShowDropdown(true)}
+                onBlur={() => setTimeout(() => setShowDropdown(false), 200)}
+                onChange={(e) => {
+                  setSearchPhone(e.target.value);
+                  setShowDropdown(true);
+                  if (selectedUser) setSelectedUser(null);
+                }}
+              />
+              {showDropdown && searchPhone.trim().length > 0 && (
+                <div className="absolute z-20 w-full mt-1 bg-white border rounded-md shadow-lg max-h-48 overflow-y-auto">
+                  {users.filter(u => 
+                    (u.phone?.replace(/[^0-9]/g, '').includes(searchPhone.replace(/[^0-9]/g, '')) || false) || 
+                    (`${u.firstName} ${u.lastName}`.toLowerCase().includes(searchPhone.toLowerCase()))
+                  ).slice(0, 5).map(u => (
+                    <div 
+                      key={u._id} 
+                      className="px-3 py-2 hover:bg-muted cursor-pointer border-b border-border last:border-0"
+                      onClick={() => {
+                        setSearchPhone(u.phone || u.email);
+                        setSelectedUser(u);
+                        setShowDropdown(false);
+                      }}
+                    >
+                      <p className="text-sm font-medium">{u.firstName} {u.lastName}</p>
+                      <p className="text-xs text-muted-foreground">{u.phone || 'Nömrə yoxdur'} • {u.email}</p>
+                    </div>
+                  ))}
+                  {users.filter(u => 
+                    (u.phone?.replace(/[^0-9]/g, '').includes(searchPhone.replace(/[^0-9]/g, '')) || false) || 
+                    (`${u.firstName} ${u.lastName}`.toLowerCase().includes(searchPhone.toLowerCase()))
+                  ).length === 0 && (
+                    <div className="px-3 py-2 text-xs text-muted-foreground">Müştəri tapılmadı</div>
+                  )}
+                </div>
+              )}
+            </div>
+            
+            {selectedUser && (
+              <div className="bg-primary/10 border border-primary/20 text-primary px-3 py-2 rounded-md text-xs font-medium">
+                Seçilmiş: {selectedUser.firstName} {selectedUser.lastName}
+              </div>
+            )}
+            
+            {!selectedUser && (
+              <Select defaultValue="vip">
+                <SelectTrigger className="text-xs"><SelectValue /></SelectTrigger>
+                <SelectContent><SelectItem value="vip">Ümumi VIP segmentə tətbiq et</SelectItem></SelectContent>
+              </Select>
+            )}
           </div>
+
           <div className="grid grid-cols-3 gap-3 mb-3">
             <div><p className="text-xs text-muted-foreground mb-1">Fayda növü</p><Input defaultValue="Kupon" className="text-xs" /></div>
             <div><p className="text-xs text-muted-foreground mb-1">Dəyər</p><Input defaultValue="15%" className="text-xs" /></div>
@@ -116,7 +193,9 @@ const AdminPromotions = () => (
             <div className="flex items-center justify-between"><span className="text-xs">Yalnız 1 istifadə</span><Switch defaultChecked /></div>
             <div className="flex items-center justify-between"><span className="text-xs">Hesabda göstər</span><Switch defaultChecked /></div>
           </div>
-          <Button size="sm" className="bg-primary text-xs w-full">Müştəriyə tətbiq et</Button>
+          <Button size="sm" className="bg-primary text-xs w-full" onClick={handleApplyBenefit}>
+            Müştəriyə tətbiq et
+          </Button>
         </div>
 
         <div className="bg-white rounded-xl border border-border p-5 shadow-sm">
@@ -137,6 +216,6 @@ const AdminPromotions = () => (
       </div>
     </div>
   </AdminLayout>
-);
+)};
 
 export default AdminPromotions;
