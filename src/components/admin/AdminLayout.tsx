@@ -7,7 +7,7 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import {
   LayoutDashboard, Package, FolderTree, FileText, Megaphone,
   Users, ShoppingCart, Truck, HeadphonesIcon, Palette, Shield,
-  Search, Bell, ExternalLink, ChevronLeft, ChevronRight, Store
+  Search, Bell, ExternalLink, ChevronLeft, ChevronRight, Store, BookOpen
 } from 'lucide-react';
 
 const navItems = [
@@ -15,6 +15,7 @@ const navItems = [
   { key: 'products', label: 'Məhsullar', icon: Package, path: '/admin/mehsullar' },
   { key: 'categories', label: 'Kateqoriya & Menü', icon: FolderTree, path: '/admin/kateqoriyalar' },
   { key: 'pages', label: 'Səhifə Qurucusu', icon: FileText, path: '/admin/sehifeler' },
+  { key: 'articles', label: 'Bloq / Məqalələr', icon: BookOpen, path: '/admin/articles' },
   { key: 'promotions', label: 'Kampaniyalar', icon: Megaphone, path: '/admin/kampaniyalar' },
   { key: 'customers', label: 'Müştərilər', icon: Users, path: '/admin/musteriler' },
   { key: 'orders', label: 'Sifarişlər', icon: ShoppingCart, path: '/admin/sifarisler' },

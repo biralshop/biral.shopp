@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Search, Heart, ShoppingCart, User, Menu, LogOut } from 'lucide-react';
+import { Search, Heart, ShoppingCart, User, Menu, LogOut, GiftIcon, BookOpen } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/contexts/CartContext';
@@ -64,7 +64,15 @@ const Header = () => {
                     {link.label}
                   </Link>
                 ))}
-                <hr className="my-2" />
+                <Link 
+                  to="/blog" 
+                  className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted font-medium transition-colors border border-transparent"
+                >
+                  <BookOpen className="w-5 h-5 text-muted-foreground" />
+                  <span>Faydalı Məqalələr / Bloq</span>
+                </Link>
+
+                <div className="h-px bg-border my-2" />
                 {isAuthenticated ? (
                   <>
                     <Link to="/hesab" className="text-foreground hover:text-primary">Hesabım</Link>
@@ -85,16 +93,13 @@ const Header = () => {
           </Link>
 
           {/* Nav links desktop */}
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 whitespace-nowrap">
-            {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className="text-foreground/80 hover:text-primary text-[15px] font-semibold transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
+          <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">
+            <Link to="/" className="text-foreground/80 hover:text-primary transition-colors">Ana səhifə</Link>
+            <Link to="/kateqoriyalar" className="text-foreground/80 hover:text-primary transition-colors">Kateqoriyalar</Link>
+            <Link to="/kampaniyalar" className="text-foreground/80 hover:text-primary transition-colors flex items-center gap-1">
+              Kampaniyalar <GiftIcon className="w-4 h-4 text-primary animate-pulse" />
+            </Link>
+            <Link to="/blog" className="text-foreground/80 hover:text-primary transition-colors">Faydalı / Bloq</Link>
           </nav>
         </div>
 

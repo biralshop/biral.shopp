@@ -8,15 +8,14 @@ const productRoutes = require('./routes/products');
 const orderRoutes = require('./routes/orders');
 const userRoutes = require('./routes/users');
 const uploadRoutes = require('./routes/upload');
+const articleRoutes = require('./routes/articles');
 
 const app = express();
 
 // Middleware
 app.use(cors({
   origin: function(origin, callback) {
-    // Allow requests with no origin (mobile apps, curl, etc.)
     if (!origin) return callback(null, true);
-    // Allow localhost and any vercel/render/netlify domain
     const allowed = [
       /localhost/,
       /\.vercel\.app$/,
@@ -24,11 +23,12 @@ app.use(cors({
       /\.netlify\.app$/,
       /biralstore/,
       /biral\.shop/,
+      /biral\.store/
     ];
     if (allowed.some(pattern => pattern.test(origin))) {
       return callback(null, true);
     }
-    callback(null, true); // Allow all for now
+    callback(null, true);
   },
   credentials: true,
 }));
@@ -41,6 +41,7 @@ app.use('/api/categories', require('./routes/categories'));
 app.use('/api/orders', orderRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/upload', uploadRoutes);
+app.use('/api/articles', articleRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
@@ -52,10 +53,12 @@ app.get('/sitemap.xml', async (req, res) => {
   try {
     const Product = require('./models/Product');
     const Category = require('./models/Category');
+    const Article = require('./models/Article');
     
-    const [products, categories] = await Promise.all([
+    const [products, categories, articles] = await Promise.all([
       Product.find({ active: true }).select('slug updatedAt'),
-      Category.find({ isActive: true }).select('slug updatedAt')
+      Category.find({ isActive: true }).select('slug updatedAt'),
+      Article.find({ status: 'active' }).select('slug updatedAt')
     ]);
 
     const baseUrl = 'https://biral.store';
@@ -89,6 +92,16 @@ app.get('/sitemap.xml', async (req, res) => {
     <lastmod>${new Date(prod.updatedAt).toISOString()}</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+  </url>`;
+    });
+
+    articles.forEach(art => {
+      xml += `
+  <url>
+    <loc>${baseUrl}/blog/${art.slug}</loc>
+    <lastmod>${new Date(art.updatedAt).toISOString()}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>`;
     });
 

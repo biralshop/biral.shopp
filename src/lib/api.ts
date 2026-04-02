@@ -208,5 +208,29 @@ export const adminAPI = {
   deleteUser: async (id: string) => {
     const res = await fetch(`${API_URL}/users/admin/${id}`, { method: 'DELETE', headers: headers(true) });
     return handleResponse(res);
+  }
+};
+
+export const articlesAPI = {
+  getAll: async (params?: { status?: string, limit?: number }) => {
+    const q = new URLSearchParams(params as any).toString();
+    const res = await fetch(`${API_URL}/articles${q ? `?${q}` : ''}`);
+    return handleResponse(res);
+  },
+  getBySlug: async (slug: string) => {
+    const res = await fetch(`${API_URL}/articles/${slug}`);
+    return handleResponse(res);
+  },
+  create: async (body: Record<string, unknown>) => {
+    const res = await fetch(`${API_URL}/articles`, { method: 'POST', headers: headers(true), body: JSON.stringify(body) });
+    return handleResponse(res);
+  },
+  update: async (id: string, body: Record<string, unknown>) => {
+    const res = await fetch(`${API_URL}/articles/${id}`, { method: 'PUT', headers: headers(true), body: JSON.stringify(body) });
+    return handleResponse(res);
+  },
+  delete: async (id: string) => {
+    const res = await fetch(`${API_URL}/articles/${id}`, { method: 'DELETE', headers: headers(true) });
+    return handleResponse(res);
   },
 };
