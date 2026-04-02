@@ -17,6 +17,9 @@ const productSchema = new mongoose.Schema({
   variants: [{ type: String }],
   features: [{ type: String }],
   weight: { type: Number, default: 0.5 }, // kg
+  width: { type: Number, default: 10 }, // cm
+  length: { type: Number, default: 10 }, // cm
+  height: { type: Number, default: 10 }, // cm
   shippingPrice: { type: Number, default: 0 },
 }, { timestamps: true });
 

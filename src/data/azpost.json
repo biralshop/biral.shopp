@@ -1,0 +1,6284 @@
+[
+  {
+    "region": "Abşeron",
+    "branch": "Abşeron",
+    "zip": "AZ 0100",
+    "label": "Abşeron - Abşeron (AZ 0100)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "1 Sayli",
+    "zip": "AZ 0101",
+    "label": "Abşeron - 1 Sayli (AZ 0101)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "2 Sayli",
+    "zip": "AZ 0102",
+    "label": "Abşeron - 2 Sayli (AZ 0102)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "Aşaği Güzdək",
+    "zip": "AZ 0111",
+    "label": "Abşeron - Aşaği Güzdək (AZ 0111)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "Ceyranbatan",
+    "zip": "AZ 0112",
+    "label": "Abşeron - Ceyranbatan (AZ 0112)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "Fatmayi",
+    "zip": "AZ 0113",
+    "label": "Abşeron - Fatmayi (AZ 0113)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "Güzdək-2",
+    "zip": "AZ 0114",
+    "label": "Abşeron - Güzdək-2 (AZ 0114)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "Hökməli",
+    "zip": "AZ 0115",
+    "label": "Abşeron - Hökməli (AZ 0115)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "Masazir-1",
+    "zip": "AZ 0116",
+    "label": "Abşeron - Masazir-1 (AZ 0116)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "Qobu",
+    "zip": "AZ 0117",
+    "label": "Abşeron - Qobu (AZ 0117)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "Mehdiabad",
+    "zip": "AZ 0118",
+    "label": "Abşeron - Mehdiabad (AZ 0118)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "Novxani",
+    "zip": "AZ 0119",
+    "label": "Abşeron - Novxani (AZ 0119)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "Pirəkəşkül",
+    "zip": "AZ 0120",
+    "label": "Abşeron - Pirəkəşkül (AZ 0120)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "Saray-1pş",
+    "zip": "AZ 0121",
+    "label": "Abşeron - Saray-1pş (AZ 0121)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "Goradil",
+    "zip": "AZ 0122",
+    "label": "Abşeron - Goradil (AZ 0122)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "Masazir-2",
+    "zip": "AZ 0123",
+    "label": "Abşeron - Masazir-2 (AZ 0123)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "Çayli",
+    "zip": "AZ 0124",
+    "label": "Abşeron - Çayli (AZ 0124)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "Məhəmmmədli",
+    "zip": "AZ 0125",
+    "label": "Abşeron - Məhəmmmədli (AZ 0125)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "Digah",
+    "zip": "AZ 0127",
+    "label": "Abşeron - Digah (AZ 0127)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "Saray-2",
+    "zip": "AZ 0128",
+    "label": "Abşeron - Saray-2 (AZ 0128)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "Mexkalon",
+    "zip": "AZ 0129",
+    "label": "Abşeron - Mexkalon (AZ 0129)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "At Yali",
+    "zip": "AZ 0130",
+    "label": "Abşeron - At Yali (AZ 0130)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "Goradil-2",
+    "zip": "AZ 0131",
+    "label": "Abşeron - Goradil-2 (AZ 0131)"
+  },
+  {
+    "region": "Abşeron",
+    "branch": "Müşviqabad",
+    "zip": "AZ 0155",
+    "label": "Abşeron - Müşviqabad (AZ 0155)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Ağcabədi",
+    "zip": "AZ 0400",
+    "label": "Ağcabədi - Ağcabədi (AZ 0400)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "2 Sayli",
+    "zip": "AZ 0402",
+    "label": "Ağcabədi - 2 Sayli (AZ 0402)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "3 Sayli",
+    "zip": "AZ 0403",
+    "label": "Ağcabədi - 3 Sayli (AZ 0403)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "4 Sayli",
+    "zip": "AZ 0404",
+    "label": "Ağcabədi - 4 Sayli (AZ 0404)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Avşar",
+    "zip": "AZ 0411",
+    "label": "Ağcabədi - Avşar (AZ 0411)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Boyad",
+    "zip": "AZ 0412",
+    "label": "Ağcabədi - Boyad (AZ 0412)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Gələbədin",
+    "zip": "AZ 0413",
+    "label": "Ağcabədi - Gələbədin (AZ 0413)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Hacibədəlli",
+    "zip": "AZ 0414",
+    "label": "Ağcabədi - Hacibədəlli (AZ 0414)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Hindarx",
+    "zip": "AZ 0415",
+    "label": "Ağcabədi - Hindarx (AZ 0415)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Hüsülü",
+    "zip": "AZ 0416",
+    "label": "Ağcabədi - Hüsülü (AZ 0416)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Xocavənd",
+    "zip": "AZ 0417",
+    "label": "Ağcabədi - Xocavənd (AZ 0417)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Kəbirli",
+    "zip": "AZ 0418",
+    "label": "Ağcabədi - Kəbirli (AZ 0418)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Kəhrizli",
+    "zip": "AZ 0419",
+    "label": "Ağcabədi - Kəhrizli (AZ 0419)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Qaradolaq",
+    "zip": "AZ 0420",
+    "label": "Ağcabədi - Qaradolaq (AZ 0420)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Qaravəlli",
+    "zip": "AZ 0421",
+    "label": "Ağcabədi - Qaravəlli (AZ 0421)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Yuxari Qiyamadinli",
+    "zip": "AZ 0422",
+    "label": "Ağcabədi - Yuxari Qiyamadinli (AZ 0422)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Minəxorlu",
+    "zip": "AZ 0424",
+    "label": "Ağcabədi - Minəxorlu (AZ 0424)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Muğanli",
+    "zip": "AZ 0425",
+    "label": "Ağcabədi - Muğanli (AZ 0425)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Pərioğullar",
+    "zip": "AZ 0426",
+    "label": "Ağcabədi - Pərioğullar (AZ 0426)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Salmanbəyli",
+    "zip": "AZ 0427",
+    "label": "Ağcabədi - Salmanbəyli (AZ 0427)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Saricali",
+    "zip": "AZ 0428",
+    "label": "Ağcabədi - Saricali (AZ 0428)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Şənlik",
+    "zip": "AZ 0429",
+    "label": "Ağcabədi - Şənlik (AZ 0429)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Təzəkənd",
+    "zip": "AZ 0430",
+    "label": "Ağcabədi - Təzəkənd (AZ 0430)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Yeniqaradolaq",
+    "zip": "AZ 0431",
+    "label": "Ağcabədi - Yeniqaradolaq (AZ 0431)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Aran",
+    "zip": "AZ 0432",
+    "label": "Ağcabədi - Aran (AZ 0432)"
+  },
+  {
+    "region": "Ağcabədi",
+    "branch": "Şərəfxanli",
+    "zip": "AZ 0433",
+    "label": "Ağcabədi - Şərəfxanli (AZ 0433)"
+  },
+  {
+    "region": "Ağdam",
+    "branch": "Ağdam",
+    "zip": "AZ 0200",
+    "label": "Ağdam - Ağdam (AZ 0200)"
+  },
+  {
+    "region": "Ağdam",
+    "branch": "Çəmənli",
+    "zip": "AZ 0216",
+    "label": "Ağdam - Çəmənli (AZ 0216)"
+  },
+  {
+    "region": "Ağdam",
+    "branch": "Əfətli",
+    "zip": "AZ 0217",
+    "label": "Ağdam - Əfətli (AZ 0217)"
+  },
+  {
+    "region": "Ağdam",
+    "branch": "Xindiristan",
+    "zip": "AZ 0227",
+    "label": "Ağdam - Xindiristan (AZ 0227)"
+  },
+  {
+    "region": "Ağdam",
+    "branch": "Qaradağli",
+    "zip": "AZ 0230",
+    "label": "Ağdam - Qaradağli (AZ 0230)"
+  },
+  {
+    "region": "Ağdam",
+    "branch": "Quzanli",
+    "zip": "AZ 0233",
+    "label": "Ağdam - Quzanli (AZ 0233)"
+  },
+  {
+    "region": "Ağdam",
+    "branch": "Mahrizli",
+    "zip": "AZ 0234",
+    "label": "Ağdam - Mahrizli (AZ 0234)"
+  },
+  {
+    "region": "Ağdam",
+    "branch": "Üç Oğlan",
+    "zip": "AZ 0246",
+    "label": "Ağdam - Üç Oğlan (AZ 0246)"
+  },
+  {
+    "region": "Ağdaş",
+    "branch": "Ağdaş",
+    "zip": "AZ 0300",
+    "label": "Ağdaş - Ağdaş (AZ 0300)"
+  },
+  {
+    "region": "Ağdaş",
+    "branch": "1 Sayli",
+    "zip": "AZ 0301",
+    "label": "Ağdaş - 1 Sayli (AZ 0301)"
+  },
+  {
+    "region": "Ağdaş",
+    "branch": "2 Sayli (Maşad)",
+    "zip": "AZ 0302",
+    "label": "Ağdaş - 2 Sayli (Maşad) (AZ 0302)"
+  },
+  {
+    "region": "Ağdaş",
+    "branch": "Abad",
+    "zip": "AZ 0311",
+    "label": "Ağdaş - Abad (AZ 0311)"
+  },
+  {
+    "region": "Ağdaş",
+    "branch": "Şordəhnə",
+    "zip": "AZ 0313",
+    "label": "Ağdaş - Şordəhnə (AZ 0313)"
+  },
+  {
+    "region": "Ağdaş",
+    "branch": "Güvəkənd",
+    "zip": "AZ 0318",
+    "label": "Ağdaş - Güvəkənd (AZ 0318)"
+  },
+  {
+    "region": "Ağdaş",
+    "branch": "Kükəl",
+    "zip": "AZ 0321",
+    "label": "Ağdaş - Kükəl (AZ 0321)"
+  },
+  {
+    "region": "Ağdaş",
+    "branch": "Qolqəti",
+    "zip": "AZ 0324",
+    "label": "Ağdaş - Qolqəti (AZ 0324)"
+  },
+  {
+    "region": "Ağdaş",
+    "branch": "Ləki",
+    "zip": "AZ 0325",
+    "label": "Ağdaş - Ləki (AZ 0325)"
+  },
+  {
+    "region": "Ağdaş",
+    "branch": "Orta Ləki",
+    "zip": "AZ 0327",
+    "label": "Ağdaş - Orta Ləki (AZ 0327)"
+  },
+  {
+    "region": "Ağdaş",
+    "branch": "Pirəzə",
+    "zip": "AZ 0328",
+    "label": "Ağdaş - Pirəzə (AZ 0328)"
+  },
+  {
+    "region": "Ağdaş",
+    "branch": "Dəhnəxəlil",
+    "zip": "AZ 0331",
+    "label": "Ağdaş - Dəhnəxəlil (AZ 0331)"
+  },
+  {
+    "region": "Ağdaş",
+    "branch": "Yenicə",
+    "zip": "AZ 0332",
+    "label": "Ağdaş - Yenicə (AZ 0332)"
+  },
+  {
+    "region": "Ağdaş",
+    "branch": "Yuxari Qəsil",
+    "zip": "AZ 0333",
+    "label": "Ağdaş - Yuxari Qəsil (AZ 0333)"
+  },
+  {
+    "region": "Ağdaş",
+    "branch": "Ərəb",
+    "zip": "AZ 0340",
+    "label": "Ağdaş - Ərəb (AZ 0340)"
+  },
+  {
+    "region": "Ağstafa",
+    "branch": "Ağstafa",
+    "zip": "AZ 0500",
+    "label": "Ağstafa - Ağstafa (AZ 0500)"
+  },
+  {
+    "region": "Ağstafa",
+    "branch": "Ağstafa Vağzal",
+    "zip": "AZ 0511",
+    "label": "Ağstafa - Ağstafa Vağzal (AZ 0511)"
+  },
+  {
+    "region": "Ağstafa",
+    "branch": "Aşaği Göycəli",
+    "zip": "AZ 0512",
+    "label": "Ağstafa - Aşaği Göycəli (AZ 0512)"
+  },
+  {
+    "region": "Ağstafa",
+    "branch": "Aşaği Kəsəmən",
+    "zip": "AZ 0513",
+    "label": "Ağstafa - Aşaği Kəsəmən (AZ 0513)"
+  },
+  {
+    "region": "Ağstafa",
+    "branch": "Böyük Kəsik",
+    "zip": "AZ 0514",
+    "label": "Ağstafa - Böyük Kəsik (AZ 0514)"
+  },
+  {
+    "region": "Ağstafa",
+    "branch": "Dağkəsəmən",
+    "zip": "AZ 0515",
+    "label": "Ağstafa - Dağkəsəmən (AZ 0515)"
+  },
+  {
+    "region": "Ağstafa",
+    "branch": "Eynalli",
+    "zip": "AZ 0517",
+    "label": "Ağstafa - Eynalli (AZ 0517)"
+  },
+  {
+    "region": "Ağstafa",
+    "branch": "Həsənsu",
+    "zip": "AZ 0518",
+    "label": "Ağstafa - Həsənsu (AZ 0518)"
+  },
+  {
+    "region": "Ağstafa",
+    "branch": "Xətai",
+    "zip": "AZ 0519",
+    "label": "Ağstafa - Xətai (AZ 0519)"
+  },
+  {
+    "region": "Ağstafa",
+    "branch": "Kənd Poylu",
+    "zip": "AZ 0520",
+    "label": "Ağstafa - Kənd Poylu (AZ 0520)"
+  },
+  {
+    "region": "Ağstafa",
+    "branch": "Köçəsgər",
+    "zip": "AZ 0521",
+    "label": "Ağstafa - Köçəsgər (AZ 0521)"
+  },
+  {
+    "region": "Ağstafa",
+    "branch": "Qirli",
+    "zip": "AZ 0523",
+    "label": "Ağstafa - Qirli (AZ 0523)"
+  },
+  {
+    "region": "Ağstafa",
+    "branch": "Muğanli",
+    "zip": "AZ 0525",
+    "label": "Ağstafa - Muğanli (AZ 0525)"
+  },
+  {
+    "region": "Ağstafa",
+    "branch": "Poylu Vağzal",
+    "zip": "AZ 0527",
+    "label": "Ağstafa - Poylu Vağzal (AZ 0527)"
+  },
+  {
+    "region": "Ağstafa",
+    "branch": "Səməd Vurğun",
+    "zip": "AZ 0528",
+    "label": "Ağstafa - Səməd Vurğun (AZ 0528)"
+  },
+  {
+    "region": "Ağstafa",
+    "branch": "Sadixli",
+    "zip": "AZ 0529",
+    "label": "Ağstafa - Sadixli (AZ 0529)"
+  },
+  {
+    "region": "Ağstafa",
+    "branch": "Tatli",
+    "zip": "AZ 0532",
+    "label": "Ağstafa - Tatli (AZ 0532)"
+  },
+  {
+    "region": "Ağstafa",
+    "branch": "Sadixli-1 Gomruk",
+    "zip": "AZ 0533",
+    "label": "Ağstafa - Sadixli-1 Gomruk (AZ 0533)"
+  },
+  {
+    "region": "Ağsu",
+    "branch": "Ağsu",
+    "zip": "AZ 0600",
+    "label": "Ağsu - Ağsu (AZ 0600)"
+  },
+  {
+    "region": "Ağsu",
+    "branch": "1 Sayli",
+    "zip": "AZ 0601",
+    "label": "Ağsu - 1 Sayli (AZ 0601)"
+  },
+  {
+    "region": "Ağsu",
+    "branch": "Bico",
+    "zip": "AZ 0611",
+    "label": "Ağsu - Bico (AZ 0611)"
+  },
+  {
+    "region": "Ağsu",
+    "branch": "Bozavand",
+    "zip": "AZ 0612",
+    "label": "Ağsu - Bozavand (AZ 0612)"
+  },
+  {
+    "region": "Ağsu",
+    "branch": "Çaparli",
+    "zip": "AZ 0614",
+    "label": "Ağsu - Çaparli (AZ 0614)"
+  },
+  {
+    "region": "Ağsu",
+    "branch": "Çiyni",
+    "zip": "AZ 0615",
+    "label": "Ağsu - Çiyni (AZ 0615)"
+  },
+  {
+    "region": "Ağsu",
+    "branch": "Ərəbmehdibəy",
+    "zip": "AZ 0616",
+    "label": "Ağsu - Ərəbmehdibəy (AZ 0616)"
+  },
+  {
+    "region": "Ağsu",
+    "branch": "Ərəbuşaği",
+    "zip": "AZ 0617",
+    "label": "Ağsu - Ərəbuşaği (AZ 0617)"
+  },
+  {
+    "region": "Ağsu",
+    "branch": "Gəgəli",
+    "zip": "AZ 0618",
+    "label": "Ağsu - Gəgəli (AZ 0618)"
+  },
+  {
+    "region": "Ağsu",
+    "branch": "Ilxiçi",
+    "zip": "AZ 0620",
+    "label": "Ağsu - Ilxiçi (AZ 0620)"
+  },
+  {
+    "region": "Ağsu",
+    "branch": "Kalva",
+    "zip": "AZ 0621",
+    "label": "Ağsu - Kalva (AZ 0621)"
+  },
+  {
+    "region": "Ağsu",
+    "branch": "Qaraqoyunlu",
+    "zip": "AZ 0623",
+    "label": "Ağsu - Qaraqoyunlu (AZ 0623)"
+  },
+  {
+    "region": "Ağsu",
+    "branch": "Növcü",
+    "zip": "AZ 0625",
+    "label": "Ağsu - Növcü (AZ 0625)"
+  },
+  {
+    "region": "Ağsu",
+    "branch": "Padar",
+    "zip": "AZ 0627",
+    "label": "Ağsu - Padar (AZ 0627)"
+  },
+  {
+    "region": "Ağsu",
+    "branch": "Pirhəsənli",
+    "zip": "AZ 0629",
+    "label": "Ağsu - Pirhəsənli (AZ 0629)"
+  },
+  {
+    "region": "Ağsu",
+    "branch": "Rəhimli",
+    "zip": "AZ 0630",
+    "label": "Ağsu - Rəhimli (AZ 0630)"
+  },
+  {
+    "region": "Şirvan",
+    "branch": "Şirvan",
+    "zip": "AZ 1800",
+    "label": "Şirvan - Şirvan (AZ 1800)"
+  },
+  {
+    "region": "Şirvan",
+    "branch": "1 Sayli",
+    "zip": "AZ 1801",
+    "label": "Şirvan - 1 Sayli (AZ 1801)"
+  },
+  {
+    "region": "Şirvan",
+    "branch": "2 Sayli",
+    "zip": "AZ 1802",
+    "label": "Şirvan - 2 Sayli (AZ 1802)"
+  },
+  {
+    "region": "Şirvan",
+    "branch": "3 Sayli",
+    "zip": "AZ 1803",
+    "label": "Şirvan - 3 Sayli (AZ 1803)"
+  },
+  {
+    "region": "Şirvan",
+    "branch": "4 Sayli",
+    "zip": "AZ 1804",
+    "label": "Şirvan - 4 Sayli (AZ 1804)"
+  },
+  {
+    "region": "Şirvan",
+    "branch": "6 Sayli",
+    "zip": "AZ 1806",
+    "label": "Şirvan - 6 Sayli (AZ 1806)"
+  },
+  {
+    "region": "Şirvan",
+    "branch": "12 Sayli",
+    "zip": "AZ 1812",
+    "label": "Şirvan - 12 Sayli (AZ 1812)"
+  },
+  {
+    "region": "Astara",
+    "branch": "Astara",
+    "zip": "AZ 0700",
+    "label": "Astara - Astara (AZ 0700)"
+  },
+  {
+    "region": "Astara",
+    "branch": "1 Sayli",
+    "zip": "AZ 0701",
+    "label": "Astara - 1 Sayli (AZ 0701)"
+  },
+  {
+    "region": "Astara",
+    "branch": "2 Sayli",
+    "zip": "AZ 0702",
+    "label": "Astara - 2 Sayli (AZ 0702)"
+  },
+  {
+    "region": "Astara",
+    "branch": "Astara Gomruk",
+    "zip": "AZ 0704",
+    "label": "Astara - Astara Gomruk (AZ 0704)"
+  },
+  {
+    "region": "Astara",
+    "branch": "Ərçivan",
+    "zip": "AZ 0711",
+    "label": "Astara - Ərçivan (AZ 0711)"
+  },
+  {
+    "region": "Astara",
+    "branch": "Kakalos",
+    "zip": "AZ 0714",
+    "label": "Astara - Kakalos (AZ 0714)"
+  },
+  {
+    "region": "Astara",
+    "branch": "Kicabə",
+    "zip": "AZ 0715",
+    "label": "Astara - Kicabə (AZ 0715)"
+  },
+  {
+    "region": "Astara",
+    "branch": "Maşxan",
+    "zip": "AZ 0716",
+    "label": "Astara - Maşxan (AZ 0716)"
+  },
+  {
+    "region": "Astara",
+    "branch": "Pensər",
+    "zip": "AZ 0717",
+    "label": "Astara - Pensər (AZ 0717)"
+  },
+  {
+    "region": "Astara",
+    "branch": "Səncərədi",
+    "zip": "AZ 0719",
+    "label": "Astara - Səncərədi (AZ 0719)"
+  },
+  {
+    "region": "Astara",
+    "branch": "Siyəkü",
+    "zip": "AZ 0720",
+    "label": "Astara - Siyəkü (AZ 0720)"
+  },
+  {
+    "region": "Astara",
+    "branch": "Suparibağ",
+    "zip": "AZ 0721",
+    "label": "Astara - Suparibağ (AZ 0721)"
+  },
+  {
+    "region": "Astara",
+    "branch": "Şahağaci",
+    "zip": "AZ 0722",
+    "label": "Astara - Şahağaci (AZ 0722)"
+  },
+  {
+    "region": "Astara",
+    "branch": "Şiyəkəran",
+    "zip": "AZ 0723",
+    "label": "Astara - Şiyəkəran (AZ 0723)"
+  },
+  {
+    "region": "Astara",
+    "branch": "Şuvi",
+    "zip": "AZ 0724",
+    "label": "Astara - Şuvi (AZ 0724)"
+  },
+  {
+    "region": "Astara",
+    "branch": "Təngərüd",
+    "zip": "AZ 0725",
+    "label": "Astara - Təngərüd (AZ 0725)"
+  },
+  {
+    "region": "Balakən",
+    "branch": "Balakən",
+    "zip": "AZ 0800",
+    "label": "Balakən - Balakən (AZ 0800)"
+  },
+  {
+    "region": "Balakən",
+    "branch": "1 Sayli",
+    "zip": "AZ 0801",
+    "label": "Balakən - 1 Sayli (AZ 0801)"
+  },
+  {
+    "region": "Balakən",
+    "branch": "Gərəkli",
+    "zip": "AZ 0811",
+    "label": "Balakən - Gərəkli (AZ 0811)"
+  },
+  {
+    "region": "Balakən",
+    "branch": "Hənifə",
+    "zip": "AZ 0812",
+    "label": "Balakən - Hənifə (AZ 0812)"
+  },
+  {
+    "region": "Balakən",
+    "branch": "Ititala",
+    "zip": "AZ 0814",
+    "label": "Balakən - Ititala (AZ 0814)"
+  },
+  {
+    "region": "Balakən",
+    "branch": "Katex",
+    "zip": "AZ 0815",
+    "label": "Balakən - Katex (AZ 0815)"
+  },
+  {
+    "region": "Balakən",
+    "branch": "Qabaqçöl",
+    "zip": "AZ 0816",
+    "label": "Balakən - Qabaqçöl (AZ 0816)"
+  },
+  {
+    "region": "Balakən",
+    "branch": "Kortala",
+    "zip": "AZ 0817",
+    "label": "Balakən - Kortala (AZ 0817)"
+  },
+  {
+    "region": "Balakən",
+    "branch": "Püştətala",
+    "zip": "AZ 0818",
+    "label": "Balakən - Püştətala (AZ 0818)"
+  },
+  {
+    "region": "Balakən",
+    "branch": "Qazma",
+    "zip": "AZ 0820",
+    "label": "Balakən - Qazma (AZ 0820)"
+  },
+  {
+    "region": "Balakən",
+    "branch": "Qazbinə",
+    "zip": "AZ 0821",
+    "label": "Balakən - Qazbinə (AZ 0821)"
+  },
+  {
+    "region": "Balakən",
+    "branch": "Qullar",
+    "zip": "AZ 0822",
+    "label": "Balakən - Qullar (AZ 0822)"
+  },
+  {
+    "region": "Balakən",
+    "branch": "Mahamalar",
+    "zip": "AZ 0823",
+    "label": "Balakən - Mahamalar (AZ 0823)"
+  },
+  {
+    "region": "Balakən",
+    "branch": "Meşəşambul",
+    "zip": "AZ 0824",
+    "label": "Balakən - Meşəşambul (AZ 0824)"
+  },
+  {
+    "region": "Balakən",
+    "branch": "Saribulaq",
+    "zip": "AZ 0826",
+    "label": "Balakən - Saribulaq (AZ 0826)"
+  },
+  {
+    "region": "Balakən",
+    "branch": "Şambul",
+    "zip": "AZ 0827",
+    "label": "Balakən - Şambul (AZ 0827)"
+  },
+  {
+    "region": "Balakən",
+    "branch": "Şərif",
+    "zip": "AZ 0828",
+    "label": "Balakən - Şərif (AZ 0828)"
+  },
+  {
+    "region": "Balakən",
+    "branch": "Talalar",
+    "zip": "AZ 0829",
+    "label": "Balakən - Talalar (AZ 0829)"
+  },
+  {
+    "region": "Balakən",
+    "branch": "Tülü",
+    "zip": "AZ 0830",
+    "label": "Balakən - Tülü (AZ 0830)"
+  },
+  {
+    "region": "Balakən",
+    "branch": "Yeni Şərif",
+    "zip": "AZ 0831",
+    "label": "Balakən - Yeni Şərif (AZ 0831)"
+  },
+  {
+    "region": "Balakən",
+    "branch": "Mazimçay (Dgk)",
+    "zip": "AZ 0833",
+    "label": "Balakən - Mazimçay (Dgk) (AZ 0833)"
+  },
+  {
+    "region": "Bərdə",
+    "branch": "Bərdə",
+    "zip": "AZ 0900",
+    "label": "Bərdə - Bərdə (AZ 0900)"
+  },
+  {
+    "region": "Bərdə",
+    "branch": "Bərdə-1",
+    "zip": "AZ 0901",
+    "label": "Bərdə - Bərdə-1 (AZ 0901)"
+  },
+  {
+    "region": "Bərdə",
+    "branch": "Bərdə-2",
+    "zip": "AZ 0902",
+    "label": "Bərdə - Bərdə-2 (AZ 0902)"
+  },
+  {
+    "region": "Bərdə",
+    "branch": "Alpout",
+    "zip": "AZ 0911",
+    "label": "Bərdə - Alpout (AZ 0911)"
+  },
+  {
+    "region": "Bərdə",
+    "branch": "Bərdə St",
+    "zip": "AZ 0912",
+    "label": "Bərdə - Bərdə St (AZ 0912)"
+  },
+  {
+    "region": "Bərdə",
+    "branch": "Böyük Göyüşlü",
+    "zip": "AZ 0913",
+    "label": "Bərdə - Böyük Göyüşlü (AZ 0913)"
+  },
+  {
+    "region": "Bərdə",
+    "branch": "Qazaxlar",
+    "zip": "AZ 0914",
+    "label": "Bərdə - Qazaxlar (AZ 0914)"
+  },
+  {
+    "region": "Bərdə",
+    "branch": "Yeni Əyriçə",
+    "zip": "AZ 0915",
+    "label": "Bərdə - Yeni Əyriçə (AZ 0915)"
+  },
+  {
+    "region": "Bərdə",
+    "branch": "Hacalli",
+    "zip": "AZ 0918",
+    "label": "Bərdə - Hacalli (AZ 0918)"
+  },
+  {
+    "region": "Bərdə",
+    "branch": "Həsənqaya",
+    "zip": "AZ 0919",
+    "label": "Bərdə - Həsənqaya (AZ 0919)"
+  },
+  {
+    "region": "Bərdə",
+    "branch": "Kətəlparaq",
+    "zip": "AZ 0922",
+    "label": "Bərdə - Kətəlparaq (AZ 0922)"
+  },
+  {
+    "region": "Bərdə",
+    "branch": "Qaradəmirçi",
+    "zip": "AZ 0924",
+    "label": "Bərdə - Qaradəmirçi (AZ 0924)"
+  },
+  {
+    "region": "Bərdə",
+    "branch": "Qaraqirnaq",
+    "zip": "AZ 0925",
+    "label": "Bərdə - Qaraqirnaq (AZ 0925)"
+  },
+  {
+    "region": "Bərdə",
+    "branch": "Lənbəran",
+    "zip": "AZ 0927",
+    "label": "Bərdə - Lənbəran (AZ 0927)"
+  },
+  {
+    "region": "Bərdə",
+    "branch": "Mehdixanli",
+    "zip": "AZ 0928",
+    "label": "Bərdə - Mehdixanli (AZ 0928)"
+  },
+  {
+    "region": "Bərdə",
+    "branch": "Mehdili",
+    "zip": "AZ 0929",
+    "label": "Bərdə - Mehdili (AZ 0929)"
+  },
+  {
+    "region": "Bərdə",
+    "branch": "Mirzəcəfərli",
+    "zip": "AZ 0931",
+    "label": "Bərdə - Mirzəcəfərli (AZ 0931)"
+  },
+  {
+    "region": "Bərdə",
+    "branch": "Mirzəlibəyli",
+    "zip": "AZ 0933",
+    "label": "Bərdə - Mirzəlibəyli (AZ 0933)"
+  },
+  {
+    "region": "Bərdə",
+    "branch": "Otuzikilər",
+    "zip": "AZ 0937",
+    "label": "Bərdə - Otuzikilər (AZ 0937)"
+  },
+  {
+    "region": "Bərdə",
+    "branch": "Samux",
+    "zip": "AZ 0938",
+    "label": "Bərdə - Samux (AZ 0938)"
+  },
+  {
+    "region": "Bərdə",
+    "branch": "Şirvanli",
+    "zip": "AZ 0942",
+    "label": "Bərdə - Şirvanli (AZ 0942)"
+  },
+  {
+    "region": "Bərdə",
+    "branch": "Yenidaşkənd",
+    "zip": "AZ 0943",
+    "label": "Bərdə - Yenidaşkənd (AZ 0943)"
+  },
+  {
+    "region": "Beyləqan",
+    "branch": "Beyləqan",
+    "zip": "AZ 1200",
+    "label": "Beyləqan - Beyləqan (AZ 1200)"
+  },
+  {
+    "region": "Beyləqan",
+    "branch": "Aşaği Çəmənli",
+    "zip": "AZ 1211",
+    "label": "Beyləqan - Aşaği Çəmənli (AZ 1211)"
+  },
+  {
+    "region": "Beyləqan",
+    "branch": "Binnətli",
+    "zip": "AZ 1213",
+    "label": "Beyləqan - Binnətli (AZ 1213)"
+  },
+  {
+    "region": "Beyləqan",
+    "branch": "Allahyarli",
+    "zip": "AZ 1214",
+    "label": "Beyləqan - Allahyarli (AZ 1214)"
+  },
+  {
+    "region": "Beyləqan",
+    "branch": "Aşiqli-1",
+    "zip": "AZ 1215",
+    "label": "Beyləqan - Aşiqli-1 (AZ 1215)"
+  },
+  {
+    "region": "Beyləqan",
+    "branch": "Daşburun",
+    "zip": "AZ 1216",
+    "label": "Beyləqan - Daşburun (AZ 1216)"
+  },
+  {
+    "region": "Beyləqan",
+    "branch": "Dünyamallar",
+    "zip": "AZ 1217",
+    "label": "Beyləqan - Dünyamallar (AZ 1217)"
+  },
+  {
+    "region": "Beyləqan",
+    "branch": "Eyvazallar",
+    "zip": "AZ 1218",
+    "label": "Beyləqan - Eyvazallar (AZ 1218)"
+  },
+  {
+    "region": "Beyləqan",
+    "branch": "Əlinəzərli",
+    "zip": "AZ 1219",
+    "label": "Beyləqan - Əlinəzərli (AZ 1219)"
+  },
+  {
+    "region": "Beyləqan",
+    "branch": "Xalaç",
+    "zip": "AZ 1220",
+    "label": "Beyləqan - Xalaç (AZ 1220)"
+  },
+  {
+    "region": "Beyləqan",
+    "branch": "Kəbirli",
+    "zip": "AZ 1222",
+    "label": "Beyləqan - Kəbirli (AZ 1222)"
+  },
+  {
+    "region": "Beyləqan",
+    "branch": "Qarallar",
+    "zip": "AZ 1223",
+    "label": "Beyləqan - Qarallar (AZ 1223)"
+  },
+  {
+    "region": "Beyləqan",
+    "branch": "Qəhrəmanli",
+    "zip": "AZ 1224",
+    "label": "Beyləqan - Qəhrəmanli (AZ 1224)"
+  },
+  {
+    "region": "Beyləqan",
+    "branch": "Mil-2",
+    "zip": "AZ 1225",
+    "label": "Beyləqan - Mil-2 (AZ 1225)"
+  },
+  {
+    "region": "Beyləqan",
+    "branch": "Milabad",
+    "zip": "AZ 1226",
+    "label": "Beyləqan - Milabad (AZ 1226)"
+  },
+  {
+    "region": "Beyləqan",
+    "branch": "Örənqala",
+    "zip": "AZ 1227",
+    "label": "Beyləqan - Örənqala (AZ 1227)"
+  },
+  {
+    "region": "Beyləqan",
+    "branch": "Şahsevən-2",
+    "zip": "AZ 1228",
+    "label": "Beyləqan - Şahsevən-2 (AZ 1228)"
+  },
+  {
+    "region": "Beyləqan",
+    "branch": "Tatallar",
+    "zip": "AZ 1230",
+    "label": "Beyləqan - Tatallar (AZ 1230)"
+  },
+  {
+    "region": "Beyləqan",
+    "branch": "Yuxari Aran",
+    "zip": "AZ 1232",
+    "label": "Beyləqan - Yuxari Aran (AZ 1232)"
+  },
+  {
+    "region": "Beyləqan",
+    "branch": "Yuxari Çəmənli",
+    "zip": "AZ 1234",
+    "label": "Beyləqan - Yuxari Çəmənli (AZ 1234)"
+  },
+  {
+    "region": "Beyləqan",
+    "branch": "Təzəkənd",
+    "zip": "AZ 1236",
+    "label": "Beyləqan - Təzəkənd (AZ 1236)"
+  },
+  {
+    "region": "Biləsuvar",
+    "branch": "Biləsuvar",
+    "zip": "AZ 1300",
+    "label": "Biləsuvar - Biləsuvar (AZ 1300)"
+  },
+  {
+    "region": "Biləsuvar",
+    "branch": "1 Sayli",
+    "zip": "AZ 1301",
+    "label": "Biləsuvar - 1 Sayli (AZ 1301)"
+  },
+  {
+    "region": "Biləsuvar",
+    "branch": "Ağalikənd",
+    "zip": "AZ 1311",
+    "label": "Biləsuvar - Ağalikənd (AZ 1311)"
+  },
+  {
+    "region": "Biləsuvar",
+    "branch": "Bağbanlar",
+    "zip": "AZ 1312",
+    "label": "Biləsuvar - Bağbanlar (AZ 1312)"
+  },
+  {
+    "region": "Biləsuvar",
+    "branch": "Aşaği Cürəli",
+    "zip": "AZ 1313",
+    "label": "Biləsuvar - Aşaği Cürəli (AZ 1313)"
+  },
+  {
+    "region": "Biləsuvar",
+    "branch": "Əsgərabad",
+    "zip": "AZ 1316",
+    "label": "Biləsuvar - Əsgərabad (AZ 1316)"
+  },
+  {
+    "region": "Biləsuvar",
+    "branch": "Xirmandali",
+    "zip": "AZ 1317",
+    "label": "Biləsuvar - Xirmandali (AZ 1317)"
+  },
+  {
+    "region": "Biləsuvar",
+    "branch": "Ismətli",
+    "zip": "AZ 1318",
+    "label": "Biləsuvar - Ismətli (AZ 1318)"
+  },
+  {
+    "region": "Biləsuvar",
+    "branch": "Səmədabad",
+    "zip": "AZ 1319",
+    "label": "Biləsuvar - Səmədabad (AZ 1319)"
+  },
+  {
+    "region": "Biləsuvar",
+    "branch": "Nəsimikənd",
+    "zip": "AZ 1320",
+    "label": "Biləsuvar - Nəsimikənd (AZ 1320)"
+  },
+  {
+    "region": "Biləsuvar",
+    "branch": "Dövrüşlü",
+    "zip": "AZ 1323",
+    "label": "Biləsuvar - Dövrüşlü (AZ 1323)"
+  },
+  {
+    "region": "Biləsuvar",
+    "branch": "Qoşatəpə Gömrük (Dgk)",
+    "zip": "AZ 1325",
+    "label": "Biləsuvar - Qoşatəpə Gömrük (Dgk) (AZ 1325)"
+  },
+  {
+    "region": "Cəlilabad",
+    "branch": "Cəlilabad",
+    "zip": "AZ 1500",
+    "label": "Cəlilabad - Cəlilabad (AZ 1500)"
+  },
+  {
+    "region": "Cəlilabad",
+    "branch": "1 Sayli",
+    "zip": "AZ 1501",
+    "label": "Cəlilabad - 1 Sayli (AZ 1501)"
+  },
+  {
+    "region": "Cəlilabad",
+    "branch": "2 Sayli",
+    "zip": "AZ 1502",
+    "label": "Cəlilabad - 2 Sayli (AZ 1502)"
+  },
+  {
+    "region": "Cəlilabad",
+    "branch": "Ağdaş",
+    "zip": "AZ 1511",
+    "label": "Cəlilabad - Ağdaş (AZ 1511)"
+  },
+  {
+    "region": "Cəlilabad",
+    "branch": "Alar",
+    "zip": "AZ 1512",
+    "label": "Cəlilabad - Alar (AZ 1512)"
+  },
+  {
+    "region": "Cəlilabad",
+    "branch": "Cəngan",
+    "zip": "AZ 1513",
+    "label": "Cəlilabad - Cəngan (AZ 1513)"
+  },
+  {
+    "region": "Cəlilabad",
+    "branch": "Göytəpə",
+    "zip": "AZ 1514",
+    "label": "Cəlilabad - Göytəpə (AZ 1514)"
+  },
+  {
+    "region": "Cəlilabad",
+    "branch": "Günəşli",
+    "zip": "AZ 1516",
+    "label": "Cəlilabad - Günəşli (AZ 1516)"
+  },
+  {
+    "region": "Cəlilabad",
+    "branch": "Hamarqişlaq",
+    "zip": "AZ 1517",
+    "label": "Cəlilabad - Hamarqişlaq (AZ 1517)"
+  },
+  {
+    "region": "Cəlilabad",
+    "branch": "Xənagah",
+    "zip": "AZ 1518",
+    "label": "Cəlilabad - Xənagah (AZ 1518)"
+  },
+  {
+    "region": "Cəlilabad",
+    "branch": "Komanli",
+    "zip": "AZ 1519",
+    "label": "Cəlilabad - Komanli (AZ 1519)"
+  },
+  {
+    "region": "Cəlilabad",
+    "branch": "Qarakazimli",
+    "zip": "AZ 1520",
+    "label": "Cəlilabad - Qarakazimli (AZ 1520)"
+  },
+  {
+    "region": "Cəlilabad",
+    "branch": "Qarazəncir",
+    "zip": "AZ 1521",
+    "label": "Cəlilabad - Qarazəncir (AZ 1521)"
+  },
+  {
+    "region": "Cəlilabad",
+    "branch": "Privolnoye",
+    "zip": "AZ 1523",
+    "label": "Cəlilabad - Privolnoye (AZ 1523)"
+  },
+  {
+    "region": "Cəlilabad",
+    "branch": "Sabirabad",
+    "zip": "AZ 1524",
+    "label": "Cəlilabad - Sabirabad (AZ 1524)"
+  },
+  {
+    "region": "Cəlilabad",
+    "branch": "Şiləvəngə",
+    "zip": "AZ 1525",
+    "label": "Cəlilabad - Şiləvəngə (AZ 1525)"
+  },
+  {
+    "region": "Cəlilabad",
+    "branch": "Təklə",
+    "zip": "AZ 1526",
+    "label": "Cəlilabad - Təklə (AZ 1526)"
+  },
+  {
+    "region": "Cəlilabad",
+    "branch": "Uzuntəpə",
+    "zip": "AZ 1527",
+    "label": "Cəlilabad - Uzuntəpə (AZ 1527)"
+  },
+  {
+    "region": "Cəlilabad",
+    "branch": "Üçtəpə",
+    "zip": "AZ 1528",
+    "label": "Cəlilabad - Üçtəpə (AZ 1528)"
+  },
+  {
+    "region": "Cəlilabad",
+    "branch": "Əliqasimli",
+    "zip": "AZ 1529",
+    "label": "Cəlilabad - Əliqasimli (AZ 1529)"
+  },
+  {
+    "region": "Cəlilabad",
+    "branch": "Astanli",
+    "zip": "AZ 1530",
+    "label": "Cəlilabad - Astanli (AZ 1530)"
+  },
+  {
+    "region": "Daşkəsən",
+    "branch": "Daşkəsən",
+    "zip": "AZ 1600",
+    "label": "Daşkəsən - Daşkəsən (AZ 1600)"
+  },
+  {
+    "region": "Daşkəsən",
+    "branch": "Bayan",
+    "zip": "AZ 1613",
+    "label": "Daşkəsən - Bayan (AZ 1613)"
+  },
+  {
+    "region": "Daşkəsən",
+    "branch": "Qabaqtəpə",
+    "zip": "AZ 1621",
+    "label": "Daşkəsən - Qabaqtəpə (AZ 1621)"
+  },
+  {
+    "region": "Daşkəsən",
+    "branch": "Yuxari Daşkəsən",
+    "zip": "AZ 1626",
+    "label": "Daşkəsən - Yuxari Daşkəsən (AZ 1626)"
+  },
+  {
+    "region": "Şabran",
+    "branch": "Şabran",
+    "zip": "AZ 1700",
+    "label": "Şabran - Şabran (AZ 1700)"
+  },
+  {
+    "region": "Şabran",
+    "branch": "1 Sayli",
+    "zip": "AZ 1701",
+    "label": "Şabran - 1 Sayli (AZ 1701)"
+  },
+  {
+    "region": "Şabran",
+    "branch": "Ağaliq",
+    "zip": "AZ 1711",
+    "label": "Şabran - Ağaliq (AZ 1711)"
+  },
+  {
+    "region": "Şabran",
+    "branch": "Dağbilici",
+    "zip": "AZ 1714",
+    "label": "Şabran - Dağbilici (AZ 1714)"
+  },
+  {
+    "region": "Şabran",
+    "branch": "Dəvəçi Vağzal",
+    "zip": "AZ 1715",
+    "label": "Şabran - Dəvəçi Vağzal (AZ 1715)"
+  },
+  {
+    "region": "Şabran",
+    "branch": "Əmirxanli",
+    "zip": "AZ 1716",
+    "label": "Şabran - Əmirxanli (AZ 1716)"
+  },
+  {
+    "region": "Şabran",
+    "branch": "Gəndob",
+    "zip": "AZ 1717",
+    "label": "Şabran - Gəndob (AZ 1717)"
+  },
+  {
+    "region": "Şabran",
+    "branch": "Pirəbədil",
+    "zip": "AZ 1718",
+    "label": "Şabran - Pirəbədil (AZ 1718)"
+  },
+  {
+    "region": "Şabran",
+    "branch": "Rəhimli",
+    "zip": "AZ 1719",
+    "label": "Şabran - Rəhimli (AZ 1719)"
+  },
+  {
+    "region": "Şabran",
+    "branch": "Dəvəçikənd",
+    "zip": "AZ 1720",
+    "label": "Şabran - Dəvəçikənd (AZ 1720)"
+  },
+  {
+    "region": "Şabran",
+    "branch": "Şahnəzərli",
+    "zip": "AZ 1721",
+    "label": "Şabran - Şahnəzərli (AZ 1721)"
+  },
+  {
+    "region": "Şabran",
+    "branch": "Zeyvə",
+    "zip": "AZ 1725",
+    "label": "Şabran - Zeyvə (AZ 1725)"
+  },
+  {
+    "region": "Füzuli",
+    "branch": "Füzuli",
+    "zip": "AZ 1900",
+    "label": "Füzuli - Füzuli (AZ 1900)"
+  },
+  {
+    "region": "Füzuli",
+    "branch": "Babi",
+    "zip": "AZ 1915",
+    "label": "Füzuli - Babi (AZ 1915)"
+  },
+  {
+    "region": "Füzuli",
+    "branch": "Bala Bəhmənli",
+    "zip": "AZ 1917",
+    "label": "Füzuli - Bala Bəhmənli (AZ 1917)"
+  },
+  {
+    "region": "Füzuli",
+    "branch": "Əhmədbəyli",
+    "zip": "AZ 1921",
+    "label": "Füzuli - Əhmədbəyli (AZ 1921)"
+  },
+  {
+    "region": "Füzuli",
+    "branch": "Horadiz Qəsəbə",
+    "zip": "AZ 1924",
+    "label": "Füzuli - Horadiz Qəsəbə (AZ 1924)"
+  },
+  {
+    "region": "Füzuli",
+    "branch": "Kərimbəyli",
+    "zip": "AZ 1930",
+    "label": "Füzuli - Kərimbəyli (AZ 1930)"
+  },
+  {
+    "region": "Gədəbəy",
+    "branch": "Gədəbəy",
+    "zip": "AZ 2100",
+    "label": "Gədəbəy - Gədəbəy (AZ 2100)"
+  },
+  {
+    "region": "Gədəbəy",
+    "branch": "Çanaqçi",
+    "zip": "AZ 2111",
+    "label": "Gədəbəy - Çanaqçi (AZ 2111)"
+  },
+  {
+    "region": "Gədəbəy",
+    "branch": "Arabaçi",
+    "zip": "AZ 2112",
+    "label": "Gədəbəy - Arabaçi (AZ 2112)"
+  },
+  {
+    "region": "Gədəbəy",
+    "branch": "Böyük Qaramurad",
+    "zip": "AZ 2114",
+    "label": "Gədəbəy - Böyük Qaramurad (AZ 2114)"
+  },
+  {
+    "region": "Gədəbəy",
+    "branch": "Çobankənd",
+    "zip": "AZ 2116",
+    "label": "Gədəbəy - Çobankənd (AZ 2116)"
+  },
+  {
+    "region": "Gədəbəy",
+    "branch": "Dəyirmandağ",
+    "zip": "AZ 2118",
+    "label": "Gədəbəy - Dəyirmandağ (AZ 2118)"
+  },
+  {
+    "region": "Gədəbəy",
+    "branch": "Alnabat",
+    "zip": "AZ 2120",
+    "label": "Gədəbəy - Alnabat (AZ 2120)"
+  },
+  {
+    "region": "Gədəbəy",
+    "branch": "Gər-Gər",
+    "zip": "AZ 2123",
+    "label": "Gədəbəy - Gər-Gər (AZ 2123)"
+  },
+  {
+    "region": "Gədəbəy",
+    "branch": "Göyəlli",
+    "zip": "AZ 2124",
+    "label": "Gədəbəy - Göyəlli (AZ 2124)"
+  },
+  {
+    "region": "Gədəbəy",
+    "branch": "Isali",
+    "zip": "AZ 2128",
+    "label": "Gədəbəy - Isali (AZ 2128)"
+  },
+  {
+    "region": "Gədəbəy",
+    "branch": "Ivanovka",
+    "zip": "AZ 2129",
+    "label": "Gədəbəy - Ivanovka (AZ 2129)"
+  },
+  {
+    "region": "Gədəbəy",
+    "branch": "Kiçik Qaramurad",
+    "zip": "AZ 2130",
+    "label": "Gədəbəy - Kiçik Qaramurad (AZ 2130)"
+  },
+  {
+    "region": "Gədəbəy",
+    "branch": "Qaraməmmədli",
+    "zip": "AZ 2131",
+    "label": "Gədəbəy - Qaraməmmədli (AZ 2131)"
+  },
+  {
+    "region": "Gədəbəy",
+    "branch": "Qoşabulaq",
+    "zip": "AZ 2133",
+    "label": "Gədəbəy - Qoşabulaq (AZ 2133)"
+  },
+  {
+    "region": "Gədəbəy",
+    "branch": "Plankənd",
+    "zip": "AZ 2135",
+    "label": "Gədəbəy - Plankənd (AZ 2135)"
+  },
+  {
+    "region": "Gədəbəy",
+    "branch": "Rəsullu",
+    "zip": "AZ 2137",
+    "label": "Gədəbəy - Rəsullu (AZ 2137)"
+  },
+  {
+    "region": "Gədəbəy",
+    "branch": "Miskinli",
+    "zip": "AZ 2138",
+    "label": "Gədəbəy - Miskinli (AZ 2138)"
+  },
+  {
+    "region": "Gədəbəy",
+    "branch": "Nərimankənd",
+    "zip": "AZ 2139",
+    "label": "Gədəbəy - Nərimankənd (AZ 2139)"
+  },
+  {
+    "region": "Gədəbəy",
+    "branch": "Saratovka",
+    "zip": "AZ 2140",
+    "label": "Gədəbəy - Saratovka (AZ 2140)"
+  },
+  {
+    "region": "Gədəbəy",
+    "branch": "Slavyanka",
+    "zip": "AZ 2141",
+    "label": "Gədəbəy - Slavyanka (AZ 2141)"
+  },
+  {
+    "region": "Gədəbəy",
+    "branch": "Söyüdlü",
+    "zip": "AZ 2142",
+    "label": "Gədəbəy - Söyüdlü (AZ 2142)"
+  },
+  {
+    "region": "Gədəbəy",
+    "branch": "Zəhmət",
+    "zip": "AZ 2144",
+    "label": "Gədəbəy - Zəhmət (AZ 2144)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "Gəncə",
+    "zip": "AZ 2000",
+    "label": "Gəncə - Gəncə (AZ 2000)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "1 Sayli",
+    "zip": "AZ 2001",
+    "label": "Gəncə - 1 Sayli (AZ 2001)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "2 Sayli",
+    "zip": "AZ 2002",
+    "label": "Gəncə - 2 Sayli (AZ 2002)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "3 Sayli",
+    "zip": "AZ 2003",
+    "label": "Gəncə - 3 Sayli (AZ 2003)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "4 Sayli",
+    "zip": "AZ 2004",
+    "label": "Gəncə - 4 Sayli (AZ 2004)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "5 Sayli",
+    "zip": "AZ 2005",
+    "label": "Gəncə - 5 Sayli (AZ 2005)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "6 Sayli",
+    "zip": "AZ 2006",
+    "label": "Gəncə - 6 Sayli (AZ 2006)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "7 Sayli",
+    "zip": "AZ 2007",
+    "label": "Gəncə - 7 Sayli (AZ 2007)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "8 Sayli",
+    "zip": "AZ 2008",
+    "label": "Gəncə - 8 Sayli (AZ 2008)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "9 Sayli",
+    "zip": "AZ 2009",
+    "label": "Gəncə - 9 Sayli (AZ 2009)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "10 Sayli",
+    "zip": "AZ 2010",
+    "label": "Gəncə - 10 Sayli (AZ 2010)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "11 Sayli",
+    "zip": "AZ 2011",
+    "label": "Gəncə - 11 Sayli (AZ 2011)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "12 Sayli",
+    "zip": "AZ 2012",
+    "label": "Gəncə - 12 Sayli (AZ 2012)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "13 Sayli",
+    "zip": "AZ 2013",
+    "label": "Gəncə - 13 Sayli (AZ 2013)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "16 Sayli",
+    "zip": "AZ 2016",
+    "label": "Gəncə - 16 Sayli (AZ 2016)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "17 Sayli",
+    "zip": "AZ 2017",
+    "label": "Gəncə - 17 Sayli (AZ 2017)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "18 Sayli",
+    "zip": "AZ 2018",
+    "label": "Gəncə - 18 Sayli (AZ 2018)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "19 Sayli",
+    "zip": "AZ 2019",
+    "label": "Gəncə - 19 Sayli (AZ 2019)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "21 Sayli",
+    "zip": "AZ 2021",
+    "label": "Gəncə - 21 Sayli (AZ 2021)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "22 Sayli",
+    "zip": "AZ 2022",
+    "label": "Gəncə - 22 Sayli (AZ 2022)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "23 Sayli",
+    "zip": "AZ 2023",
+    "label": "Gəncə - 23 Sayli (AZ 2023)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "24 Sayli",
+    "zip": "AZ 2024",
+    "label": "Gəncə - 24 Sayli (AZ 2024)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "Goranboy",
+    "zip": "AZ 2200",
+    "label": "Goranboy - Goranboy (AZ 2200)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "1 Sayli",
+    "zip": "AZ 2201",
+    "label": "Goranboy - 1 Sayli (AZ 2201)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "Duzqishlaq",
+    "zip": "AZ 2211",
+    "label": "Goranboy - Duzqishlaq (AZ 2211)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "Aşaği Ağcakənd",
+    "zip": "AZ 2212",
+    "label": "Goranboy - Aşaği Ağcakənd (AZ 2212)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "Borsunlu",
+    "zip": "AZ 2214",
+    "label": "Goranboy - Borsunlu (AZ 2214)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "Boluslu",
+    "zip": "AZ 2215",
+    "label": "Goranboy - Boluslu (AZ 2215)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "Dəliməmmədli",
+    "zip": "AZ 2216",
+    "label": "Goranboy - Dəliməmmədli (AZ 2216)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "Faxrali",
+    "zip": "AZ 2218",
+    "label": "Goranboy - Faxrali (AZ 2218)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "Hazir Əhmədli",
+    "zip": "AZ 2222",
+    "label": "Goranboy - Hazir Əhmədli (AZ 2222)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "Xan Qərvənd",
+    "zip": "AZ 2223",
+    "label": "Goranboy - Xan Qərvənd (AZ 2223)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "Xinali",
+    "zip": "AZ 2225",
+    "label": "Goranboy - Xinali (AZ 2225)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "Xoylu",
+    "zip": "AZ 2226",
+    "label": "Goranboy - Xoylu (AZ 2226)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "Qaradağli",
+    "zip": "AZ 2227",
+    "label": "Goranboy - Qaradağli (AZ 2227)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "Qizil Hacili",
+    "zip": "AZ 2231",
+    "label": "Goranboy - Qizil Hacili (AZ 2231)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "Qizil Hacili 1",
+    "zip": "AZ 2232",
+    "label": "Goranboy - Qizil Hacili 1 (AZ 2232)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "Muzdurlar",
+    "zip": "AZ 2233",
+    "label": "Goranboy - Muzdurlar (AZ 2233)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "Nizami",
+    "zip": "AZ 2235",
+    "label": "Goranboy - Nizami (AZ 2235)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "Səfikürd",
+    "zip": "AZ 2237",
+    "label": "Goranboy - Səfikürd (AZ 2237)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "Şəfəq",
+    "zip": "AZ 2239",
+    "label": "Goranboy - Şəfəq (AZ 2239)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "Tap Qaraqoyunlu",
+    "zip": "AZ 2240",
+    "label": "Goranboy - Tap Qaraqoyunlu (AZ 2240)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "Veyisli",
+    "zip": "AZ 2241",
+    "label": "Goranboy - Veyisli (AZ 2241)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "Zeyvə",
+    "zip": "AZ 2243",
+    "label": "Goranboy - Zeyvə (AZ 2243)"
+  },
+  {
+    "region": "Goranboy",
+    "branch": "Səmədabad",
+    "zip": "AZ 2248",
+    "label": "Goranboy - Səmədabad (AZ 2248)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Göyçay",
+    "zip": "AZ 2300",
+    "label": "Göyçay - Göyçay (AZ 2300)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "1 Sayli",
+    "zip": "AZ 2301",
+    "label": "Göyçay - 1 Sayli (AZ 2301)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "2 Sayli",
+    "zip": "AZ 2302",
+    "label": "Göyçay - 2 Sayli (AZ 2302)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "3 Sayli",
+    "zip": "AZ 2303",
+    "label": "Göyçay - 3 Sayli (AZ 2303)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Alxasafa",
+    "zip": "AZ 2311",
+    "label": "Göyçay - Alxasafa (AZ 2311)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Alpoud",
+    "zip": "AZ 2312",
+    "label": "Göyçay - Alpoud (AZ 2312)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Bəydövül",
+    "zip": "AZ 2313",
+    "label": "Göyçay - Bəydövül (AZ 2313)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Biğir",
+    "zip": "AZ 2314",
+    "label": "Göyçay - Biğir (AZ 2314)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Cəyirli",
+    "zip": "AZ 2315",
+    "label": "Göyçay - Cəyirli (AZ 2315)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Çaxirlipş",
+    "zip": "AZ 2316",
+    "label": "Göyçay - Çaxirlipş (AZ 2316)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Çərəkə",
+    "zip": "AZ 2317",
+    "label": "Göyçay - Çərəkə (AZ 2317)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Qarayazi",
+    "zip": "AZ 2318",
+    "label": "Göyçay - Qarayazi (AZ 2318)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Inçə",
+    "zip": "AZ 2319",
+    "label": "Göyçay - Inçə (AZ 2319)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Kürdşaban",
+    "zip": "AZ 2320",
+    "label": "Göyçay - Kürdşaban (AZ 2320)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Qarabaqqal",
+    "zip": "AZ 2321",
+    "label": "Göyçay - Qarabaqqal (AZ 2321)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Qaraman",
+    "zip": "AZ 2322",
+    "label": "Göyçay - Qaraman (AZ 2322)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Qaraməryəm",
+    "zip": "AZ 2323",
+    "label": "Göyçay - Qaraməryəm (AZ 2323)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Qizilağac",
+    "zip": "AZ 2324",
+    "label": "Göyçay - Qizilağac (AZ 2324)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Ləkçiplaq",
+    "zip": "AZ 2325",
+    "label": "Göyçay - Ləkçiplaq (AZ 2325)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Malli Şixli",
+    "zip": "AZ 2326",
+    "label": "Göyçay - Malli Şixli (AZ 2326)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Məlikkənd",
+    "zip": "AZ 2327",
+    "label": "Göyçay - Məlikkənd (AZ 2327)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Mirti",
+    "zip": "AZ 2328",
+    "label": "Göyçay - Mirti (AZ 2328)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Müşkürlü",
+    "zip": "AZ 2329",
+    "label": "Göyçay - Müşkürlü (AZ 2329)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Potu",
+    "zip": "AZ 2330",
+    "label": "Göyçay - Potu (AZ 2330)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Ərəbcəbirli",
+    "zip": "AZ 2331",
+    "label": "Göyçay - Ərəbcəbirli (AZ 2331)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Yeniarx",
+    "zip": "AZ 2332",
+    "label": "Göyçay - Yeniarx (AZ 2332)"
+  },
+  {
+    "region": "Göyçay",
+    "branch": "Şəkər",
+    "zip": "AZ 2333",
+    "label": "Göyçay - Şəkər (AZ 2333)"
+  },
+  {
+    "region": "Göy-Göl",
+    "branch": "Göy-Göl",
+    "zip": "AZ 2500",
+    "label": "Göy-Göl - Göy-Göl (AZ 2500)"
+  },
+  {
+    "region": "Göy-Göl",
+    "branch": "1 Sayli",
+    "zip": "AZ 2501",
+    "label": "Göy-Göl - 1 Sayli (AZ 2501)"
+  },
+  {
+    "region": "Göy-Göl",
+    "branch": "Aşiqli",
+    "zip": "AZ 2511",
+    "label": "Göy-Göl - Aşiqli (AZ 2511)"
+  },
+  {
+    "region": "Göy-Göl",
+    "branch": "Çaykənd",
+    "zip": "AZ 2512",
+    "label": "Göy-Göl - Çaykənd (AZ 2512)"
+  },
+  {
+    "region": "Göy-Göl",
+    "branch": "Balçili",
+    "zip": "AZ 2516",
+    "label": "Göy-Göl - Balçili (AZ 2516)"
+  },
+  {
+    "region": "Göy-Göl",
+    "branch": "Qirixli",
+    "zip": "AZ 2517",
+    "label": "Göy-Göl - Qirixli (AZ 2517)"
+  },
+  {
+    "region": "Göy-Göl",
+    "branch": "Quşqara",
+    "zip": "AZ 2520",
+    "label": "Göy-Göl - Quşqara (AZ 2520)"
+  },
+  {
+    "region": "Göy-Göl",
+    "branch": "Mollacəlilli",
+    "zip": "AZ 2521",
+    "label": "Göy-Göl - Mollacəlilli (AZ 2521)"
+  },
+  {
+    "region": "Göy-Göl",
+    "branch": "Nadel",
+    "zip": "AZ 2522",
+    "label": "Göy-Göl - Nadel (AZ 2522)"
+  },
+  {
+    "region": "Göy-Göl",
+    "branch": "Toğana",
+    "zip": "AZ 2525",
+    "label": "Göy-Göl - Toğana (AZ 2525)"
+  },
+  {
+    "region": "Göy-Göl",
+    "branch": "Topalhəsənli",
+    "zip": "AZ 2526",
+    "label": "Göy-Göl - Topalhəsənli (AZ 2526)"
+  },
+  {
+    "region": "Göy-Göl",
+    "branch": "Üçtəpə",
+    "zip": "AZ 2527",
+    "label": "Göy-Göl - Üçtəpə (AZ 2527)"
+  },
+  {
+    "region": "Göy-Göl",
+    "branch": "Yeni Zod",
+    "zip": "AZ 2528",
+    "label": "Göy-Göl - Yeni Zod (AZ 2528)"
+  },
+  {
+    "region": "Haciqabul",
+    "branch": "Haciqabul",
+    "zip": "AZ 2400",
+    "label": "Haciqabul - Haciqabul (AZ 2400)"
+  },
+  {
+    "region": "Haciqabul",
+    "branch": "1 Sayli",
+    "zip": "AZ 2401",
+    "label": "Haciqabul - 1 Sayli (AZ 2401)"
+  },
+  {
+    "region": "Haciqabul",
+    "branch": "Abdulabad",
+    "zip": "AZ 2411",
+    "label": "Haciqabul - Abdulabad (AZ 2411)"
+  },
+  {
+    "region": "Haciqabul",
+    "branch": "Atbulaq",
+    "zip": "AZ 2412",
+    "label": "Haciqabul - Atbulaq (AZ 2412)"
+  },
+  {
+    "region": "Haciqabul",
+    "branch": "Qarasu",
+    "zip": "AZ 2413",
+    "label": "Haciqabul - Qarasu (AZ 2413)"
+  },
+  {
+    "region": "Haciqabul",
+    "branch": "Meyniman",
+    "zip": "AZ 2414",
+    "label": "Haciqabul - Meyniman (AZ 2414)"
+  },
+  {
+    "region": "Haciqabul",
+    "branch": "Muğan",
+    "zip": "AZ 2415",
+    "label": "Haciqabul - Muğan (AZ 2415)"
+  },
+  {
+    "region": "Haciqabul",
+    "branch": "Nəvahi",
+    "zip": "AZ 2416",
+    "label": "Haciqabul - Nəvahi (AZ 2416)"
+  },
+  {
+    "region": "Haciqabul",
+    "branch": "Rəncbər",
+    "zip": "AZ 2417",
+    "label": "Haciqabul - Rəncbər (AZ 2417)"
+  },
+  {
+    "region": "Haciqabul",
+    "branch": "Taliş",
+    "zip": "AZ 2418",
+    "label": "Haciqabul - Taliş (AZ 2418)"
+  },
+  {
+    "region": "Haciqabul",
+    "branch": "Udulu",
+    "zip": "AZ 2419",
+    "label": "Haciqabul - Udulu (AZ 2419)"
+  },
+  {
+    "region": "Haciqabul",
+    "branch": "Qubali Balaoğlan",
+    "zip": "AZ 2420",
+    "label": "Haciqabul - Qubali Balaoğlan (AZ 2420)"
+  },
+  {
+    "region": "Haciqabul",
+    "branch": "Padar Qəsəbə",
+    "zip": "AZ 2421",
+    "label": "Haciqabul - Padar Qəsəbə (AZ 2421)"
+  },
+  {
+    "region": "Imişli",
+    "branch": "Imişli",
+    "zip": "AZ 3000",
+    "label": "Imişli - Imişli (AZ 3000)"
+  },
+  {
+    "region": "Imişli",
+    "branch": "Ağaməmmədli",
+    "zip": "AZ 3011",
+    "label": "Imişli - Ağaməmmədli (AZ 3011)"
+  },
+  {
+    "region": "Imişli",
+    "branch": "Aranli",
+    "zip": "AZ 3012",
+    "label": "Imişli - Aranli (AZ 3012)"
+  },
+  {
+    "region": "Imişli",
+    "branch": "Bəcrəvan",
+    "zip": "AZ 3013",
+    "label": "Imişli - Bəcrəvan (AZ 3013)"
+  },
+  {
+    "region": "Imişli",
+    "branch": "Bəhrəmtəpə",
+    "zip": "AZ 3014",
+    "label": "Imişli - Bəhrəmtəpə (AZ 3014)"
+  },
+  {
+    "region": "Imişli",
+    "branch": "Əliqullar",
+    "zip": "AZ 3018",
+    "label": "Imişli - Əliqullar (AZ 3018)"
+  },
+  {
+    "region": "Imişli",
+    "branch": "Qaradonlu",
+    "zip": "AZ 3022",
+    "label": "Imişli - Qaradonlu (AZ 3022)"
+  },
+  {
+    "region": "Imişli",
+    "branch": "Qaralar",
+    "zip": "AZ 3024",
+    "label": "Imişli - Qaralar (AZ 3024)"
+  },
+  {
+    "region": "Imişli",
+    "branch": "Qizilkənd",
+    "zip": "AZ 3026",
+    "label": "Imişli - Qizilkənd (AZ 3026)"
+  },
+  {
+    "region": "Imişli",
+    "branch": "Məmmədli",
+    "zip": "AZ 3028",
+    "label": "Imişli - Məmmədli (AZ 3028)"
+  },
+  {
+    "region": "Imişli",
+    "branch": "Məzrəli",
+    "zip": "AZ 3029",
+    "label": "Imişli - Məzrəli (AZ 3029)"
+  },
+  {
+    "region": "Imişli",
+    "branch": "Otuzikilər",
+    "zip": "AZ 3030",
+    "label": "Imişli - Otuzikilər (AZ 3030)"
+  },
+  {
+    "region": "Imişli",
+    "branch": "Muradxanli",
+    "zip": "AZ 3031",
+    "label": "Imişli - Muradxanli (AZ 3031)"
+  },
+  {
+    "region": "Imişli",
+    "branch": "Rəsullu",
+    "zip": "AZ 3034",
+    "label": "Imişli - Rəsullu (AZ 3034)"
+  },
+  {
+    "region": "Imişli",
+    "branch": "Şahverdili",
+    "zip": "AZ 3035",
+    "label": "Imişli - Şahverdili (AZ 3035)"
+  },
+  {
+    "region": "Imişli",
+    "branch": "Sarixanli",
+    "zip": "AZ 3036",
+    "label": "Imişli - Sarixanli (AZ 3036)"
+  },
+  {
+    "region": "Imişli",
+    "branch": "Soltanmuradli",
+    "zip": "AZ 3037",
+    "label": "Imişli - Soltanmuradli (AZ 3037)"
+  },
+  {
+    "region": "Imişli",
+    "branch": "Göbəktala",
+    "zip": "AZ 3039",
+    "label": "Imişli - Göbəktala (AZ 3039)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Ismayilli",
+    "zip": "AZ 3100",
+    "label": "Ismayilli - Ismayilli (AZ 3100)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "1 Sayli",
+    "zip": "AZ 3101",
+    "label": "Ismayilli - 1 Sayli (AZ 3101)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Basqal",
+    "zip": "AZ 3111",
+    "label": "Ismayilli - Basqal (AZ 3111)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Aşiqbayramli",
+    "zip": "AZ 3112",
+    "label": "Ismayilli - Aşiqbayramli (AZ 3112)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Hacihətəmli",
+    "zip": "AZ 3113",
+    "label": "Ismayilli - Hacihətəmli (AZ 3113)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Ivanovka",
+    "zip": "AZ 3114",
+    "label": "Ismayilli - Ivanovka (AZ 3114)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Diyalli",
+    "zip": "AZ 3115",
+    "label": "Ismayilli - Diyalli (AZ 3115)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Kürdmaşi",
+    "zip": "AZ 3116",
+    "label": "Ismayilli - Kürdmaşi (AZ 3116)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Qalaçiq",
+    "zip": "AZ 3117",
+    "label": "Ismayilli - Qalaçiq (AZ 3117)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Qalagah",
+    "zip": "AZ 3118",
+    "label": "Ismayilli - Qalagah (AZ 3118)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Qalinçaq",
+    "zip": "AZ 3119",
+    "label": "Ismayilli - Qalinçaq (AZ 3119)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Qubaxəlilli",
+    "zip": "AZ 3121",
+    "label": "Ismayilli - Qubaxəlilli (AZ 3121)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Quşencə",
+    "zip": "AZ 3122",
+    "label": "Ismayilli - Quşencə (AZ 3122)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Lahic",
+    "zip": "AZ 3123",
+    "label": "Ismayilli - Lahic (AZ 3123)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Ruşan",
+    "zip": "AZ 3124",
+    "label": "Ismayilli - Ruşan (AZ 3124)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Talistan",
+    "zip": "AZ 3125",
+    "label": "Ismayilli - Talistan (AZ 3125)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Təzəkənd",
+    "zip": "AZ 3126",
+    "label": "Ismayilli - Təzəkənd (AZ 3126)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Tircan",
+    "zip": "AZ 3127",
+    "label": "Ismayilli - Tircan (AZ 3127)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Topçu",
+    "zip": "AZ 3128",
+    "label": "Ismayilli - Topçu (AZ 3128)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Qurbanəfəndi",
+    "zip": "AZ 3129",
+    "label": "Ismayilli - Qurbanəfəndi (AZ 3129)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Gülyan",
+    "zip": "AZ 3130",
+    "label": "Ismayilli - Gülyan (AZ 3130)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Xəlilli",
+    "zip": "AZ 3131",
+    "label": "Ismayilli - Xəlilli (AZ 3131)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Mollaisaqli",
+    "zip": "AZ 3135",
+    "label": "Ismayilli - Mollaisaqli (AZ 3135)"
+  },
+  {
+    "region": "Ismayilli",
+    "branch": "Sumağali",
+    "zip": "AZ 3136",
+    "label": "Ismayilli - Sumağali (AZ 3136)"
+  },
+  {
+    "region": "Kəlbəcər",
+    "branch": "Kəlbəcər",
+    "zip": "AZ 3200",
+    "label": "Kəlbəcər - Kəlbəcər (AZ 3200)"
+  },
+  {
+    "region": "Kəlbəcər",
+    "branch": "Zar (Gənjə)",
+    "zip": "AZ 3218",
+    "label": "Kəlbəcər - Zar (Gənjə) (AZ 3218)"
+  },
+  {
+    "region": "Kürdəmir",
+    "branch": "Kürdəmir",
+    "zip": "AZ 3300",
+    "label": "Kürdəmir - Kürdəmir (AZ 3300)"
+  },
+  {
+    "region": "Kürdəmir",
+    "branch": "1 Sayli",
+    "zip": "AZ 3301",
+    "label": "Kürdəmir - 1 Sayli (AZ 3301)"
+  },
+  {
+    "region": "Kürdəmir",
+    "branch": "Cəyli",
+    "zip": "AZ 3313",
+    "label": "Kürdəmir - Cəyli (AZ 3313)"
+  },
+  {
+    "region": "Kürdəmir",
+    "branch": "Karrar Qəsəbə",
+    "zip": "AZ 3314",
+    "label": "Kürdəmir - Karrar Qəsəbə (AZ 3314)"
+  },
+  {
+    "region": "Kürdəmir",
+    "branch": "Xirdapay",
+    "zip": "AZ 3315",
+    "label": "Kürdəmir - Xirdapay (AZ 3315)"
+  },
+  {
+    "region": "Kürdəmir",
+    "branch": "Karrar",
+    "zip": "AZ 3316",
+    "label": "Kürdəmir - Karrar (AZ 3316)"
+  },
+  {
+    "region": "Kürdəmir",
+    "branch": "Köhünlü",
+    "zip": "AZ 3317",
+    "label": "Kürdəmir - Köhünlü (AZ 3317)"
+  },
+  {
+    "region": "Kürdəmir",
+    "branch": "Mollakənd",
+    "zip": "AZ 3320",
+    "label": "Kürdəmir - Mollakənd (AZ 3320)"
+  },
+  {
+    "region": "Kürdəmir",
+    "branch": "Muradxan",
+    "zip": "AZ 3321",
+    "label": "Kürdəmir - Muradxan (AZ 3321)"
+  },
+  {
+    "region": "Kürdəmir",
+    "branch": "Siğirli",
+    "zip": "AZ 3323",
+    "label": "Kürdəmir - Siğirli (AZ 3323)"
+  },
+  {
+    "region": "Kürdəmir",
+    "branch": "Sor-Sor",
+    "zip": "AZ 3324",
+    "label": "Kürdəmir - Sor-Sor (AZ 3324)"
+  },
+  {
+    "region": "Kürdəmir",
+    "branch": "Şiximli",
+    "zip": "AZ 3325",
+    "label": "Kürdəmir - Şiximli (AZ 3325)"
+  },
+  {
+    "region": "Kürdəmir",
+    "branch": "Şilyan",
+    "zip": "AZ 3326",
+    "label": "Kürdəmir - Şilyan (AZ 3326)"
+  },
+  {
+    "region": "Kürdəmir",
+    "branch": "Topalhəsənli",
+    "zip": "AZ 3327",
+    "label": "Kürdəmir - Topalhəsənli (AZ 3327)"
+  },
+  {
+    "region": "Kürdəmir",
+    "branch": "Yenikənd",
+    "zip": "AZ 3328",
+    "label": "Kürdəmir - Yenikənd (AZ 3328)"
+  },
+  {
+    "region": "Kürdəmir",
+    "branch": "Atakişili",
+    "zip": "AZ 3329",
+    "label": "Kürdəmir - Atakişili (AZ 3329)"
+  },
+  {
+    "region": "Kürdəmir",
+    "branch": "Qarasaqqal",
+    "zip": "AZ 3332",
+    "label": "Kürdəmir - Qarasaqqal (AZ 3332)"
+  },
+  {
+    "region": "Kürdəmir",
+    "branch": "Çöhranli",
+    "zip": "AZ 3333",
+    "label": "Kürdəmir - Çöhranli (AZ 3333)"
+  },
+  {
+    "region": "Kürdəmir",
+    "branch": "Mehdili",
+    "zip": "AZ 3334",
+    "label": "Kürdəmir - Mehdili (AZ 3334)"
+  },
+  {
+    "region": "Laçin",
+    "branch": "Laçin",
+    "zip": "AZ 4100",
+    "label": "Laçin - Laçin (AZ 4100)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Lənkəran",
+    "zip": "AZ 4200",
+    "label": "Lənkəran - Lənkəran (AZ 4200)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "1 Sayli",
+    "zip": "AZ 4201",
+    "label": "Lənkəran - 1 Sayli (AZ 4201)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "2 Sayli",
+    "zip": "AZ 4202",
+    "label": "Lənkəran - 2 Sayli (AZ 4202)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "3 Sayli",
+    "zip": "AZ 4203",
+    "label": "Lənkəran - 3 Sayli (AZ 4203)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "4 Sayli",
+    "zip": "AZ 4204",
+    "label": "Lənkəran - 4 Sayli (AZ 4204)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "5 Sayli",
+    "zip": "AZ 4205",
+    "label": "Lənkəran - 5 Sayli (AZ 4205)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Boladi",
+    "zip": "AZ 4212",
+    "label": "Lənkəran - Boladi (AZ 4212)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Gərmətük",
+    "zip": "AZ 4214",
+    "label": "Lənkəran - Gərmətük (AZ 4214)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Girdəni",
+    "zip": "AZ 4215",
+    "label": "Lənkəran - Girdəni (AZ 4215)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Haftoni",
+    "zip": "AZ 4216",
+    "label": "Lənkəran - Haftoni (AZ 4216)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Hirkan",
+    "zip": "AZ 4217",
+    "label": "Lənkəran - Hirkan (AZ 4217)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Istisu",
+    "zip": "AZ 4219",
+    "label": "Lənkəran - Istisu (AZ 4219)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Kərgəlan",
+    "zip": "AZ 4221",
+    "label": "Lənkəran - Kərgəlan (AZ 4221)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Liman",
+    "zip": "AZ 4222",
+    "label": "Lənkəran - Liman (AZ 4222)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Mamusta",
+    "zip": "AZ 4223",
+    "label": "Lənkəran - Mamusta (AZ 4223)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Nərimanabad-1pş",
+    "zip": "AZ 4224",
+    "label": "Lənkəran - Nərimanabad-1pş (AZ 4224)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Osaküçə",
+    "zip": "AZ 4226",
+    "label": "Lənkəran - Osaküçə (AZ 4226)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Rvo",
+    "zip": "AZ 4227",
+    "label": "Lənkəran - Rvo (AZ 4227)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Separadi",
+    "zip": "AZ 4228",
+    "label": "Lənkəran - Separadi (AZ 4228)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Şağlaser",
+    "zip": "AZ 4230",
+    "label": "Lənkəran - Şağlaser (AZ 4230)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Şürük",
+    "zip": "AZ 4231",
+    "label": "Lənkəran - Şürük (AZ 4231)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Vel",
+    "zip": "AZ 4232",
+    "label": "Lənkəran - Vel (AZ 4232)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Veravul",
+    "zip": "AZ 4233",
+    "label": "Lənkəran - Veravul (AZ 4233)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Vilvan",
+    "zip": "AZ 4234",
+    "label": "Lənkəran - Vilvan (AZ 4234)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Bürcəli",
+    "zip": "AZ 4235",
+    "label": "Lənkəran - Bürcəli (AZ 4235)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Göyşaban",
+    "zip": "AZ 4239",
+    "label": "Lənkəran - Göyşaban (AZ 4239)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Şilavar",
+    "zip": "AZ 4243",
+    "label": "Lənkəran - Şilavar (AZ 4243)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Sutəmurdov",
+    "zip": "AZ 4244",
+    "label": "Lənkəran - Sutəmurdov (AZ 4244)"
+  },
+  {
+    "region": "Lerik",
+    "branch": "Lerik",
+    "zip": "AZ 4300",
+    "label": "Lerik - Lerik (AZ 4300)"
+  },
+  {
+    "region": "Lerik",
+    "branch": "Günəşli",
+    "zip": "AZ 4311",
+    "label": "Lerik - Günəşli (AZ 4311)"
+  },
+  {
+    "region": "Lerik",
+    "branch": "Bilabənd",
+    "zip": "AZ 4312",
+    "label": "Lerik - Bilabənd (AZ 4312)"
+  },
+  {
+    "region": "Lerik",
+    "branch": "Çayrud",
+    "zip": "AZ 4316",
+    "label": "Lerik - Çayrud (AZ 4316)"
+  },
+  {
+    "region": "Lerik",
+    "branch": "Əliabad",
+    "zip": "AZ 4318",
+    "label": "Lerik - Əliabad (AZ 4318)"
+  },
+  {
+    "region": "Lerik",
+    "branch": "Kələxan",
+    "zip": "AZ 4320",
+    "label": "Lerik - Kələxan (AZ 4320)"
+  },
+  {
+    "region": "Lerik",
+    "branch": "Kirəvud",
+    "zip": "AZ 4321",
+    "label": "Lerik - Kirəvud (AZ 4321)"
+  },
+  {
+    "region": "Lerik",
+    "branch": "Qosmalyan",
+    "zip": "AZ 4322",
+    "label": "Lerik - Qosmalyan (AZ 4322)"
+  },
+  {
+    "region": "Lerik",
+    "branch": "Livədirqə",
+    "zip": "AZ 4323",
+    "label": "Lerik - Livədirqə (AZ 4323)"
+  },
+  {
+    "region": "Lerik",
+    "branch": "Monidigah",
+    "zip": "AZ 4324",
+    "label": "Lerik - Monidigah (AZ 4324)"
+  },
+  {
+    "region": "Lerik",
+    "branch": "Piran",
+    "zip": "AZ 4327",
+    "label": "Lerik - Piran (AZ 4327)"
+  },
+  {
+    "region": "Lerik",
+    "branch": "Pirasora",
+    "zip": "AZ 4328",
+    "label": "Lerik - Pirasora (AZ 4328)"
+  },
+  {
+    "region": "Lerik",
+    "branch": "Rvarud",
+    "zip": "AZ 4329",
+    "label": "Lerik - Rvarud (AZ 4329)"
+  },
+  {
+    "region": "Lerik",
+    "branch": "Şingədulan",
+    "zip": "AZ 4331",
+    "label": "Lerik - Şingədulan (AZ 4331)"
+  },
+  {
+    "region": "Lerik",
+    "branch": "Tikəbənd",
+    "zip": "AZ 4332",
+    "label": "Lerik - Tikəbənd (AZ 4332)"
+  },
+  {
+    "region": "Lerik",
+    "branch": "Vizəzəmin",
+    "zip": "AZ 4335",
+    "label": "Lerik - Vizəzəmin (AZ 4335)"
+  },
+  {
+    "region": "Lerik",
+    "branch": "Züvüc",
+    "zip": "AZ 4336",
+    "label": "Lerik - Züvüc (AZ 4336)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Masalli",
+    "zip": "AZ 4400",
+    "label": "Masalli - Masalli (AZ 4400)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "2 Sayli",
+    "zip": "AZ 4402",
+    "label": "Masalli - 2 Sayli (AZ 4402)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "3 Sayli",
+    "zip": "AZ 4403",
+    "label": "Masalli - 3 Sayli (AZ 4403)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "4 Sayli",
+    "zip": "AZ 4404",
+    "label": "Masalli - 4 Sayli (AZ 4404)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "5 Sayli",
+    "zip": "AZ 4405",
+    "label": "Masalli - 5 Sayli (AZ 4405)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Bambaşi",
+    "zip": "AZ 4411",
+    "label": "Masalli - Bambaşi (AZ 4411)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Bədəlan",
+    "zip": "AZ 4412",
+    "label": "Masalli - Bədəlan (AZ 4412)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Boradigah",
+    "zip": "AZ 4413",
+    "label": "Masalli - Boradigah (AZ 4413)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Çaxirli",
+    "zip": "AZ 4414",
+    "label": "Masalli - Çaxirli (AZ 4414)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Ərkivan",
+    "zip": "AZ 4415",
+    "label": "Masalli - Ərkivan (AZ 4415)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Gəyəçöl",
+    "zip": "AZ 4416",
+    "label": "Masalli - Gəyəçöl (AZ 4416)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Güllütəpə",
+    "zip": "AZ 4417",
+    "label": "Masalli - Güllütəpə (AZ 4417)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Həsənli",
+    "zip": "AZ 4418",
+    "label": "Masalli - Həsənli (AZ 4418)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Hişkədərə",
+    "zip": "AZ 4419",
+    "label": "Masalli - Hişkədərə (AZ 4419)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Xil",
+    "zip": "AZ 4420",
+    "label": "Masalli - Xil (AZ 4420)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Xirmandali",
+    "zip": "AZ 4421",
+    "label": "Masalli - Xirmandali (AZ 4421)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Kalinovka",
+    "zip": "AZ 4422",
+    "label": "Masalli - Kalinovka (AZ 4422)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Kolatan",
+    "zip": "AZ 4423",
+    "label": "Masalli - Kolatan (AZ 4423)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Köhnə Alvadi",
+    "zip": "AZ 4424",
+    "label": "Masalli - Köhnə Alvadi (AZ 4424)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Qarğaliq",
+    "zip": "AZ 4425",
+    "label": "Masalli - Qarğaliq (AZ 4425)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Qizilağac",
+    "zip": "AZ 4426",
+    "label": "Masalli - Qizilağac (AZ 4426)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Qizilavar",
+    "zip": "AZ 4427",
+    "label": "Masalli - Qizilavar (AZ 4427)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Mahmudavar",
+    "zip": "AZ 4429",
+    "label": "Masalli - Mahmudavar (AZ 4429)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Masalli Vağzal",
+    "zip": "AZ 4430",
+    "label": "Masalli - Masalli Vağzal (AZ 4430)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Musaküçə",
+    "zip": "AZ 4431",
+    "label": "Masalli - Musaküçə (AZ 4431)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Siğdaş",
+    "zip": "AZ 4432",
+    "label": "Masalli - Siğdaş (AZ 4432)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Şərəfə",
+    "zip": "AZ 4433",
+    "label": "Masalli - Şərəfə (AZ 4433)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Təzə Alvadi",
+    "zip": "AZ 4434",
+    "label": "Masalli - Təzə Alvadi (AZ 4434)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Təzəkənd10.4.44.35",
+    "zip": "AZ 4435",
+    "label": "Masalli - Təzəkənd10.4.44.35 (AZ 4435)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Tüklə",
+    "zip": "AZ 4436",
+    "label": "Masalli - Tüklə (AZ 4436)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Türkoba",
+    "zip": "AZ 4437",
+    "label": "Masalli - Türkoba (AZ 4437)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Yeddioymaq",
+    "zip": "AZ 4438",
+    "label": "Masalli - Yeddioymaq (AZ 4438)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Yeyənkənd",
+    "zip": "AZ 4439",
+    "label": "Masalli - Yeyənkənd (AZ 4439)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Şixlar",
+    "zip": "AZ 4440",
+    "label": "Masalli - Şixlar (AZ 4440)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Oncakələ",
+    "zip": "AZ 4441",
+    "label": "Masalli - Oncakələ (AZ 4441)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Qəriblər",
+    "zip": "AZ 4442",
+    "label": "Masalli - Qəriblər (AZ 4442)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Səmidxan",
+    "zip": "AZ 4443",
+    "label": "Masalli - Səmidxan (AZ 4443)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Lürən",
+    "zip": "AZ 4444",
+    "label": "Masalli - Lürən (AZ 4444)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Hacitəpə",
+    "zip": "AZ 4446",
+    "label": "Masalli - Hacitəpə (AZ 4446)"
+  },
+  {
+    "region": "Masalli",
+    "branch": "Yeddioymaq-1",
+    "zip": "AZ 4449",
+    "label": "Masalli - Yeddioymaq-1 (AZ 4449)"
+  },
+  {
+    "region": "Mingəçevir",
+    "branch": "Mingəçevir",
+    "zip": "AZ 4500",
+    "label": "Mingəçevir - Mingəçevir (AZ 4500)"
+  },
+  {
+    "region": "Mingəçevir",
+    "branch": "1 Sayli",
+    "zip": "AZ 4501",
+    "label": "Mingəçevir - 1 Sayli (AZ 4501)"
+  },
+  {
+    "region": "Mingəçevir",
+    "branch": "2 Sayli",
+    "zip": "AZ 4502",
+    "label": "Mingəçevir - 2 Sayli (AZ 4502)"
+  },
+  {
+    "region": "Mingəçevir",
+    "branch": "4 Sayli",
+    "zip": "AZ 4504",
+    "label": "Mingəçevir - 4 Sayli (AZ 4504)"
+  },
+  {
+    "region": "Mingəçevir",
+    "branch": "5 Sayli",
+    "zip": "AZ 4505",
+    "label": "Mingəçevir - 5 Sayli (AZ 4505)"
+  },
+  {
+    "region": "Mingəçevir",
+    "branch": "6 Sayli",
+    "zip": "AZ 4506",
+    "label": "Mingəçevir - 6 Sayli (AZ 4506)"
+  },
+  {
+    "region": "Mingəçevir",
+    "branch": "7 Sayli",
+    "zip": "AZ 4507",
+    "label": "Mingəçevir - 7 Sayli (AZ 4507)"
+  },
+  {
+    "region": "Mingəçevir",
+    "branch": "8 Sayli",
+    "zip": "AZ 4508",
+    "label": "Mingəçevir - 8 Sayli (AZ 4508)"
+  },
+  {
+    "region": "Mingəçevir",
+    "branch": "9 Sayli",
+    "zip": "AZ 4509",
+    "label": "Mingəçevir - 9 Sayli (AZ 4509)"
+  },
+  {
+    "region": "Mingəçevir",
+    "branch": "10 Sayli",
+    "zip": "AZ 4510",
+    "label": "Mingəçevir - 10 Sayli (AZ 4510)"
+  },
+  {
+    "region": "Mingəçevir",
+    "branch": "11 Sayli",
+    "zip": "AZ 4511",
+    "label": "Mingəçevir - 11 Sayli (AZ 4511)"
+  },
+  {
+    "region": "Naftalan",
+    "branch": "Naftalan",
+    "zip": "AZ 4600",
+    "label": "Naftalan - Naftalan (AZ 4600)"
+  },
+  {
+    "region": "Naftalan",
+    "branch": "1 Sayli",
+    "zip": "AZ 4601",
+    "label": "Naftalan - 1 Sayli (AZ 4601)"
+  },
+  {
+    "region": "Neftçala",
+    "branch": "Neftçala",
+    "zip": "AZ 4700",
+    "label": "Neftçala - Neftçala (AZ 4700)"
+  },
+  {
+    "region": "Neftçala",
+    "branch": "1 Sayli",
+    "zip": "AZ 4701",
+    "label": "Neftçala - 1 Sayli (AZ 4701)"
+  },
+  {
+    "region": "Neftçala",
+    "branch": "2 Sayli",
+    "zip": "AZ 4702",
+    "label": "Neftçala - 2 Sayli (AZ 4702)"
+  },
+  {
+    "region": "Neftçala",
+    "branch": "4 Sayli",
+    "zip": "AZ 4704",
+    "label": "Neftçala - 4 Sayli (AZ 4704)"
+  },
+  {
+    "region": "Neftçala",
+    "branch": "5 Sayli",
+    "zip": "AZ 4705",
+    "label": "Neftçala - 5 Sayli (AZ 4705)"
+  },
+  {
+    "region": "Neftçala",
+    "branch": "Aşaği Qaramanli",
+    "zip": "AZ 4711",
+    "label": "Neftçala - Aşaği Qaramanli (AZ 4711)"
+  },
+  {
+    "region": "Neftçala",
+    "branch": "Aşaği Surra",
+    "zip": "AZ 4712",
+    "label": "Neftçala - Aşaği Surra (AZ 4712)"
+  },
+  {
+    "region": "Neftçala",
+    "branch": "Bankə",
+    "zip": "AZ 4713",
+    "label": "Neftçala - Bankə (AZ 4713)"
+  },
+  {
+    "region": "Neftçala",
+    "branch": "Boyat",
+    "zip": "AZ 4715",
+    "label": "Neftçala - Boyat (AZ 4715)"
+  },
+  {
+    "region": "Neftçala",
+    "branch": "Həsənabad",
+    "zip": "AZ 4717",
+    "label": "Neftçala - Həsənabad (AZ 4717)"
+  },
+  {
+    "region": "Neftçala",
+    "branch": "Xilli",
+    "zip": "AZ 4719",
+    "label": "Neftçala - Xilli (AZ 4719)"
+  },
+  {
+    "region": "Neftçala",
+    "branch": "Xol Qarabucaq",
+    "zip": "AZ 4720",
+    "label": "Neftçala - Xol Qarabucaq (AZ 4720)"
+  },
+  {
+    "region": "Neftçala",
+    "branch": "Qaçaqkənd",
+    "zip": "AZ 4723",
+    "label": "Neftçala - Qaçaqkənd (AZ 4723)"
+  },
+  {
+    "region": "Neftçala",
+    "branch": "Qirmizikənd",
+    "zip": "AZ 4724",
+    "label": "Neftçala - Qirmizikənd (AZ 4724)"
+  },
+  {
+    "region": "Neftçala",
+    "branch": "Yuxari Qaramanli",
+    "zip": "AZ 4728",
+    "label": "Neftçala - Yuxari Qaramanli (AZ 4728)"
+  },
+  {
+    "region": "Neftçala",
+    "branch": "Kürkənd",
+    "zip": "AZ 4729",
+    "label": "Neftçala - Kürkənd (AZ 4729)"
+  },
+  {
+    "region": "Oğuz",
+    "branch": "Oğuz",
+    "zip": "AZ 4800",
+    "label": "Oğuz - Oğuz (AZ 4800)"
+  },
+  {
+    "region": "Oğuz",
+    "branch": "Bayan",
+    "zip": "AZ 4812",
+    "label": "Oğuz - Bayan (AZ 4812)"
+  },
+  {
+    "region": "Oğuz",
+    "branch": "Bucaq",
+    "zip": "AZ 4814",
+    "label": "Oğuz - Bucaq (AZ 4814)"
+  },
+  {
+    "region": "Oğuz",
+    "branch": "Calud",
+    "zip": "AZ 4815",
+    "label": "Oğuz - Calud (AZ 4815)"
+  },
+  {
+    "region": "Oğuz",
+    "branch": "Xaçmaz",
+    "zip": "AZ 4817",
+    "label": "Oğuz - Xaçmaz (AZ 4817)"
+  },
+  {
+    "region": "Oğuz",
+    "branch": "Kərimli",
+    "zip": "AZ 4819",
+    "label": "Oğuz - Kərimli (AZ 4819)"
+  },
+  {
+    "region": "Oğuz",
+    "branch": "Qumlaq",
+    "zip": "AZ 4821",
+    "label": "Oğuz - Qumlaq (AZ 4821)"
+  },
+  {
+    "region": "Oğuz",
+    "branch": "Padar",
+    "zip": "AZ 4823",
+    "label": "Oğuz - Padar (AZ 4823)"
+  },
+  {
+    "region": "Oğuz",
+    "branch": "Sincan",
+    "zip": "AZ 4824",
+    "label": "Oğuz - Sincan (AZ 4824)"
+  },
+  {
+    "region": "Oğuz",
+    "branch": "Şirvanli",
+    "zip": "AZ 4825",
+    "label": "Oğuz - Şirvanli (AZ 4825)"
+  },
+  {
+    "region": "Oğuz",
+    "branch": "Yaqublu",
+    "zip": "AZ 4826",
+    "label": "Oğuz - Yaqublu (AZ 4826)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Qəbələ",
+    "zip": "AZ 3600",
+    "label": "Qəbələ - Qəbələ (AZ 3600)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "1 Sayli",
+    "zip": "AZ 3601",
+    "label": "Qəbələ - 1 Sayli (AZ 3601)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "2 Sayli",
+    "zip": "AZ 3602",
+    "label": "Qəbələ - 2 Sayli (AZ 3602)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Bum",
+    "zip": "AZ 3611",
+    "label": "Qəbələ - Bum (AZ 3611)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Bunud",
+    "zip": "AZ 3612",
+    "label": "Qəbələ - Bunud (AZ 3612)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Çuxur Qəbələ",
+    "zip": "AZ 3613",
+    "label": "Qəbələ - Çuxur Qəbələ (AZ 3613)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Dizaxli",
+    "zip": "AZ 3614",
+    "label": "Qəbələ - Dizaxli (AZ 3614)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Əmirvan",
+    "zip": "AZ 3615",
+    "label": "Qəbələ - Əmirvan (AZ 3615)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Hacialili",
+    "zip": "AZ 3616",
+    "label": "Qəbələ - Hacialili (AZ 3616)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Həmzəlli",
+    "zip": "AZ 3617",
+    "label": "Qəbələ - Həmzəlli (AZ 3617)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Kürd",
+    "zip": "AZ 3618",
+    "label": "Qəbələ - Kürd (AZ 3618)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Qəmərvan",
+    "zip": "AZ 3619",
+    "label": "Qəbələ - Qəmərvan (AZ 3619)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Məlikli",
+    "zip": "AZ 3620",
+    "label": "Qəbələ - Məlikli (AZ 3620)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Mixliqovaq",
+    "zip": "AZ 3621",
+    "label": "Qəbələ - Mixliqovaq (AZ 3621)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Mirzəbəyli",
+    "zip": "AZ 3622",
+    "label": "Qəbələ - Mirzəbəyli (AZ 3622)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Nic-1",
+    "zip": "AZ 3623",
+    "label": "Qəbələ - Nic-1 (AZ 3623)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Nic-2",
+    "zip": "AZ 3624",
+    "label": "Qəbələ - Nic-2 (AZ 3624)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Pirəli",
+    "zip": "AZ 3625",
+    "label": "Qəbələ - Pirəli (AZ 3625)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Tüntül",
+    "zip": "AZ 3627",
+    "label": "Qəbələ - Tüntül (AZ 3627)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Vəndam",
+    "zip": "AZ 3628",
+    "label": "Qəbələ - Vəndam (AZ 3628)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Zalam",
+    "zip": "AZ 3629",
+    "label": "Qəbələ - Zalam (AZ 3629)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Zaragan",
+    "zip": "AZ 3630",
+    "label": "Qəbələ - Zaragan (AZ 3630)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Nohurqişlaq",
+    "zip": "AZ 3632",
+    "label": "Qəbələ - Nohurqişlaq (AZ 3632)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Böyük Əmilli",
+    "zip": "AZ 3635",
+    "label": "Qəbələ - Böyük Əmilli (AZ 3635)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Soltan Nuxa",
+    "zip": "AZ 3636",
+    "label": "Qəbələ - Soltan Nuxa (AZ 3636)"
+  },
+  {
+    "region": "Qəbələ",
+    "branch": "Zaragan-1",
+    "zip": "AZ 3638",
+    "label": "Qəbələ - Zaragan-1 (AZ 3638)"
+  },
+  {
+    "region": "Qax",
+    "branch": "Qax",
+    "zip": "AZ 3400",
+    "label": "Qax - Qax (AZ 3400)"
+  },
+  {
+    "region": "Qax",
+    "branch": "1 Sayli",
+    "zip": "AZ 3401",
+    "label": "Qax - 1 Sayli (AZ 3401)"
+  },
+  {
+    "region": "Qax",
+    "branch": "Alatəmir",
+    "zip": "AZ 3411",
+    "label": "Qax - Alatəmir (AZ 3411)"
+  },
+  {
+    "region": "Qax",
+    "branch": "Almali",
+    "zip": "AZ 3412",
+    "label": "Qax - Almali (AZ 3412)"
+  },
+  {
+    "region": "Qax",
+    "branch": "Cəlayer",
+    "zip": "AZ 3413",
+    "label": "Qax - Cəlayer (AZ 3413)"
+  },
+  {
+    "region": "Qax",
+    "branch": "Əlibəyli",
+    "zip": "AZ 3414",
+    "label": "Qax - Əlibəyli (AZ 3414)"
+  },
+  {
+    "region": "Qax",
+    "branch": "Güllük",
+    "zip": "AZ 3416",
+    "label": "Qax - Güllük (AZ 3416)"
+  },
+  {
+    "region": "Qax",
+    "branch": "Ilisu",
+    "zip": "AZ 3417",
+    "label": "Qax - Ilisu (AZ 3417)"
+  },
+  {
+    "region": "Qax",
+    "branch": "Kötüklü",
+    "zip": "AZ 3418",
+    "label": "Qax - Kötüklü (AZ 3418)"
+  },
+  {
+    "region": "Qax",
+    "branch": "Qax Ingiloy",
+    "zip": "AZ 3419",
+    "label": "Qax - Qax Ingiloy (AZ 3419)"
+  },
+  {
+    "region": "Qax",
+    "branch": "Qorağan",
+    "zip": "AZ 3420",
+    "label": "Qax - Qorağan (AZ 3420)"
+  },
+  {
+    "region": "Qax",
+    "branch": "Qaşqaçay",
+    "zip": "AZ 3421",
+    "label": "Qax - Qaşqaçay (AZ 3421)"
+  },
+  {
+    "region": "Qax",
+    "branch": "Qipçaq",
+    "zip": "AZ 3422",
+    "label": "Qax - Qipçaq (AZ 3422)"
+  },
+  {
+    "region": "Qax",
+    "branch": "Qum",
+    "zip": "AZ 3423",
+    "label": "Qax - Qum (AZ 3423)"
+  },
+  {
+    "region": "Qax",
+    "branch": "Ləkit",
+    "zip": "AZ 3424",
+    "label": "Qax - Ləkit (AZ 3424)"
+  },
+  {
+    "region": "Qax",
+    "branch": "Tasmali",
+    "zip": "AZ 3425",
+    "label": "Qax - Tasmali (AZ 3425)"
+  },
+  {
+    "region": "Qax",
+    "branch": "Turacli",
+    "zip": "AZ 3426",
+    "label": "Qax - Turacli (AZ 3426)"
+  },
+  {
+    "region": "Qax",
+    "branch": "Üzümlü",
+    "zip": "AZ 3427",
+    "label": "Qax - Üzümlü (AZ 3427)"
+  },
+  {
+    "region": "Qax",
+    "branch": "Zəyəm",
+    "zip": "AZ 3428",
+    "label": "Qax - Zəyəm (AZ 3428)"
+  },
+  {
+    "region": "Qazax",
+    "branch": "Qazax",
+    "zip": "AZ 3500",
+    "label": "Qazax - Qazax (AZ 3500)"
+  },
+  {
+    "region": "Qazax",
+    "branch": "1 Sayli",
+    "zip": "AZ 3501",
+    "label": "Qazax - 1 Sayli (AZ 3501)"
+  },
+  {
+    "region": "Qazax",
+    "branch": "2 Sayli",
+    "zip": "AZ 3502",
+    "label": "Qazax - 2 Sayli (AZ 3502)"
+  },
+  {
+    "region": "Qazax",
+    "branch": "Ağköynək",
+    "zip": "AZ 3511",
+    "label": "Qazax - Ağköynək (AZ 3511)"
+  },
+  {
+    "region": "Qazax",
+    "branch": "Alpoud",
+    "zip": "AZ 3512",
+    "label": "Qazax - Alpoud (AZ 3512)"
+  },
+  {
+    "region": "Qazax",
+    "branch": "Aslanbəyli",
+    "zip": "AZ 3513",
+    "label": "Qazax - Aslanbəyli (AZ 3513)"
+  },
+  {
+    "region": "Qazax",
+    "branch": "Cəfərli",
+    "zip": "AZ 3516",
+    "label": "Qazax - Cəfərli (AZ 3516)"
+  },
+  {
+    "region": "Qazax",
+    "branch": "Çayli",
+    "zip": "AZ 3517",
+    "label": "Qazax - Çayli (AZ 3517)"
+  },
+  {
+    "region": "Qazax",
+    "branch": "Daş Salahli",
+    "zip": "AZ 3518",
+    "label": "Qazax - Daş Salahli (AZ 3518)"
+  },
+  {
+    "region": "Qazax",
+    "branch": "Dəmirçilər",
+    "zip": "AZ 3519",
+    "label": "Qazax - Dəmirçilər (AZ 3519)"
+  },
+  {
+    "region": "Qazax",
+    "branch": "Xanliqlar",
+    "zip": "AZ 3520",
+    "label": "Qazax - Xanliqlar (AZ 3520)"
+  },
+  {
+    "region": "Qazax",
+    "branch": "Kəmərli",
+    "zip": "AZ 3521",
+    "label": "Qazax - Kəmərli (AZ 3521)"
+  },
+  {
+    "region": "Qazax",
+    "branch": "Kosalar",
+    "zip": "AZ 3523",
+    "label": "Qazax - Kosalar (AZ 3523)"
+  },
+  {
+    "region": "Qazax",
+    "branch": "Qaymaqli",
+    "zip": "AZ 3524",
+    "label": "Qazax - Qaymaqli (AZ 3524)"
+  },
+  {
+    "region": "Qazax",
+    "branch": "Siniq Körpü (Dgk)",
+    "zip": "AZ 3525",
+    "label": "Qazax - Siniq Körpü (Dgk) (AZ 3525)"
+  },
+  {
+    "region": "Qazax",
+    "branch": "Orta Salahli",
+    "zip": "AZ 3528",
+    "label": "Qazax - Orta Salahli (AZ 3528)"
+  },
+  {
+    "region": "Qazax",
+    "branch": "Şixli-1",
+    "zip": "AZ 3529",
+    "label": "Qazax - Şixli-1 (AZ 3529)"
+  },
+  {
+    "region": "Qazax",
+    "branch": "Şixli-2",
+    "zip": "AZ 3530",
+    "label": "Qazax - Şixli-2 (AZ 3530)"
+  },
+  {
+    "region": "Qazax",
+    "branch": "Yuxari Salahli",
+    "zip": "AZ 3532",
+    "label": "Qazax - Yuxari Salahli (AZ 3532)"
+  },
+  {
+    "region": "Qazax",
+    "branch": "Nərimanov Qəsəbəsi",
+    "zip": "AZ 3533",
+    "label": "Qazax - Nərimanov Qəsəbəsi (AZ 3533)"
+  },
+  {
+    "region": "Qazax",
+    "branch": "Hüseynbəyli",
+    "zip": "AZ 3534",
+    "label": "Qazax - Hüseynbəyli (AZ 3534)"
+  },
+  {
+    "region": "Qazax",
+    "branch": "Fərəhli",
+    "zip": "AZ 3536",
+    "label": "Qazax - Fərəhli (AZ 3536)"
+  },
+  {
+    "region": "Qobustan",
+    "branch": "Qobustan",
+    "zip": "AZ 3700",
+    "label": "Qobustan - Qobustan (AZ 3700)"
+  },
+  {
+    "region": "Qobustan",
+    "branch": "1 Sayli",
+    "zip": "AZ 3701",
+    "label": "Qobustan - 1 Sayli (AZ 3701)"
+  },
+  {
+    "region": "Qobustan",
+    "branch": "Cəyirli",
+    "zip": "AZ 3711",
+    "label": "Qobustan - Cəyirli (AZ 3711)"
+  },
+  {
+    "region": "Qobustan",
+    "branch": "Ərəbşalbaş",
+    "zip": "AZ 3713",
+    "label": "Qobustan - Ərəbşalbaş (AZ 3713)"
+  },
+  {
+    "region": "Qobustan",
+    "branch": "Xilmilli",
+    "zip": "AZ 3714",
+    "label": "Qobustan - Xilmilli (AZ 3714)"
+  },
+  {
+    "region": "Qobustan",
+    "branch": "Nabur",
+    "zip": "AZ 3715",
+    "label": "Qobustan - Nabur (AZ 3715)"
+  },
+  {
+    "region": "Qobustan",
+    "branch": "Poladli",
+    "zip": "AZ 3717",
+    "label": "Qobustan - Poladli (AZ 3717)"
+  },
+  {
+    "region": "Qobustan",
+    "branch": "Təklə",
+    "zip": "AZ 3719",
+    "label": "Qobustan - Təklə (AZ 3719)"
+  },
+  {
+    "region": "Quba",
+    "branch": "Quba",
+    "zip": "AZ 4000",
+    "label": "Quba - Quba (AZ 4000)"
+  },
+  {
+    "region": "Quba",
+    "branch": "1 Sayli",
+    "zip": "AZ 4001",
+    "label": "Quba - 1 Sayli (AZ 4001)"
+  },
+  {
+    "region": "Quba",
+    "branch": "2 Sayli",
+    "zip": "AZ 4002",
+    "label": "Quba - 2 Sayli (AZ 4002)"
+  },
+  {
+    "region": "Quba",
+    "branch": "3 Sayli",
+    "zip": "AZ 4003",
+    "label": "Quba - 3 Sayli (AZ 4003)"
+  },
+  {
+    "region": "Quba",
+    "branch": "Alekseyevka",
+    "zip": "AZ 4011",
+    "label": "Quba - Alekseyevka (AZ 4011)"
+  },
+  {
+    "region": "Quba",
+    "branch": "Alpan",
+    "zip": "AZ 4012",
+    "label": "Quba - Alpan (AZ 4012)"
+  },
+  {
+    "region": "Quba",
+    "branch": "Amsar",
+    "zip": "AZ 4013",
+    "label": "Quba - Amsar (AZ 4013)"
+  },
+  {
+    "region": "Quba",
+    "branch": "Çiçi",
+    "zip": "AZ 4014",
+    "label": "Quba - Çiçi (AZ 4014)"
+  },
+  {
+    "region": "Quba",
+    "branch": "Aşaği Atuc",
+    "zip": "AZ 4015",
+    "label": "Quba - Aşaği Atuc (AZ 4015)"
+  },
+  {
+    "region": "Quba",
+    "branch": "Xucbala",
+    "zip": "AZ 4019",
+    "label": "Quba - Xucbala (AZ 4019)"
+  },
+  {
+    "region": "Quba",
+    "branch": "Kupçal",
+    "zip": "AZ 4022",
+    "label": "Quba - Kupçal (AZ 4022)"
+  },
+  {
+    "region": "Quba",
+    "branch": "Qəçrəş",
+    "zip": "AZ 4023",
+    "label": "Quba - Qəçrəş (AZ 4023)"
+  },
+  {
+    "region": "Quba",
+    "branch": "Qirmizi Qəsəbə",
+    "zip": "AZ 4024",
+    "label": "Quba - Qirmizi Qəsəbə (AZ 4024)"
+  },
+  {
+    "region": "Quba",
+    "branch": "Qonaqkənd",
+    "zip": "AZ 4025",
+    "label": "Quba - Qonaqkənd (AZ 4025)"
+  },
+  {
+    "region": "Quba",
+    "branch": "Nügədi-1",
+    "zip": "AZ 4026",
+    "label": "Quba - Nügədi-1 (AZ 4026)"
+  },
+  {
+    "region": "Quba",
+    "branch": "Nügədi-2",
+    "zip": "AZ 4027",
+    "label": "Quba - Nügədi-2 (AZ 4027)"
+  },
+  {
+    "region": "Quba",
+    "branch": "Rustov",
+    "zip": "AZ 4028",
+    "label": "Quba - Rustov (AZ 4028)"
+  },
+  {
+    "region": "Quba",
+    "branch": "Talabi",
+    "zip": "AZ 4030",
+    "label": "Quba - Talabi (AZ 4030)"
+  },
+  {
+    "region": "Quba",
+    "branch": "Vəl-Vələ",
+    "zip": "AZ 4031",
+    "label": "Quba - Vəl-Vələ (AZ 4031)"
+  },
+  {
+    "region": "Quba",
+    "branch": "Vladimirovka",
+    "zip": "AZ 4032",
+    "label": "Quba - Vladimirovka (AZ 4032)"
+  },
+  {
+    "region": "Quba",
+    "branch": "Hacihüseynli",
+    "zip": "AZ 4033",
+    "label": "Quba - Hacihüseynli (AZ 4033)"
+  },
+  {
+    "region": "Quba",
+    "branch": "Zərdabi",
+    "zip": "AZ 4035",
+    "label": "Quba - Zərdabi (AZ 4035)"
+  },
+  {
+    "region": "Quba",
+    "branch": "Barli",
+    "zip": "AZ 4038",
+    "label": "Quba - Barli (AZ 4038)"
+  },
+  {
+    "region": "Qubadli",
+    "branch": "Qubadli",
+    "zip": "AZ 3900",
+    "label": "Qubadli - Qubadli (AZ 3900)"
+  },
+  {
+    "region": "Qusar",
+    "branch": "Qusar",
+    "zip": "AZ 3800",
+    "label": "Qusar - Qusar (AZ 3800)"
+  },
+  {
+    "region": "Qusar",
+    "branch": "2 Sayli",
+    "zip": "AZ 3802",
+    "label": "Qusar - 2 Sayli (AZ 3802)"
+  },
+  {
+    "region": "Qusar",
+    "branch": "3 Sayli",
+    "zip": "AZ 3803",
+    "label": "Qusar - 3 Sayli (AZ 3803)"
+  },
+  {
+    "region": "Qusar",
+    "branch": "Aşaği Ləyər",
+    "zip": "AZ 3811",
+    "label": "Qusar - Aşaği Ləyər (AZ 3811)"
+  },
+  {
+    "region": "Qusar",
+    "branch": "Düztahir",
+    "zip": "AZ 3814",
+    "label": "Qusar - Düztahir (AZ 3814)"
+  },
+  {
+    "region": "Qusar",
+    "branch": "Əniq",
+    "zip": "AZ 3816",
+    "label": "Qusar - Əniq (AZ 3816)"
+  },
+  {
+    "region": "Qusar",
+    "branch": "Gədəzeyxur",
+    "zip": "AZ 3817",
+    "label": "Qusar - Gədəzeyxur (AZ 3817)"
+  },
+  {
+    "region": "Qusar",
+    "branch": "Gündüzqala",
+    "zip": "AZ 3818",
+    "label": "Qusar - Gündüzqala (AZ 3818)"
+  },
+  {
+    "region": "Qusar",
+    "branch": "Həzrə",
+    "zip": "AZ 3819",
+    "label": "Qusar - Həzrə (AZ 3819)"
+  },
+  {
+    "region": "Qusar",
+    "branch": "Hil",
+    "zip": "AZ 3820",
+    "label": "Qusar - Hil (AZ 3820)"
+  },
+  {
+    "region": "Qusar",
+    "branch": "Imamqulukənd",
+    "zip": "AZ 3824",
+    "label": "Qusar - Imamqulukənd (AZ 3824)"
+  },
+  {
+    "region": "Qusar",
+    "branch": "Kuzun Qişlaq",
+    "zip": "AZ 3826",
+    "label": "Qusar - Kuzun Qişlaq (AZ 3826)"
+  },
+  {
+    "region": "Qusar",
+    "branch": "Kuzun",
+    "zip": "AZ 3827",
+    "label": "Qusar - Kuzun (AZ 3827)"
+  },
+  {
+    "region": "Qusar",
+    "branch": "Quxur Oba",
+    "zip": "AZ 3830",
+    "label": "Qusar - Quxur Oba (AZ 3830)"
+  },
+  {
+    "region": "Qusar",
+    "branch": "Qullar",
+    "zip": "AZ 3831",
+    "label": "Qusar - Qullar (AZ 3831)"
+  },
+  {
+    "region": "Qusar",
+    "branch": "Piral",
+    "zip": "AZ 3833",
+    "label": "Qusar - Piral (AZ 3833)"
+  },
+  {
+    "region": "Qusar",
+    "branch": "Şirvanovka",
+    "zip": "AZ 3834",
+    "label": "Qusar - Şirvanovka (AZ 3834)"
+  },
+  {
+    "region": "Qusar",
+    "branch": "Urva",
+    "zip": "AZ 3835",
+    "label": "Qusar - Urva (AZ 3835)"
+  },
+  {
+    "region": "Qusar",
+    "branch": "Yasab",
+    "zip": "AZ 3836",
+    "label": "Qusar - Yasab (AZ 3836)"
+  },
+  {
+    "region": "Qusar",
+    "branch": "Yuxari Zeyxur",
+    "zip": "AZ 3838",
+    "label": "Qusar - Yuxari Zeyxur (AZ 3838)"
+  },
+  {
+    "region": "Qusar",
+    "branch": "Samur Sdk Gömrük",
+    "zip": "AZ 3840",
+    "label": "Qusar - Samur Sdk Gömrük (AZ 3840)"
+  },
+  {
+    "region": "Saatli",
+    "branch": "Saatli",
+    "zip": "AZ 4900",
+    "label": "Saatli - Saatli (AZ 4900)"
+  },
+  {
+    "region": "Saatli",
+    "branch": "1 Sayli",
+    "zip": "AZ 4901",
+    "label": "Saatli - 1 Sayli (AZ 4901)"
+  },
+  {
+    "region": "Saatli",
+    "branch": "Azadkənd",
+    "zip": "AZ 4911",
+    "label": "Saatli - Azadkənd (AZ 4911)"
+  },
+  {
+    "region": "Saatli",
+    "branch": "Bəylik",
+    "zip": "AZ 4912",
+    "label": "Saatli - Bəylik (AZ 4912)"
+  },
+  {
+    "region": "Saatli",
+    "branch": "Dədə Qorqud",
+    "zip": "AZ 4913",
+    "label": "Saatli - Dədə Qorqud (AZ 4913)"
+  },
+  {
+    "region": "Saatli",
+    "branch": "Əlisoltanli",
+    "zip": "AZ 4914",
+    "label": "Saatli - Əlisoltanli (AZ 4914)"
+  },
+  {
+    "region": "Saatli",
+    "branch": "Fətəlikənd",
+    "zip": "AZ 4915",
+    "label": "Saatli - Fətəlikənd (AZ 4915)"
+  },
+  {
+    "region": "Saatli",
+    "branch": "Haciqasimli",
+    "zip": "AZ 4916",
+    "label": "Saatli - Haciqasimli (AZ 4916)"
+  },
+  {
+    "region": "Saatli",
+    "branch": "Xanlarkənd",
+    "zip": "AZ 4917",
+    "label": "Saatli - Xanlarkənd (AZ 4917)"
+  },
+  {
+    "region": "Saatli",
+    "branch": "Qara Nuru",
+    "zip": "AZ 4918",
+    "label": "Saatli - Qara Nuru (AZ 4918)"
+  },
+  {
+    "region": "Saatli",
+    "branch": "Qaraçalar",
+    "zip": "AZ 4919",
+    "label": "Saatli - Qaraçalar (AZ 4919)"
+  },
+  {
+    "region": "Saatli",
+    "branch": "Qarayevkənd",
+    "zip": "AZ 4920",
+    "label": "Saatli - Qarayevkənd (AZ 4920)"
+  },
+  {
+    "region": "Saatli",
+    "branch": "Qiraqli",
+    "zip": "AZ 4921",
+    "label": "Saatli - Qiraqli (AZ 4921)"
+  },
+  {
+    "region": "Saatli",
+    "branch": "Məmmədabad",
+    "zip": "AZ 4922",
+    "label": "Saatli - Məmmədabad (AZ 4922)"
+  },
+  {
+    "region": "Saatli",
+    "branch": "Mircəlalkənd",
+    "zip": "AZ 4923",
+    "label": "Saatli - Mircəlalkənd (AZ 4923)"
+  },
+  {
+    "region": "Saatli",
+    "branch": "Mollavazli",
+    "zip": "AZ 4924",
+    "label": "Saatli - Mollavazli (AZ 4924)"
+  },
+  {
+    "region": "Saatli",
+    "branch": "Nərimankənd",
+    "zip": "AZ 4925",
+    "label": "Saatli - Nərimankənd (AZ 4925)"
+  },
+  {
+    "region": "Saatli",
+    "branch": "Nəsimikənd",
+    "zip": "AZ 4926",
+    "label": "Saatli - Nəsimikənd (AZ 4926)"
+  },
+  {
+    "region": "Saatli",
+    "branch": "Saatlikənd",
+    "zip": "AZ 4927",
+    "label": "Saatli - Saatlikənd (AZ 4927)"
+  },
+  {
+    "region": "Saatli",
+    "branch": "Saracalar",
+    "zip": "AZ 4928",
+    "label": "Saatli - Saracalar (AZ 4928)"
+  },
+  {
+    "region": "Saatli",
+    "branch": "Şirinbəyli",
+    "zip": "AZ 4929",
+    "label": "Saatli - Şirinbəyli (AZ 4929)"
+  },
+  {
+    "region": "Saatli",
+    "branch": "Varxankənd",
+    "zip": "AZ 4930",
+    "label": "Saatli - Varxankənd (AZ 4930)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Sabirabad",
+    "zip": "AZ 5400",
+    "label": "Sabirabad - Sabirabad (AZ 5400)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "1 Sayli",
+    "zip": "AZ 5401",
+    "label": "Sabirabad - 1 Sayli (AZ 5401)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "3 Sayli",
+    "zip": "AZ 5403",
+    "label": "Sabirabad - 3 Sayli (AZ 5403)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Axisxa",
+    "zip": "AZ 5411",
+    "label": "Sabirabad - Axisxa (AZ 5411)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Axtaçi",
+    "zip": "AZ 5412",
+    "label": "Sabirabad - Axtaçi (AZ 5412)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Cavad",
+    "zip": "AZ 5415",
+    "label": "Sabirabad - Cavad (AZ 5415)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Əhmədabad",
+    "zip": "AZ 5418",
+    "label": "Sabirabad - Əhmədabad (AZ 5418)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Həşimxanli",
+    "zip": "AZ 5420",
+    "label": "Sabirabad - Həşimxanli (AZ 5420)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Kürkəndi",
+    "zip": "AZ 5422",
+    "label": "Sabirabad - Kürkəndi (AZ 5422)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Qalağayin",
+    "zip": "AZ 5423",
+    "label": "Sabirabad - Qalağayin (AZ 5423)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Qaragüney",
+    "zip": "AZ 5424",
+    "label": "Sabirabad - Qaragüney (AZ 5424)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Quruzma",
+    "zip": "AZ 5425",
+    "label": "Sabirabad - Quruzma (AZ 5425)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Qaratəpə",
+    "zip": "AZ 5426",
+    "label": "Sabirabad - Qaratəpə (AZ 5426)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Qasimbəyli",
+    "zip": "AZ 5427",
+    "label": "Sabirabad - Qasimbəyli (AZ 5427)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Qəzli",
+    "zip": "AZ 5428",
+    "label": "Sabirabad - Qəzli (AZ 5428)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Minbaşi",
+    "zip": "AZ 5429",
+    "label": "Sabirabad - Minbaşi (AZ 5429)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Moranli",
+    "zip": "AZ 5430",
+    "label": "Sabirabad - Moranli (AZ 5430)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Mürsəlli",
+    "zip": "AZ 5432",
+    "label": "Sabirabad - Mürsəlli (AZ 5432)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Surra",
+    "zip": "AZ 5433",
+    "label": "Sabirabad - Surra (AZ 5433)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Nizamikənd",
+    "zip": "AZ 5434",
+    "label": "Sabirabad - Nizamikənd (AZ 5434)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Suqovuşan",
+    "zip": "AZ 5435",
+    "label": "Sabirabad - Suqovuşan (AZ 5435)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Şəhriyar",
+    "zip": "AZ 5436",
+    "label": "Sabirabad - Şəhriyar (AZ 5436)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Şix Salahli",
+    "zip": "AZ 5437",
+    "label": "Sabirabad - Şix Salahli (AZ 5437)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Ulacali",
+    "zip": "AZ 5439",
+    "label": "Sabirabad - Ulacali (AZ 5439)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Yolçubəyli",
+    "zip": "AZ 5440",
+    "label": "Sabirabad - Yolçubəyli (AZ 5440)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Zəngənə",
+    "zip": "AZ 5441",
+    "label": "Sabirabad - Zəngənə (AZ 5441)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Qaralar",
+    "zip": "AZ 5443",
+    "label": "Sabirabad - Qaralar (AZ 5443)"
+  },
+  {
+    "region": "Sabirabad",
+    "branch": "Xəlfəli",
+    "zip": "AZ 5446",
+    "label": "Sabirabad - Xəlfəli (AZ 5446)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Şəki",
+    "zip": "AZ 5500",
+    "label": "Şəki - Şəki (AZ 5500)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "1 Sayli",
+    "zip": "AZ 5501",
+    "label": "Şəki - 1 Sayli (AZ 5501)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "2 Sayli",
+    "zip": "AZ 5502",
+    "label": "Şəki - 2 Sayli (AZ 5502)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "3 Sayli",
+    "zip": "AZ 5503",
+    "label": "Şəki - 3 Sayli (AZ 5503)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "4 Sayli",
+    "zip": "AZ 5504",
+    "label": "Şəki - 4 Sayli (AZ 5504)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "5 Sayli",
+    "zip": "AZ 5505",
+    "label": "Şəki - 5 Sayli (AZ 5505)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "6 Sayli",
+    "zip": "AZ 5506",
+    "label": "Şəki - 6 Sayli (AZ 5506)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "7 Sayli",
+    "zip": "AZ 5507",
+    "label": "Şəki - 7 Sayli (AZ 5507)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "8 Sayli",
+    "zip": "AZ 5508",
+    "label": "Şəki - 8 Sayli (AZ 5508)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Aşaği Göynük",
+    "zip": "AZ 5511",
+    "label": "Şəki - Aşaği Göynük (AZ 5511)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Aşaği Küngüt",
+    "zip": "AZ 5512",
+    "label": "Şəki - Aşaği Küngüt (AZ 5512)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Baltali",
+    "zip": "AZ 5513",
+    "label": "Şəki - Baltali (AZ 5513)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Baş Göynük",
+    "zip": "AZ 5514",
+    "label": "Şəki - Baş Göynük (AZ 5514)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Baş Küngüt",
+    "zip": "AZ 5515",
+    "label": "Şəki - Baş Küngüt (AZ 5515)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Baş Layiski",
+    "zip": "AZ 5516",
+    "label": "Şəki - Baş Layiski (AZ 5516)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Baş Zəyzit",
+    "zip": "AZ 5517",
+    "label": "Şəki - Baş Zəyzit (AZ 5517)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Böyük Dəhnə",
+    "zip": "AZ 5518",
+    "label": "Şəki - Böyük Dəhnə (AZ 5518)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Cəfərabad",
+    "zip": "AZ 5519",
+    "label": "Şəki - Cəfərabad (AZ 5519)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Cəyirli",
+    "zip": "AZ 5520",
+    "label": "Şəki - Cəyirli (AZ 5520)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Cumaykənd",
+    "zip": "AZ 5521",
+    "label": "Şəki - Cumaykənd (AZ 5521)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Inçə",
+    "zip": "AZ 5523",
+    "label": "Şəki - Inçə (AZ 5523)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Kiçik Dəhnə",
+    "zip": "AZ 5524",
+    "label": "Şəki - Kiçik Dəhnə (AZ 5524)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Kiş",
+    "zip": "AZ 5525",
+    "label": "Şəki - Kiş (AZ 5525)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Qoxmuq",
+    "zip": "AZ 5526",
+    "label": "Şəki - Qoxmuq (AZ 5526)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Oxud",
+    "zip": "AZ 5527",
+    "label": "Şəki - Oxud (AZ 5527)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Orta Zəyzit",
+    "zip": "AZ 5528",
+    "label": "Şəki - Orta Zəyzit (AZ 5528)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Sarica",
+    "zip": "AZ 5529",
+    "label": "Şəki - Sarica (AZ 5529)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Suçma",
+    "zip": "AZ 5530",
+    "label": "Şəki - Suçma (AZ 5530)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Şəkikənd",
+    "zip": "AZ 5531",
+    "label": "Şəki - Şəkikənd (AZ 5531)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Şorsu",
+    "zip": "AZ 5532",
+    "label": "Şəki - Şorsu (AZ 5532)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Turan",
+    "zip": "AZ 5533",
+    "label": "Şəki - Turan (AZ 5533)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Biləcik",
+    "zip": "AZ 5534",
+    "label": "Şəki - Biləcik (AZ 5534)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Aydinbulaq",
+    "zip": "AZ 5535",
+    "label": "Şəki - Aydinbulaq (AZ 5535)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Oravan",
+    "zip": "AZ 5536",
+    "label": "Şəki - Oravan (AZ 5536)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Baş Göynük-2",
+    "zip": "AZ 5537",
+    "label": "Şəki - Baş Göynük-2 (AZ 5537)"
+  },
+  {
+    "region": "Şəki",
+    "branch": "Köbər Zəyzid",
+    "zip": "AZ 5540",
+    "label": "Şəki - Köbər Zəyzid (AZ 5540)"
+  },
+  {
+    "region": "Salyan",
+    "branch": "Salyan",
+    "zip": "AZ 5200",
+    "label": "Salyan - Salyan (AZ 5200)"
+  },
+  {
+    "region": "Salyan",
+    "branch": "1 Sayli",
+    "zip": "AZ 5201",
+    "label": "Salyan - 1 Sayli (AZ 5201)"
+  },
+  {
+    "region": "Salyan",
+    "branch": "5 Sayli",
+    "zip": "AZ 5205",
+    "label": "Salyan - 5 Sayli (AZ 5205)"
+  },
+  {
+    "region": "Salyan",
+    "branch": "6 Sayli",
+    "zip": "AZ 5206",
+    "label": "Salyan - 6 Sayli (AZ 5206)"
+  },
+  {
+    "region": "Salyan",
+    "branch": "Arbatan",
+    "zip": "AZ 5211",
+    "label": "Salyan - Arbatan (AZ 5211)"
+  },
+  {
+    "region": "Salyan",
+    "branch": "Çuxanli",
+    "zip": "AZ 5213",
+    "label": "Salyan - Çuxanli (AZ 5213)"
+  },
+  {
+    "region": "Salyan",
+    "branch": "Həsənli",
+    "zip": "AZ 5214",
+    "label": "Salyan - Həsənli (AZ 5214)"
+  },
+  {
+    "region": "Salyan",
+    "branch": "Xalac",
+    "zip": "AZ 5215",
+    "label": "Salyan - Xalac (AZ 5215)"
+  },
+  {
+    "region": "Salyan",
+    "branch": "Xidirli",
+    "zip": "AZ 5216",
+    "label": "Salyan - Xidirli (AZ 5216)"
+  },
+  {
+    "region": "Salyan",
+    "branch": "Kür Qaraqaşli",
+    "zip": "AZ 5218",
+    "label": "Salyan - Kür Qaraqaşli (AZ 5218)"
+  },
+  {
+    "region": "Salyan",
+    "branch": "Kürsəngi",
+    "zip": "AZ 5219",
+    "label": "Salyan - Kürsəngi (AZ 5219)"
+  },
+  {
+    "region": "Salyan",
+    "branch": "Qarabağli",
+    "zip": "AZ 5220",
+    "label": "Salyan - Qarabağli (AZ 5220)"
+  },
+  {
+    "region": "Salyan",
+    "branch": "Qaraçala",
+    "zip": "AZ 5221",
+    "label": "Salyan - Qaraçala (AZ 5221)"
+  },
+  {
+    "region": "Salyan",
+    "branch": "Qizilağac",
+    "zip": "AZ 5222",
+    "label": "Salyan - Qizilağac (AZ 5222)"
+  },
+  {
+    "region": "Salyan",
+    "branch": "Marişli",
+    "zip": "AZ 5223",
+    "label": "Salyan - Marişli (AZ 5223)"
+  },
+  {
+    "region": "Salyan",
+    "branch": "Noxudlu",
+    "zip": "AZ 5224",
+    "label": "Salyan - Noxudlu (AZ 5224)"
+  },
+  {
+    "region": "Salyan",
+    "branch": "Sarvan",
+    "zip": "AZ 5227",
+    "label": "Salyan - Sarvan (AZ 5227)"
+  },
+  {
+    "region": "Salyan",
+    "branch": "Şorsulu",
+    "zip": "AZ 5228",
+    "label": "Salyan - Şorsulu (AZ 5228)"
+  },
+  {
+    "region": "Salyan",
+    "branch": "Yenikənd",
+    "zip": "AZ 5230",
+    "label": "Salyan - Yenikənd (AZ 5230)"
+  },
+  {
+    "region": "Salyan",
+    "branch": "Şəkərli",
+    "zip": "AZ 5233",
+    "label": "Salyan - Şəkərli (AZ 5233)"
+  },
+  {
+    "region": "Şamaxi",
+    "branch": "Şamaxi",
+    "zip": "AZ 5600",
+    "label": "Şamaxi - Şamaxi (AZ 5600)"
+  },
+  {
+    "region": "Şamaxi",
+    "branch": "1 Sayli",
+    "zip": "AZ 5601",
+    "label": "Şamaxi - 1 Sayli (AZ 5601)"
+  },
+  {
+    "region": "Şamaxi",
+    "branch": "2 Sayli",
+    "zip": "AZ 5602",
+    "label": "Şamaxi - 2 Sayli (AZ 5602)"
+  },
+  {
+    "region": "Şamaxi",
+    "branch": "Qizmeydan",
+    "zip": "AZ 5611",
+    "label": "Şamaxi - Qizmeydan (AZ 5611)"
+  },
+  {
+    "region": "Şamaxi",
+    "branch": "Bağirli",
+    "zip": "AZ 5612",
+    "label": "Şamaxi - Bağirli (AZ 5612)"
+  },
+  {
+    "region": "Şamaxi",
+    "branch": "Cabani",
+    "zip": "AZ 5613",
+    "label": "Şamaxi - Cabani (AZ 5613)"
+  },
+  {
+    "region": "Şamaxi",
+    "branch": "Çuxuryurd",
+    "zip": "AZ 5614",
+    "label": "Şamaxi - Çuxuryurd (AZ 5614)"
+  },
+  {
+    "region": "Şamaxi",
+    "branch": "Göylər",
+    "zip": "AZ 5615",
+    "label": "Şamaxi - Göylər (AZ 5615)"
+  },
+  {
+    "region": "Şamaxi",
+    "branch": "Günəşli",
+    "zip": "AZ 5616",
+    "label": "Şamaxi - Günəşli (AZ 5616)"
+  },
+  {
+    "region": "Şamaxi",
+    "branch": "Mədrəsə",
+    "zip": "AZ 5617",
+    "label": "Şamaxi - Mədrəsə (AZ 5617)"
+  },
+  {
+    "region": "Şamaxi",
+    "branch": "Nağaraxana",
+    "zip": "AZ 5618",
+    "label": "Şamaxi - Nağaraxana (AZ 5618)"
+  },
+  {
+    "region": "Şamaxi",
+    "branch": "Sabir",
+    "zip": "AZ 5619",
+    "label": "Şamaxi - Sabir (AZ 5619)"
+  },
+  {
+    "region": "Şamaxi",
+    "branch": "Quşçu",
+    "zip": "AZ 5620",
+    "label": "Şamaxi - Quşçu (AZ 5620)"
+  },
+  {
+    "region": "Şamaxi",
+    "branch": "Mirikənd",
+    "zip": "AZ 5621",
+    "label": "Şamaxi - Mirikənd (AZ 5621)"
+  },
+  {
+    "region": "Şamaxi",
+    "branch": "Çarhan",
+    "zip": "AZ 5623",
+    "label": "Şamaxi - Çarhan (AZ 5623)"
+  },
+  {
+    "region": "Şamaxi",
+    "branch": "Pirqulu",
+    "zip": "AZ 5626",
+    "label": "Şamaxi - Pirqulu (AZ 5626)"
+  },
+  {
+    "region": "Şamaxi",
+    "branch": "Muğanli",
+    "zip": "AZ 5627",
+    "label": "Şamaxi - Muğanli (AZ 5627)"
+  },
+  {
+    "region": "Şamaxi",
+    "branch": "Məlikçobanli",
+    "zip": "AZ 5628",
+    "label": "Şamaxi - Məlikçobanli (AZ 5628)"
+  },
+  {
+    "region": "Şamaxi",
+    "branch": "Məlhəm",
+    "zip": "AZ 5629",
+    "label": "Şamaxi - Məlhəm (AZ 5629)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Şəmkir",
+    "zip": "AZ 5700",
+    "label": "Şəmkir - Şəmkir (AZ 5700)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "4 Sayli",
+    "zip": "AZ 5704",
+    "label": "Şəmkir - 4 Sayli (AZ 5704)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "5 Sayli",
+    "zip": "AZ 5705",
+    "label": "Şəmkir - 5 Sayli (AZ 5705)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "6 Sayli",
+    "zip": "AZ 5706",
+    "label": "Şəmkir - 6 Sayli (AZ 5706)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Aşaği Seyfəli",
+    "zip": "AZ 5711",
+    "label": "Şəmkir - Aşaği Seyfəli (AZ 5711)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Çənlibel",
+    "zip": "AZ 5712",
+    "label": "Şəmkir - Çənlibel (AZ 5712)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Çinarli",
+    "zip": "AZ 5713",
+    "label": "Şəmkir - Çinarli (AZ 5713)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Dəllər Cəyir",
+    "zip": "AZ 5714",
+    "label": "Şəmkir - Dəllər Cəyir (AZ 5714)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Dəllər",
+    "zip": "AZ 5715",
+    "label": "Şəmkir - Dəllər (AZ 5715)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Düyərli",
+    "zip": "AZ 5716",
+    "label": "Şəmkir - Düyərli (AZ 5716)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Əliyaqublu",
+    "zip": "AZ 5717",
+    "label": "Şəmkir - Əliyaqublu (AZ 5717)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Irmaşli",
+    "zip": "AZ 5718",
+    "label": "Şəmkir - Irmaşli (AZ 5718)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Könüllü",
+    "zip": "AZ 5719",
+    "label": "Şəmkir - Könüllü (AZ 5719)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Kür",
+    "zip": "AZ 5720",
+    "label": "Şəmkir - Kür (AZ 5720)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Qaracəmirli",
+    "zip": "AZ 5721",
+    "label": "Şəmkir - Qaracəmirli (AZ 5721)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Muxtariyyət",
+    "zip": "AZ 5722",
+    "label": "Şəmkir - Muxtariyyət (AZ 5722)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Plankənd",
+    "zip": "AZ 5723",
+    "label": "Şəmkir - Plankənd (AZ 5723)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Sabirkənd",
+    "zip": "AZ 5724",
+    "label": "Şəmkir - Sabirkənd (AZ 5724)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Şəmkir Vağzal",
+    "zip": "AZ 5725",
+    "label": "Şəmkir - Şəmkir Vağzal (AZ 5725)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Şiştəpə",
+    "zip": "AZ 5726",
+    "label": "Şəmkir - Şiştəpə (AZ 5726)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Zəyəm Cirdaxan",
+    "zip": "AZ 5729",
+    "label": "Şəmkir - Zəyəm Cirdaxan (AZ 5729)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Zəyəm - 3g Muveqqeti",
+    "zip": "AZ 5730",
+    "label": "Şəmkir - Zəyəm - 3g Muveqqeti (AZ 5730)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Ipək Yolu",
+    "zip": "AZ 5732",
+    "label": "Şəmkir - Ipək Yolu (AZ 5732)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Çaparli",
+    "zip": "AZ 5733",
+    "label": "Şəmkir - Çaparli (AZ 5733)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Mahmudlu",
+    "zip": "AZ 5734",
+    "label": "Şəmkir - Mahmudlu (AZ 5734)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Xuluf (Aşaği Keçili)",
+    "zip": "AZ 5735",
+    "label": "Şəmkir - Xuluf (Aşaği Keçili) (AZ 5735)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Bayramli",
+    "zip": "AZ 5736",
+    "label": "Şəmkir - Bayramli (AZ 5736)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Dəllər Cirdaxan",
+    "zip": "AZ 5737",
+    "label": "Şəmkir - Dəllər Cirdaxan (AZ 5737)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Yeni Həyat",
+    "zip": "AZ 5739",
+    "label": "Şəmkir - Yeni Həyat (AZ 5739)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Qapanli",
+    "zip": "AZ 5740",
+    "label": "Şəmkir - Qapanli (AZ 5740)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Tatarli",
+    "zip": "AZ 5741",
+    "label": "Şəmkir - Tatarli (AZ 5741)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Qasimallar",
+    "zip": "AZ 5742",
+    "label": "Şəmkir - Qasimallar (AZ 5742)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Qilincbəyli",
+    "zip": "AZ 5743",
+    "label": "Şəmkir - Qilincbəyli (AZ 5743)"
+  },
+  {
+    "region": "Şəmkir",
+    "branch": "Dəllər Daşbulaq",
+    "zip": "AZ 5745",
+    "label": "Şəmkir - Dəllər Daşbulaq (AZ 5745)"
+  },
+  {
+    "region": "Samux",
+    "branch": "Samux",
+    "zip": "AZ 5100",
+    "label": "Samux - Samux (AZ 5100)"
+  },
+  {
+    "region": "Samux",
+    "branch": "1 Sayli",
+    "zip": "AZ 5101",
+    "label": "Samux - 1 Sayli (AZ 5101)"
+  },
+  {
+    "region": "Samux",
+    "branch": "2 Sayli Rş",
+    "zip": "AZ 5102",
+    "label": "Samux - 2 Sayli Rş (AZ 5102)"
+  },
+  {
+    "region": "Samux",
+    "branch": "Çoban Abdalli",
+    "zip": "AZ 5111",
+    "label": "Samux - Çoban Abdalli (AZ 5111)"
+  },
+  {
+    "region": "Samux",
+    "branch": "Əhmədbəyli",
+    "zip": "AZ 5112",
+    "label": "Samux - Əhmədbəyli (AZ 5112)"
+  },
+  {
+    "region": "Samux",
+    "branch": "Institut",
+    "zip": "AZ 5114",
+    "label": "Samux - Institut (AZ 5114)"
+  },
+  {
+    "region": "Samux",
+    "branch": "Qarayeri",
+    "zip": "AZ 5116",
+    "label": "Samux - Qarayeri (AZ 5116)"
+  },
+  {
+    "region": "Samux",
+    "branch": "Qirmizi Samux",
+    "zip": "AZ 5117",
+    "label": "Samux - Qirmizi Samux (AZ 5117)"
+  },
+  {
+    "region": "Samux",
+    "branch": "Qovlarsari",
+    "zip": "AZ 5118",
+    "label": "Samux - Qovlarsari (AZ 5118)"
+  },
+  {
+    "region": "Samux",
+    "branch": "Lək",
+    "zip": "AZ 5119",
+    "label": "Samux - Lək (AZ 5119)"
+  },
+  {
+    "region": "Samux",
+    "branch": "Poylu",
+    "zip": "AZ 5120",
+    "label": "Samux - Poylu (AZ 5120)"
+  },
+  {
+    "region": "Samux",
+    "branch": "Seyidlər",
+    "zip": "AZ 5121",
+    "label": "Samux - Seyidlər (AZ 5121)"
+  },
+  {
+    "region": "Samux",
+    "branch": "Zazali",
+    "zip": "AZ 5122",
+    "label": "Samux - Zazali (AZ 5122)"
+  },
+  {
+    "region": "Samux",
+    "branch": "Ziyadli",
+    "zip": "AZ 5123",
+    "label": "Samux - Ziyadli (AZ 5123)"
+  },
+  {
+    "region": "Samux",
+    "branch": "Əliuşaği",
+    "zip": "AZ 5125",
+    "label": "Samux - Əliuşaği (AZ 5125)"
+  },
+  {
+    "region": "Samux",
+    "branch": "Sariqamiş",
+    "zip": "AZ 5128",
+    "label": "Samux - Sariqamiş (AZ 5128)"
+  },
+  {
+    "region": "Samux",
+    "branch": "Sərkar-2",
+    "zip": "AZ 5129",
+    "label": "Samux - Sərkar-2 (AZ 5129)"
+  },
+  {
+    "region": "Samux",
+    "branch": "Yenikənd",
+    "zip": "AZ 5131",
+    "label": "Samux - Yenikənd (AZ 5131)"
+  },
+  {
+    "region": "Samux",
+    "branch": "Yuxari Ağasibəyli",
+    "zip": "AZ 5134",
+    "label": "Samux - Yuxari Ağasibəyli (AZ 5134)"
+  },
+  {
+    "region": "Siyəzən",
+    "branch": "Siyəzən",
+    "zip": "AZ 5300",
+    "label": "Siyəzən - Siyəzən (AZ 5300)"
+  },
+  {
+    "region": "Siyəzən",
+    "branch": "1 Sayli Rş",
+    "zip": "AZ 5301",
+    "label": "Siyəzən - 1 Sayli Rş (AZ 5301)"
+  },
+  {
+    "region": "Siyəzən",
+    "branch": "Yenikənd",
+    "zip": "AZ 5312",
+    "label": "Siyəzən - Yenikənd (AZ 5312)"
+  },
+  {
+    "region": "Siyəzən",
+    "branch": "Həmyə",
+    "zip": "AZ 5313",
+    "label": "Siyəzən - Həmyə (AZ 5313)"
+  },
+  {
+    "region": "Siyəzən",
+    "branch": "Sədan",
+    "zip": "AZ 5314",
+    "label": "Siyəzən - Sədan (AZ 5314)"
+  },
+  {
+    "region": "Siyəzən",
+    "branch": "Zarat",
+    "zip": "AZ 5315",
+    "label": "Siyəzən - Zarat (AZ 5315)"
+  },
+  {
+    "region": "Siyəzən",
+    "branch": "Məsrif",
+    "zip": "AZ 5316",
+    "label": "Siyəzən - Məsrif (AZ 5316)"
+  },
+  {
+    "region": "Sumqayit",
+    "branch": "Sumqayit",
+    "zip": "AZ 5000",
+    "label": "Sumqayit - Sumqayit (AZ 5000)"
+  },
+  {
+    "region": "Sumqayit",
+    "branch": "1 Sayli",
+    "zip": "AZ 5001",
+    "label": "Sumqayit - 1 Sayli (AZ 5001)"
+  },
+  {
+    "region": "Sumqayit",
+    "branch": "3 Sayli",
+    "zip": "AZ 5003",
+    "label": "Sumqayit - 3 Sayli (AZ 5003)"
+  },
+  {
+    "region": "Sumqayit",
+    "branch": "4 Sayli",
+    "zip": "AZ 5004",
+    "label": "Sumqayit - 4 Sayli (AZ 5004)"
+  },
+  {
+    "region": "Sumqayit",
+    "branch": "5 Sayli",
+    "zip": "AZ 5005",
+    "label": "Sumqayit - 5 Sayli (AZ 5005)"
+  },
+  {
+    "region": "Sumqayit",
+    "branch": "6 Sayli",
+    "zip": "AZ 5006",
+    "label": "Sumqayit - 6 Sayli (AZ 5006)"
+  },
+  {
+    "region": "Sumqayit",
+    "branch": "7 Sayli",
+    "zip": "AZ 5007",
+    "label": "Sumqayit - 7 Sayli (AZ 5007)"
+  },
+  {
+    "region": "Sumqayit",
+    "branch": "8 Sayli",
+    "zip": "AZ 5008",
+    "label": "Sumqayit - 8 Sayli (AZ 5008)"
+  },
+  {
+    "region": "Sumqayit",
+    "branch": "9 Sayli",
+    "zip": "AZ 5009",
+    "label": "Sumqayit - 9 Sayli (AZ 5009)"
+  },
+  {
+    "region": "Sumqayit",
+    "branch": "11 Sayli",
+    "zip": "AZ 5011",
+    "label": "Sumqayit - 11 Sayli (AZ 5011)"
+  },
+  {
+    "region": "Sumqayit",
+    "branch": "Corat",
+    "zip": "AZ 5021",
+    "label": "Sumqayit - Corat (AZ 5021)"
+  },
+  {
+    "region": "Sumqayit",
+    "branch": "Haci Zeynalabdin",
+    "zip": "AZ 5022",
+    "label": "Sumqayit - Haci Zeynalabdin (AZ 5022)"
+  },
+  {
+    "region": "Şuşa",
+    "branch": "Şuşa",
+    "zip": "AZ 5800",
+    "label": "Şuşa - Şuşa (AZ 5800)"
+  },
+  {
+    "region": "Tər-Tər",
+    "branch": "Tər-Tər",
+    "zip": "AZ 5900",
+    "label": "Tər-Tər - Tər-Tər (AZ 5900)"
+  },
+  {
+    "region": "Tər-Tər",
+    "branch": "2 Sayli",
+    "zip": "AZ 5902",
+    "label": "Tər-Tər - 2 Sayli (AZ 5902)"
+  },
+  {
+    "region": "Tər-Tər",
+    "branch": "Azadqaraqoyunlu",
+    "zip": "AZ 5911",
+    "label": "Tər-Tər - Azadqaraqoyunlu (AZ 5911)"
+  },
+  {
+    "region": "Tər-Tər",
+    "branch": "Bəyimsarov",
+    "zip": "AZ 5912",
+    "label": "Tər-Tər - Bəyimsarov (AZ 5912)"
+  },
+  {
+    "region": "Tər-Tər",
+    "branch": "Dəmirçilər",
+    "zip": "AZ 5915",
+    "label": "Tər-Tər - Dəmirçilər (AZ 5915)"
+  },
+  {
+    "region": "Tər-Tər",
+    "branch": "Haciqərvənd",
+    "zip": "AZ 5918",
+    "label": "Tər-Tər - Haciqərvənd (AZ 5918)"
+  },
+  {
+    "region": "Tər-Tər",
+    "branch": "Qaradağli",
+    "zip": "AZ 5922",
+    "label": "Tər-Tər - Qaradağli (AZ 5922)"
+  },
+  {
+    "region": "Tər-Tər",
+    "branch": "Qarağaci",
+    "zip": "AZ 5923",
+    "label": "Tər-Tər - Qarağaci (AZ 5923)"
+  },
+  {
+    "region": "Tər-Tər",
+    "branch": "Qaynaq",
+    "zip": "AZ 5924",
+    "label": "Tər-Tər - Qaynaq (AZ 5924)"
+  },
+  {
+    "region": "Tər-Tər",
+    "branch": "Sarov",
+    "zip": "AZ 5926",
+    "label": "Tər-Tər - Sarov (AZ 5926)"
+  },
+  {
+    "region": "Tər-Tər",
+    "branch": "Seydimli",
+    "zip": "AZ 5927",
+    "label": "Tər-Tər - Seydimli (AZ 5927)"
+  },
+  {
+    "region": "Tər-Tər",
+    "branch": "Ələsgərli",
+    "zip": "AZ 5928",
+    "label": "Tər-Tər - Ələsgərli (AZ 5928)"
+  },
+  {
+    "region": "Tər-Tər",
+    "branch": "Səhlabad",
+    "zip": "AZ 5929",
+    "label": "Tər-Tər - Səhlabad (AZ 5929)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "Tovuz",
+    "zip": "AZ 6000",
+    "label": "Tovuz - Tovuz (AZ 6000)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "1 Sayli",
+    "zip": "AZ 6001",
+    "label": "Tovuz - 1 Sayli (AZ 6001)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "2 Sayli",
+    "zip": "AZ 6002",
+    "label": "Tovuz - 2 Sayli (AZ 6002)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "Abulbəyli",
+    "zip": "AZ 6011",
+    "label": "Tovuz - Abulbəyli (AZ 6011)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "Alakol",
+    "zip": "AZ 6012",
+    "label": "Tovuz - Alakol (AZ 6012)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "Əyyublu",
+    "zip": "AZ 6014",
+    "label": "Tovuz - Əyyublu (AZ 6014)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "Aşaği Quşçu",
+    "zip": "AZ 6015",
+    "label": "Tovuz - Aşaği Quşçu (AZ 6015)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "Aşaği Öysüzlü",
+    "zip": "AZ 6016",
+    "label": "Tovuz - Aşaği Öysüzlü (AZ 6016)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "Azafli",
+    "zip": "AZ 6017",
+    "label": "Tovuz - Azafli (AZ 6017)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "Bozalqanli",
+    "zip": "AZ 6018",
+    "label": "Tovuz - Bozalqanli (AZ 6018)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "Dondar Quşcu",
+    "zip": "AZ 6022",
+    "label": "Tovuz - Dondar Quşcu (AZ 6022)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "Dönük Qirixli",
+    "zip": "AZ 6023",
+    "label": "Tovuz - Dönük Qirixli (AZ 6023)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "Düz Cirdaxan",
+    "zip": "AZ 6024",
+    "label": "Tovuz - Düz Cirdaxan (AZ 6024)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "Düz Qirixli",
+    "zip": "AZ 6025",
+    "label": "Tovuz - Düz Qirixli (AZ 6025)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "Əlibəyli",
+    "zip": "AZ 6026",
+    "label": "Tovuz - Əlibəyli (AZ 6026)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "Əlimərdanli",
+    "zip": "AZ 6027",
+    "label": "Tovuz - Əlimərdanli (AZ 6027)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "Əsrik Cirdaxan",
+    "zip": "AZ 6028",
+    "label": "Tovuz - Əsrik Cirdaxan (AZ 6028)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "Qaraxanli",
+    "zip": "AZ 6030",
+    "label": "Tovuz - Qaraxanli (AZ 6030)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "Xatinli",
+    "zip": "AZ 6033",
+    "label": "Tovuz - Xatinli (AZ 6033)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "Qovlar",
+    "zip": "AZ 6035",
+    "label": "Tovuz - Qovlar (AZ 6035)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "Yanixli",
+    "zip": "AZ 6039",
+    "label": "Tovuz - Yanixli (AZ 6039)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "Yuxari Öysüzlü",
+    "zip": "AZ 6040",
+    "label": "Tovuz - Yuxari Öysüzlü (AZ 6040)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "Ibrahimhacili",
+    "zip": "AZ 6041",
+    "label": "Tovuz - Ibrahimhacili (AZ 6041)"
+  },
+  {
+    "region": "Tovuz",
+    "branch": "Mulkulu",
+    "zip": "AZ 6044",
+    "label": "Tovuz - Mulkulu (AZ 6044)"
+  },
+  {
+    "region": "Ucar",
+    "branch": "Ucar",
+    "zip": "AZ 6100",
+    "label": "Ucar - Ucar (AZ 6100)"
+  },
+  {
+    "region": "Ucar",
+    "branch": "2 Sayli",
+    "zip": "AZ 6102",
+    "label": "Ucar - 2 Sayli (AZ 6102)"
+  },
+  {
+    "region": "Ucar",
+    "branch": "Qaziqumlaq",
+    "zip": "AZ 6111",
+    "label": "Ucar - Qaziqumlaq (AZ 6111)"
+  },
+  {
+    "region": "Ucar",
+    "branch": "Alpout",
+    "zip": "AZ 6112",
+    "label": "Ucar - Alpout (AZ 6112)"
+  },
+  {
+    "region": "Ucar",
+    "branch": "Bərgüşad",
+    "zip": "AZ 6113",
+    "label": "Ucar - Bərgüşad (AZ 6113)"
+  },
+  {
+    "region": "Ucar",
+    "branch": "Küçəkənd",
+    "zip": "AZ 6114",
+    "label": "Ucar - Küçəkənd (AZ 6114)"
+  },
+  {
+    "region": "Ucar",
+    "branch": "Boyat",
+    "zip": "AZ 6115",
+    "label": "Ucar - Boyat (AZ 6115)"
+  },
+  {
+    "region": "Ucar",
+    "branch": "Qarabörk",
+    "zip": "AZ 6116",
+    "label": "Ucar - Qarabörk (AZ 6116)"
+  },
+  {
+    "region": "Ucar",
+    "branch": "Qaracalli",
+    "zip": "AZ 6117",
+    "label": "Ucar - Qaracalli (AZ 6117)"
+  },
+  {
+    "region": "Ucar",
+    "branch": "Qaradağli",
+    "zip": "AZ 6118",
+    "label": "Ucar - Qaradağli (AZ 6118)"
+  },
+  {
+    "region": "Ucar",
+    "branch": "Qəzyan",
+    "zip": "AZ 6119",
+    "label": "Ucar - Qəzyan (AZ 6119)"
+  },
+  {
+    "region": "Ucar",
+    "branch": "Qulabənd",
+    "zip": "AZ 6120",
+    "label": "Ucar - Qulabənd (AZ 6120)"
+  },
+  {
+    "region": "Ucar",
+    "branch": "Lək",
+    "zip": "AZ 6121",
+    "label": "Ucar - Lək (AZ 6121)"
+  },
+  {
+    "region": "Ucar",
+    "branch": "Ramal",
+    "zip": "AZ 6122",
+    "label": "Ucar - Ramal (AZ 6122)"
+  },
+  {
+    "region": "Ucar",
+    "branch": "Təzə Şilyan",
+    "zip": "AZ 6123",
+    "label": "Ucar - Təzə Şilyan (AZ 6123)"
+  },
+  {
+    "region": "Ucar",
+    "branch": "Yuxari Şilyan",
+    "zip": "AZ 6124",
+    "label": "Ucar - Yuxari Şilyan (AZ 6124)"
+  },
+  {
+    "region": "Ucar",
+    "branch": "Müsüslü",
+    "zip": "AZ 6125",
+    "label": "Ucar - Müsüslü (AZ 6125)"
+  },
+  {
+    "region": "Ucar",
+    "branch": "Məlikballi",
+    "zip": "AZ 6126",
+    "label": "Ucar - Məlikballi (AZ 6126)"
+  },
+  {
+    "region": "Ucar",
+    "branch": "Xələc",
+    "zip": "AZ 6127",
+    "label": "Ucar - Xələc (AZ 6127)"
+  },
+  {
+    "region": "Ucar",
+    "branch": "Şahliq",
+    "zip": "AZ 6128",
+    "label": "Ucar - Şahliq (AZ 6128)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Xaçmaz",
+    "zip": "AZ 2700",
+    "label": "Xaçmaz - Xaçmaz (AZ 2700)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "2 Sayli",
+    "zip": "AZ 2702",
+    "label": "Xaçmaz - 2 Sayli (AZ 2702)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "3 Sayli",
+    "zip": "AZ 2703",
+    "label": "Xaçmaz - 3 Sayli (AZ 2703)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "4 Sayli",
+    "zip": "AZ 2704",
+    "label": "Xaçmaz - 4 Sayli (AZ 2704)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Alekseevka",
+    "zip": "AZ 2711",
+    "label": "Xaçmaz - Alekseevka (AZ 2711)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Çarxi",
+    "zip": "AZ 2712",
+    "label": "Xaçmaz - Çarxi (AZ 2712)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Dədəli",
+    "zip": "AZ 2713",
+    "label": "Xaçmaz - Dədəli (AZ 2713)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Haciəlibəy",
+    "zip": "AZ 2714",
+    "label": "Xaçmaz - Haciəlibəy (AZ 2714)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Həsənqala",
+    "zip": "AZ 2715",
+    "label": "Xaçmaz - Həsənqala (AZ 2715)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Hülövlü",
+    "zip": "AZ 2716",
+    "label": "Xaçmaz - Hülövlü (AZ 2716)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Xudat",
+    "zip": "AZ 2717",
+    "label": "Xaçmaz - Xudat (AZ 2717)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Kənd Xudat",
+    "zip": "AZ 2718",
+    "label": "Xaçmaz - Kənd Xudat (AZ 2718)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Qaraçaycek",
+    "zip": "AZ 2719",
+    "label": "Xaçmaz - Qaraçaycek (AZ 2719)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Qimil Qişlaq",
+    "zip": "AZ 2720",
+    "label": "Xaçmaz - Qimil Qişlaq (AZ 2720)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Qusarçay",
+    "zip": "AZ 2721",
+    "label": "Xaçmaz - Qusarçay (AZ 2721)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Ləcət",
+    "zip": "AZ 2722",
+    "label": "Xaçmaz - Ləcət (AZ 2722)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Muxtadir",
+    "zip": "AZ 2723",
+    "label": "Xaçmaz - Muxtadir (AZ 2723)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Nabran",
+    "zip": "AZ 2724",
+    "label": "Xaçmaz - Nabran (AZ 2724)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Nərəcan",
+    "zip": "AZ 2725",
+    "label": "Xaçmaz - Nərəcan (AZ 2725)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Niyazoba",
+    "zip": "AZ 2726",
+    "label": "Xaçmaz - Niyazoba (AZ 2726)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Müşkür",
+    "zip": "AZ 2727",
+    "label": "Xaçmaz - Müşkür (AZ 2727)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Pirquluoba",
+    "zip": "AZ 2728",
+    "label": "Xaçmaz - Pirquluoba (AZ 2728)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Uzun Oba",
+    "zip": "AZ 2729",
+    "label": "Xaçmaz - Uzun Oba (AZ 2729)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Yalama",
+    "zip": "AZ 2730",
+    "label": "Xaçmaz - Yalama (AZ 2730)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Yeni Həyat",
+    "zip": "AZ 2731",
+    "label": "Xaçmaz - Yeni Həyat (AZ 2731)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Yergüc",
+    "zip": "AZ 2732",
+    "label": "Xaçmaz - Yergüc (AZ 2732)"
+  },
+  {
+    "region": "Xaçmaz",
+    "branch": "Xanoba   Gomruk",
+    "zip": "AZ 2734",
+    "label": "Xaçmaz - Xanoba   Gomruk (AZ 2734)"
+  },
+  {
+    "region": "Xankəndi",
+    "branch": "Xankəndi",
+    "zip": "AZ 2600",
+    "label": "Xankəndi - Xankəndi (AZ 2600)"
+  },
+  {
+    "region": "Xizi",
+    "branch": "Xizi",
+    "zip": "AZ 8000",
+    "label": "Xizi - Xizi (AZ 8000)"
+  },
+  {
+    "region": "Xizi",
+    "branch": "Giləzi",
+    "zip": "AZ 8011",
+    "label": "Xizi - Giləzi (AZ 8011)"
+  },
+  {
+    "region": "Xocali",
+    "branch": "Xocali",
+    "zip": "AZ 2900",
+    "label": "Xocali - Xocali (AZ 2900)"
+  },
+  {
+    "region": "Xocavənd",
+    "branch": "Xocavənd",
+    "zip": "AZ 2800",
+    "label": "Xocavənd - Xocavənd (AZ 2800)"
+  },
+  {
+    "region": "Yardimli",
+    "branch": "Yardimli",
+    "zip": "AZ 6500",
+    "label": "Yardimli - Yardimli (AZ 6500)"
+  },
+  {
+    "region": "Yardimli",
+    "branch": "Avaş",
+    "zip": "AZ 6510",
+    "label": "Yardimli - Avaş (AZ 6510)"
+  },
+  {
+    "region": "Yardimli",
+    "branch": "Arus",
+    "zip": "AZ 6512",
+    "label": "Yardimli - Arus (AZ 6512)"
+  },
+  {
+    "region": "Yardimli",
+    "branch": "Çayüzü",
+    "zip": "AZ 6515",
+    "label": "Yardimli - Çayüzü (AZ 6515)"
+  },
+  {
+    "region": "Yardimli",
+    "branch": "Köryədi",
+    "zip": "AZ 6518",
+    "label": "Yardimli - Köryədi (AZ 6518)"
+  },
+  {
+    "region": "Yardimli",
+    "branch": "Şəfəqli",
+    "zip": "AZ 6523",
+    "label": "Yardimli - Şəfəqli (AZ 6523)"
+  },
+  {
+    "region": "Yardimli",
+    "branch": "Vərgədüz",
+    "zip": "AZ 6526",
+    "label": "Yardimli - Vərgədüz (AZ 6526)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "Yevlax",
+    "zip": "AZ 6600",
+    "label": "Yevlax - Yevlax (AZ 6600)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "1 Sayli",
+    "zip": "AZ 6601",
+    "label": "Yevlax - 1 Sayli (AZ 6601)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "2 Sayli",
+    "zip": "AZ 6602",
+    "label": "Yevlax - 2 Sayli (AZ 6602)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "3 Sayli",
+    "zip": "AZ 6603",
+    "label": "Yevlax - 3 Sayli (AZ 6603)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "4 Sayli",
+    "zip": "AZ 6604",
+    "label": "Yevlax - 4 Sayli (AZ 6604)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "5 Sayli",
+    "zip": "AZ 6605",
+    "label": "Yevlax - 5 Sayli (AZ 6605)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "Aran 1",
+    "zip": "AZ 6611",
+    "label": "Yevlax - Aran 1 (AZ 6611)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "Aran 2",
+    "zip": "AZ 6612",
+    "label": "Yevlax - Aran 2 (AZ 6612)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "Aşaği Bucaq",
+    "zip": "AZ 6613",
+    "label": "Yevlax - Aşaği Bucaq (AZ 6613)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "Nərimanabad",
+    "zip": "AZ 6614",
+    "label": "Yevlax - Nərimanabad (AZ 6614)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "Hürüuşaği",
+    "zip": "AZ 6616",
+    "label": "Yevlax - Hürüuşaği (AZ 6616)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "Haciselli",
+    "zip": "AZ 6617",
+    "label": "Yevlax - Haciselli (AZ 6617)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "Xaldan",
+    "zip": "AZ 6619",
+    "label": "Yevlax - Xaldan (AZ 6619)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "Xanabad",
+    "zip": "AZ 6620",
+    "label": "Yevlax - Xanabad (AZ 6620)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "Kövər",
+    "zip": "AZ 6621",
+    "label": "Yevlax - Kövər (AZ 6621)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "Qaramanli",
+    "zip": "AZ 6622",
+    "label": "Yevlax - Qaramanli (AZ 6622)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "Qaraməmmədli",
+    "zip": "AZ 6623",
+    "label": "Yevlax - Qaraməmmədli (AZ 6623)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "Qoyunbinəsi",
+    "zip": "AZ 6624",
+    "label": "Yevlax - Qoyunbinəsi (AZ 6624)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "Malbinəsi",
+    "zip": "AZ 6625",
+    "label": "Yevlax - Malbinəsi (AZ 6625)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "Meyvəli",
+    "zip": "AZ 6626",
+    "label": "Yevlax - Meyvəli (AZ 6626)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "Nemətabad",
+    "zip": "AZ 6627",
+    "label": "Yevlax - Nemətabad (AZ 6627)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "Nurallar",
+    "zip": "AZ 6629",
+    "label": "Yevlax - Nurallar (AZ 6629)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "Salahli",
+    "zip": "AZ 6631",
+    "label": "Yevlax - Salahli (AZ 6631)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "Səmədabad",
+    "zip": "AZ 6632",
+    "label": "Yevlax - Səmədabad (AZ 6632)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "Tanriqullar",
+    "zip": "AZ 6633",
+    "label": "Yevlax - Tanriqullar (AZ 6633)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "Gülövşə",
+    "zip": "AZ 6634",
+    "label": "Yevlax - Gülövşə (AZ 6634)"
+  },
+  {
+    "region": "Yevlax",
+    "branch": "Yuxari Qarxun",
+    "zip": "AZ 6636",
+    "label": "Yevlax - Yuxari Qarxun (AZ 6636)"
+  },
+  {
+    "region": "Zəngilan",
+    "branch": "Zəngilan",
+    "zip": "AZ 6400",
+    "label": "Zəngilan - Zəngilan (AZ 6400)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Zaqatala",
+    "zip": "AZ 6200",
+    "label": "Zaqatala - Zaqatala (AZ 6200)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "1sayli",
+    "zip": "AZ 6201",
+    "label": "Zaqatala - 1sayli (AZ 6201)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "2 Sayli",
+    "zip": "AZ 6202",
+    "label": "Zaqatala - 2 Sayli (AZ 6202)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "3 Sayli",
+    "zip": "AZ 6203",
+    "label": "Zaqatala - 3 Sayli (AZ 6203)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "4 Sayli",
+    "zip": "AZ 6204",
+    "label": "Zaqatala - 4 Sayli (AZ 6204)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "5 Sayli",
+    "zip": "AZ 6205",
+    "label": "Zaqatala - 5 Sayli (AZ 6205)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "6 Sayli",
+    "zip": "AZ 6206",
+    "label": "Zaqatala - 6 Sayli (AZ 6206)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Aşaği Tala",
+    "zip": "AZ 6212",
+    "label": "Zaqatala - Aşaği Tala (AZ 6212)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Bəhmədli",
+    "zip": "AZ 6213",
+    "label": "Zaqatala - Bəhmədli (AZ 6213)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Car",
+    "zip": "AZ 6214",
+    "label": "Zaqatala - Car (AZ 6214)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Çobankol",
+    "zip": "AZ 6215",
+    "label": "Zaqatala - Çobankol (AZ 6215)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Danaçi",
+    "zip": "AZ 6216",
+    "label": "Zaqatala - Danaçi (AZ 6216)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Üçünsü Tala",
+    "zip": "AZ 6217",
+    "label": "Zaqatala - Üçünsü Tala (AZ 6217)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Əliabad",
+    "zip": "AZ 6218",
+    "label": "Zaqatala - Əliabad (AZ 6218)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Əliabad-1",
+    "zip": "AZ 6219",
+    "label": "Zaqatala - Əliabad-1 (AZ 6219)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Dağli",
+    "zip": "AZ 6220",
+    "label": "Zaqatala - Dağli (AZ 6220)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Göyəm",
+    "zip": "AZ 6222",
+    "label": "Zaqatala - Göyəm (AZ 6222)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Gözbarax",
+    "zip": "AZ 6223",
+    "label": "Zaqatala - Gözbarax (AZ 6223)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Qandax",
+    "zip": "AZ 6225",
+    "label": "Zaqatala - Qandax (AZ 6225)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Qimir",
+    "zip": "AZ 6227",
+    "label": "Zaqatala - Qimir (AZ 6227)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Makov",
+    "zip": "AZ 6229",
+    "label": "Zaqatala - Makov (AZ 6229)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Mazix",
+    "zip": "AZ 6230",
+    "label": "Zaqatala - Mazix (AZ 6230)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Mosul",
+    "zip": "AZ 6231",
+    "label": "Zaqatala - Mosul (AZ 6231)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Muğanli",
+    "zip": "AZ 6232",
+    "label": "Zaqatala - Muğanli (AZ 6232)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Muxax",
+    "zip": "AZ 6233",
+    "label": "Zaqatala - Muxax (AZ 6233)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Yeni Suvağil",
+    "zip": "AZ 6236",
+    "label": "Zaqatala - Yeni Suvağil (AZ 6236)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Yengiyan",
+    "zip": "AZ 6237",
+    "label": "Zaqatala - Yengiyan (AZ 6237)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Yuxari Çardaxlar",
+    "zip": "AZ 6238",
+    "label": "Zaqatala - Yuxari Çardaxlar (AZ 6238)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Yuxari Tala",
+    "zip": "AZ 6239",
+    "label": "Zaqatala - Yuxari Tala (AZ 6239)"
+  },
+  {
+    "region": "Zaqatala",
+    "branch": "Lahic",
+    "zip": "AZ 6240",
+    "label": "Zaqatala - Lahic (AZ 6240)"
+  },
+  {
+    "region": "Zərdab",
+    "branch": "Zərdab",
+    "zip": "AZ 6300",
+    "label": "Zərdab - Zərdab (AZ 6300)"
+  },
+  {
+    "region": "Zərdab",
+    "branch": "1 Sayli",
+    "zip": "AZ 6301",
+    "label": "Zərdab - 1 Sayli (AZ 6301)"
+  },
+  {
+    "region": "Zərdab",
+    "branch": "Biçaqçi",
+    "zip": "AZ 6312",
+    "label": "Zərdab - Biçaqçi (AZ 6312)"
+  },
+  {
+    "region": "Zərdab",
+    "branch": "Çalli",
+    "zip": "AZ 6313",
+    "label": "Zərdab - Çalli (AZ 6313)"
+  },
+  {
+    "region": "Zərdab",
+    "branch": "Gəlmə",
+    "zip": "AZ 6315",
+    "label": "Zərdab - Gəlmə (AZ 6315)"
+  },
+  {
+    "region": "Zərdab",
+    "branch": "Qoruqbaği",
+    "zip": "AZ 6316",
+    "label": "Zərdab - Qoruqbaği (AZ 6316)"
+  },
+  {
+    "region": "Zərdab",
+    "branch": "Qaravəlli",
+    "zip": "AZ 6317",
+    "label": "Zərdab - Qaravəlli (AZ 6317)"
+  },
+  {
+    "region": "Zərdab",
+    "branch": "Məlikli",
+    "zip": "AZ 6319",
+    "label": "Zərdab - Məlikli (AZ 6319)"
+  },
+  {
+    "region": "Zərdab",
+    "branch": "Məmmədqasimli",
+    "zip": "AZ 6321",
+    "label": "Zərdab - Məmmədqasimli (AZ 6321)"
+  },
+  {
+    "region": "Zərdab",
+    "branch": "Əlvənd",
+    "zip": "AZ 6322",
+    "label": "Zərdab - Əlvənd (AZ 6322)"
+  },
+  {
+    "region": "Zərdab",
+    "branch": "Pərvanli",
+    "zip": "AZ 6323",
+    "label": "Zərdab - Pərvanli (AZ 6323)"
+  },
+  {
+    "region": "Zərdab",
+    "branch": "Səfdəxal",
+    "zip": "AZ 6324",
+    "label": "Zərdab - Səfdəxal (AZ 6324)"
+  },
+  {
+    "region": "Zərdab",
+    "branch": "Yarməmmədbaği",
+    "zip": "AZ 6325",
+    "label": "Zərdab - Yarməmmədbaği (AZ 6325)"
+  },
+  {
+    "region": "Zərdab",
+    "branch": "Təzəkənd",
+    "zip": "AZ 6328",
+    "label": "Zərdab - Təzəkənd (AZ 6328)"
+  },
+  {
+    "region": "Lənkəran",
+    "branch": "Mərkəzi Poçt (Lənkəran)",
+    "zip": "AZ4200",
+    "label": "Lənkəran - Mərkəzi Poçt (AZ4200)"
+  },
+  {
+    "region": "Gəncə",
+    "branch": "Mərkəzi Poçt (Gəncə)",
+    "zip": "AZ2000",
+    "label": "Gəncə - Mərkəzi Poçt (AZ2000)"
+  },
+  {
+    "region": "Sumqayıt",
+    "branch": "Mərkəzi Poçt (Sumqayıt)",
+    "zip": "AZ5000",
+    "label": "Sumqayıt - Mərkəzi Poçt (AZ5000)"
+  }
+]

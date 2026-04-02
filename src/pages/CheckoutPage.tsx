@@ -11,23 +11,34 @@ import { Textarea } from '@/components/ui/textarea';
 import { ShieldCheck, CreditCard, Banknote, Building2, Tag, Check, AlertCircle } from 'lucide-react';
 import { validatePromoCode } from '@/lib/promoCodes';
 import { toast } from 'sonner';
+import azpostData from '@/data/azpost.json';
 
 const CheckoutPage = () => {
   const { items, totalPrice, clearCart } = useCart();
   const { createOrder } = useOrders();
   const navigate = useNavigate();
-  const [deliveryMethod, setDeliveryMethod] = useState('standard');
+  const [deliveryMethod, setDeliveryMethod] = useState('baku');
   const [paymentMethod, setPaymentMethod] = useState('card');
   const [promoCode, setPromoCode] = useState('');
   const [promoDiscount, setPromoDiscount] = useState(0);
   const [promoApplied, setPromoApplied] = useState('');
   const [errors, setErrors] = useState<Record<string, string>>({});
+  
+  const [postSearch, setPostSearch] = useState('');
+  const [showPostOptions, setShowPostOptions] = useState(false);
 
   const [form, setForm] = useState({
     name: '', phone: '', city: 'Bakı', postal: '', address: '', notes: '',
   });
 
-  const totalWeight = items.reduce((acc, { product, quantity }) => acc + ((product.weight || 0.5) * quantity), 0);
+  const exactWeight = items.reduce((acc, { product, quantity }) => acc + ((product.weight || 0.5) * quantity), 0);
+  const totalVolWeight = items.reduce((acc, { product, quantity }) => {
+    const w = product.width || 10;
+    const l = product.length || 10;
+    const h = product.height || 10;
+    return acc + (((w * l * h) / 6000) * quantity);
+  }, 0);
+  const chargeableWeight = Math.max(exactWeight, totalVolWeight);
 
   const calculatePostalFee = (weightInKg: number) => {
     let base = 0;
@@ -40,7 +51,7 @@ const CheckoutPage = () => {
   };
 
   const bakuFee = totalPrice >= 50 ? 0 : 5.00;
-  const postFee = calculatePostalFee(totalWeight);
+  const postFee = calculatePostalFee(chargeableWeight);
 
   const shipping = deliveryMethod === 'baku' ? bakuFee : postFee;
   const finalTotal = totalPrice - promoDiscount + shipping;
@@ -179,18 +190,67 @@ const CheckoutPage = () => {
                     <Input id="phone" placeholder="+994 50 XXX XX XX" value={form.phone} onChange={(e) => updateForm('phone', e.target.value)} className={`mt-1 ${errors.phone ? 'border-destructive' : ''}`} />
                     {errors.phone && <p className="text-xs text-destructive mt-1 flex items-center gap-1"><AlertCircle className="h-3 w-3" />{errors.phone}</p>}
                   </div>
-                  <div>
-                    <Label htmlFor="city">Şəhər / Rayon *</Label>
-                    <Input id="city" placeholder="Məs: Bakı, Gəncə, Quba" value={form.city} onChange={(e) => updateForm('city', e.target.value)} className={`mt-1 ${errors.city ? 'border-destructive' : ''}`} />
-                    {errors.city && <p className="text-xs text-destructive mt-1 flex items-center gap-1"><AlertCircle className="h-3 w-3" />{errors.city}</p>}
-                  </div>
-                  <div>
-                    <Label htmlFor="postal">Poçt kodu</Label>
-                    <Input id="postal" placeholder="AZ1000" value={form.postal} onChange={(e) => updateForm('postal', e.target.value)} className="mt-1" />
-                  </div>
-                  <div className="sm:col-span-2">
-                    <Label htmlFor="address">Ünvan *</Label>
-                    <Input id="address" placeholder="Küçə, bina, mənzil" value={form.address} onChange={(e) => updateForm('address', e.target.value)} className={`mt-1 ${errors.address ? 'border-destructive' : ''}`} />
+                  
+                  {deliveryMethod === 'baku' ? (
+                    <>
+                      <div>
+                        <Label htmlFor="city">Şəhər / Rayon *</Label>
+                        <Input id="city" value="Bakı" readOnly className="mt-1 bg-muted font-medium" />
+                      </div>
+                      <div>
+                        <Label htmlFor="postal">Poçt kodu (İstəyə bağlı)</Label>
+                        <Input id="postal" placeholder="AZ1000" value={form.postal} onChange={(e) => updateForm('postal', e.target.value)} className="mt-1" />
+                      </div>
+                    </>
+                  ) : (
+                    <div className="sm:col-span-2 relative">
+                      <Label htmlFor="city">Bölgə / Poçt filialını seçin *</Label>
+                      <Input
+                        id="city"
+                        placeholder="Məs: Lənkəran, Göyçay, Zaqatala..."
+                        value={postSearch}
+                        onFocus={() => setShowPostOptions(true)}
+                        onBlur={() => setTimeout(() => setShowPostOptions(false), 200)}
+                        onChange={(e) => {
+                          setPostSearch(e.target.value);
+                          setShowPostOptions(true);
+                          updateForm('city', '');
+                          updateForm('postal', '');
+                        }}
+                        className={`mt-1 ${errors.city ? 'border-destructive' : ''}`}
+                      />
+                      {errors.city && <p className="text-xs text-destructive mt-1 flex items-center gap-1"><AlertCircle className="h-3 w-3" />{errors.city}</p>}
+                      
+                      {showPostOptions && postSearch && (
+                        <div className="absolute z-10 w-full mt-1 bg-card border rounded-md shadow-lg max-h-60 overflow-y-auto">
+                          {azpostData
+                            .filter(p => p.label.toLowerCase().includes(postSearch.toLowerCase()))
+                            .slice(0, 20)
+                            .map((p, idx) => (
+                              <div
+                                key={idx}
+                                className="px-4 py-2 hover:bg-muted cursor-pointer text-sm"
+                                onClick={() => {
+                                  setPostSearch(p.label);
+                                  updateForm('city', p.region);
+                                  updateForm('postal', p.zip);
+                                  setShowPostOptions(false);
+                                }}
+                              >
+                                {p.label}
+                              </div>
+                            ))}
+                          {azpostData.filter(p => p.label.toLowerCase().includes(postSearch.toLowerCase())).length === 0 && (
+                            <div className="px-4 py-3 text-sm text-muted-foreground">Nəticə tapılmadı...</div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  <div className="sm:col-span-2 mt-2">
+                    <Label htmlFor="address">{deliveryMethod === 'baku' ? 'Ünvan *' : 'Poçta gələcək şəxsin ünvanı (İstəyə bağlı)'}</Label>
+                    <Input id="address" placeholder="Küçə, bina, mənzil..." value={form.address} onChange={(e) => updateForm('address', e.target.value)} className={`mt-1 ${errors.address ? 'border-destructive' : ''}`} />
                     {errors.address && <p className="text-xs text-destructive mt-1 flex items-center gap-1"><AlertCircle className="h-3 w-3" />{errors.address}</p>}
                   </div>
                   <div className="sm:col-span-2">
@@ -206,7 +266,7 @@ const CheckoutPage = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {[
                     { key: 'baku', label: 'Qapıya çatdırılma (Bakı)', desc: '1-2 iş günü', price: bakuFee === 0 ? 'Pulsuz' : `${bakuFee.toFixed(2)}₼` },
-                    { key: 'post', label: 'Bölgəyə çatdırılma (Poçt)', desc: `Ümumi çəki: ${totalWeight} kq`, price: `${postFee.toFixed(2)}₼` },
+                    { key: 'post', label: 'Bölgəyə çatdırılma (Poçt)', desc: `Çəki bazası: ${chargeableWeight.toFixed(2)} kq`, price: `${postFee.toFixed(2)}₼` },
                   ].map((m) => (
                     <button
                       key={m.key}

@@ -16,6 +16,9 @@ export interface Product {
   features?: string[];
   variants?: string[];
   weight?: number;
+  width?: number;
+  length?: number;
+  height?: number;
 }
 
 export const getProductId = (p: Product): string => p._id || p.id || '';

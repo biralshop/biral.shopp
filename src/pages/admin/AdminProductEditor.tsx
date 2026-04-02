@@ -31,6 +31,9 @@ const AdminProductEditor = () => {
     images: [] as string[],
     badge: '',
     weight: 0.5,
+    width: 10,
+    length: 10,
+    height: 10,
     features: ''
   });
 
@@ -53,6 +56,9 @@ const AdminProductEditor = () => {
             images: res.product.images || (res.product.image ? [res.product.image] : []),
             badge: res.product.badge || '',
             weight: res.product.weight || 0.5,
+            width: res.product.width || 10,
+            length: res.product.length || 10,
+            height: res.product.height || 10,
             features: (res.product.features || []).join('\n')
           });
         })
@@ -65,7 +71,7 @@ const AdminProductEditor = () => {
     const { name, value } = e.target;
     setFormData(prev => ({ 
       ...prev, 
-      [name]: ['price', 'oldPrice', 'stock', 'rating', 'weight'].includes(name) ? Number(value) : value 
+      [name]: ['price', 'oldPrice', 'stock', 'rating', 'weight', 'width', 'length', 'height'].includes(name) ? Number(value) : value 
     }));
   };
 
@@ -193,7 +199,12 @@ const AdminProductEditor = () => {
               <div><Label className="text-xs">Qiymət (AZN)</Label><Input type="number" step="0.01" name="price" value={formData.price} onChange={handleChange} /></div>
               <div><Label className="text-xs">Köhnə Qiymət (AZN)</Label><Input type="number" step="0.01" name="oldPrice" value={formData.oldPrice} onChange={handleChange} /></div>
               <div><Label className="text-xs">Stok Miqdarı</Label><Input type="number" name="stock" value={formData.stock} onChange={handleChange} /></div>
-              <div><Label className="text-xs">Çəki (kq) - Poçt üçün</Label><Input type="number" step="0.01" name="weight" value={formData.weight} onChange={handleChange} /></div>
+              <div><Label className="text-xs">Real Çəki (kq)</Label><Input type="number" step="0.01" name="weight" value={formData.weight} onChange={handleChange} /></div>
+            </div>
+            <div className="grid grid-cols-3 gap-4 mt-2">
+              <div><Label className="text-xs text-muted-foreground">En (sm)</Label><Input type="number" name="width" value={formData.width} onChange={handleChange} /></div>
+              <div><Label className="text-xs text-muted-foreground">Uzunluq (sm)</Label><Input type="number" name="length" value={formData.length} onChange={handleChange} /></div>
+              <div><Label className="text-xs text-muted-foreground">Hündürlük (sm)</Label><Input type="number" name="height" value={formData.height} onChange={handleChange} /></div>
             </div>
             <div className="mt-4">
               <Label className="text-xs">Xüsusiyyətlər (Hər sətrə bir xüsusiyyət yazın)</Label>
