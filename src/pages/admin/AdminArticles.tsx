@@ -76,12 +76,12 @@ export default function AdminArticles() {
     }
   };
 
-  const handleProductToggle = (prodSlug: string) => {
+  const handleProductToggle = (prodId: string) => {
     setForm(prev => ({
       ...prev,
-      relatedProducts: prev.relatedProducts.includes(prodSlug)
-        ? prev.relatedProducts.filter(p => p !== prodSlug)
-        : [...prev.relatedProducts, prodSlug]
+      relatedProducts: prev.relatedProducts.includes(prodId)
+        ? prev.relatedProducts.filter(p => p !== prodId)
+        : [...prev.relatedProducts, prodId]
     }));
   };
 
@@ -128,8 +128,8 @@ export default function AdminArticles() {
             <label className="text-sm font-medium flex items-center gap-2"><LinkIcon className="w-4 h-4" /> Əlaqəli Məhsullar (Satış üçün məqaləyə birləşdirin)</label>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2 border p-4 rounded max-h-48 overflow-y-auto">
               {products.map(p => (
-                <label key={p.slug} className="flex items-center gap-2 text-sm p-2 bg-muted rounded cursor-pointer hover:bg-secondary">
-                  <input type="checkbox" checked={form.relatedProducts.includes(p.slug)} onChange={() => handleProductToggle(p.slug)} />
+                <label key={p._id} className="flex items-center gap-2 text-sm p-2 bg-muted rounded cursor-pointer hover:bg-secondary">
+                  <input type="checkbox" checked={form.relatedProducts.includes(p._id)} onChange={() => handleProductToggle(p._id)} />
                   <span className="truncate">{p.title}</span>
                 </label>
               ))}

@@ -22,7 +22,7 @@ export default function BlogDetail() {
           if (res.article.relatedProducts?.length > 0) {
             const allProdsRes = await productsAPI.getAll({ limit: '100' });
             const allP = allProdsRes.products || [];
-            const rProducts = allP.filter((p: any) => res.article.relatedProducts.includes(p.slug));
+            const rProducts = allP.filter((p: any) => res.article.relatedProducts.includes(p._id));
             setRelatedProducts(rProducts);
           }
         }

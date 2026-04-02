@@ -56,7 +56,7 @@ app.get('/sitemap.xml', async (req, res) => {
     const Article = require('./models/Article');
     
     const [products, categories, articles] = await Promise.all([
-      Product.find({ active: true }).select('slug updatedAt'),
+      Product.find({ active: true }).select('_id updatedAt'),
       Category.find({ isActive: true }).select('slug updatedAt'),
       Article.find({ status: 'active' }).select('slug updatedAt')
     ]);
@@ -88,7 +88,7 @@ app.get('/sitemap.xml', async (req, res) => {
     products.forEach(prod => {
       xml += `
   <url>
-    <loc>${baseUrl}/mehsul/${prod.slug}</loc>
+    <loc>${baseUrl}/mehsul/${prod._id}</loc>
     <lastmod>${new Date(prod.updatedAt).toISOString()}</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
@@ -136,10 +136,10 @@ app.get('/google-shopping-feed.xml', async (req, res) => {
       
       xml += `
     <item>
-      <g:id>${prod.slug}</g:id>
+      <g:id>${prod._id}</g:id>
       <g:title>${title}</g:title>
       <g:description>${desc}</g:description>
-      <g:link>${baseUrl}/mehsul/${prod.slug}</g:link>
+      <g:link>${baseUrl}/mehsul/${prod._id}</g:link>
       <g:image_link>${prod.image}</g:image_link>
       <g:availability>${prod.inStock ? 'in_stock' : 'out_of_stock'}</g:availability>
       <g:price>${prod.price} AZN</g:price>
