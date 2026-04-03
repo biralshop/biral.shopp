@@ -44,8 +44,11 @@ const AIAssistant = () => {
     setIsLoading(true);
 
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || 'https://biralstore-api.onrender.com/api';
-      console.log('BiralAI calling endpoint:', `${apiUrl}/ai/chat`);
+      // Determine the API URL automatically based on hostname
+      const isLocal = window.location.hostname === 'localhost';
+      const apiUrl = isLocal ? 'http://localhost:5000/api' : (import.meta.env.VITE_API_URL || 'https://biralstore-api.onrender.com/api');
+      
+      console.log(`BiralAI [${isLocal ? 'LOCAL' : 'PROD'}] calling: ${apiUrl}/ai/chat`);
       
       const response = await fetch(`${apiUrl}/ai/chat`, {
         method: 'POST',

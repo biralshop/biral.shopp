@@ -44,7 +44,19 @@ Təlimatlar:
       })
     });
 
-    const data = await response.json();
+    let data;
+    try {
+      const text = await response.text();
+      try {
+        data = JSON.parse(text);
+      } catch (e) {
+        console.error('AI Response was not JSON:', text);
+        return res.status(500).json({ error: 'AI provider returned non-JSON response', raw: text });
+      }
+    } catch (e) {
+      console.error('Failed to read AI response text:', e);
+      return res.status(500).json({ error: 'Failed to read response' });
+    }
     
     if (data.error) {
       console.error('AI Provider Error Detail:', JSON.stringify(data.error, null, 2));
@@ -53,7 +65,7 @@ Təlimatlar:
 
     if (!data.choices || !data.choices[0]) {
       console.error('Unexpected AI Response Structure:', data);
-      return res.status(500).json({ error: 'Unexpected response format' });
+      return res.status(500).json({ error: 'Unexpected response format', raw: data });
     }
 
     res.json({ message: data.choices[0].message.content });
