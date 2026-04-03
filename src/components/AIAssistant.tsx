@@ -44,7 +44,10 @@ const AIAssistant = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://biralstore-api.onrender.com/api'}/ai/chat`, {
+      const apiUrl = import.meta.env.VITE_API_URL || 'https://biralstore-api.onrender.com/api';
+      console.log('BiralAI calling endpoint:', `${apiUrl}/ai/chat`);
+      
+      const response = await fetch(`${apiUrl}/ai/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 

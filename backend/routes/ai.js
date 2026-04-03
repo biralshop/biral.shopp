@@ -25,6 +25,8 @@ Təlimatlar:
 4. BIRAL10 kuponunu xatırlat.
 5. Qısa və konkret cavablar verməyə çalış, amma səmimiyyəti qoru.`;
 
+    console.log('Calling AI Assistant with model:', process.env.CLAUDE_MODEL);
+
     const response = await fetch('https://api.completions.me/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -45,8 +47,13 @@ Təlimatlar:
     const data = await response.json();
     
     if (data.error) {
-      console.error('AI Provider Error:', data.error);
-      return res.status(500).json({ error: 'AI service error' });
+      console.error('AI Provider Error Detail:', JSON.stringify(data.error, null, 2));
+      return res.status(500).json({ error: 'AI service error', details: data.error });
+    }
+
+    if (!data.choices || !data.choices[0]) {
+      console.error('Unexpected AI Response Structure:', data);
+      return res.status(500).json({ error: 'Unexpected response format' });
     }
 
     res.json({ message: data.choices[0].message.content });
