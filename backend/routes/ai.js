@@ -10,7 +10,6 @@ router.post('/chat', (req, res) => {
   }
 
   const systemPrompt = `Sən BiralStore mağazasının rəsmi süni intellektli premium alış-veriş köməkçisisən. Adın BiralAI-dır. 
-Sən Claude 4.6 Opus modelinə əsaslanırsan. 
 Mağaza haqqında məlumat:
 - BiralStore innovativ ev, mətbəx, maşın aksesuarları və premium həyat tərzi məhsulları satır.
 - Brend dəyərlərimiz: Keyfiyyət, İnnovasiya və Müştəri Məmnuniyyəti.
@@ -25,8 +24,9 @@ Təlimatlar:
 4. BIRAL10 kuponunu xatırlat.
 5. Qısa və konkret cavablar verməyə çalış, amma səmimiyyəti qoru.`;
 
+  // We use gpt-4o as it was verified to work with the user's completions.me key
   const postData = JSON.stringify({
-    model: process.env.CLAUDE_MODEL || 'claude-opus-4.6',
+    model: 'gpt-4o', 
     messages: [
       { role: 'system', content: systemPrompt },
       ...messages
@@ -36,16 +36,16 @@ Təlimatlar:
   });
 
   const options = {
-    hostname: 'api.completions.me',
+    hostname: 'completions.me',
     port: 443,
-    path: '/v1/chat/completions',
+    path: '/api/v1/chat/completions',
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${process.env.CLAUDE_API_KEY}`,
       'Content-Length': Buffer.byteLength(postData)
     },
-    timeout: 30000 // 30 seconds timeout
+    timeout: 30000 
   };
 
   const aiReq = https.request(options, (aiRes) => {
@@ -54,31 +54,23 @@ Təlimatlar:
     aiRes.on('data', (chunk) => { body += chunk; });
     aiRes.on('end', () => {
       try {
-        const data = JSON.parse(body);
-        if (data.error) {
-          console.error('AI Provider Error:', data.error);
-          return res.status(500).json({ error: 'AI service error', details: data.error });
+        if (aiRes.statusCode !== 200) {
+          console.error(`AI Provider Error: ${aiRes.statusCode}`, body);
+          return res.status(aiRes.statusCode).json({ error: 'AI service error', details: body });
         }
+        const data = JSON.parse(body);
         if (!data.choices || !data.choices[0]) {
-          console.error('Unexpected AI Structure:', data);
-          return res.status(500).json({ error: 'Unexpected response', raw: data });
+          return res.status(500).json({ error: 'Unexpected response format' });
         }
         res.json({ message: data.choices[0].message.content });
       } catch (e) {
-        console.error('JSON Parse Error:', body);
-        res.status(500).json({ error: 'Failed to parse AI response', raw: body });
+        res.status(500).json({ error: 'Failed to parse AI response' });
       }
     });
   });
 
   aiReq.on('error', (e) => {
-    console.error('HTTPS Request Error:', e);
-    res.status(500).json({ error: 'Request to AI failed', details: e.message });
-  });
-
-  aiReq.on('timeout', () => {
-    aiReq.destroy();
-    res.status(504).json({ error: 'AI Provider timeout' });
+    res.status(500).json({ error: 'Connection to AI failed', details: e.message });
   });
 
   aiReq.write(postData);
