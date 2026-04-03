@@ -7,7 +7,7 @@ export interface PromoCode {
 }
 
 export const promoCodes: PromoCode[] = [
-  { code: 'PRAKTIK10', discountPercent: 10, minOrderAmount: 0, description: 'İlk sifarişə 10% endirim', active: true },
+  { code: 'BIRAL10', discountPercent: 10, minOrderAmount: 0, description: 'İlk sifarişə 10% endirim', active: true },
   { code: 'YAZ25', discountPercent: 25, minOrderAmount: 50, description: '50₼+ sifarişlərə 25% endirim', active: true },
   { code: 'PULSUZ', discountPercent: 15, minOrderAmount: 30, description: '30₼+ sifarişlərə 15% endirim', active: true },
 ];

@@ -42,18 +42,18 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
         {/* Logo */}
         <div className="p-4 border-b border-white/10">
           <Link to="/admin" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center font-bold text-sm text-white shrink-0">PT</div>
+            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center font-bold text-sm text-white shrink-0">BS</div>
             {!collapsed && (
               <div>
-                <p className="font-bold text-sm leading-tight">PraktikTap</p>
-                <p className="text-[10px] text-white/50">Admin Studio • no-code</p>
+                <p className="font-bold text-sm leading-tight">BiralStore</p>
+                <p className="text-[10px] text-white/50">Admin Panel • Management</p>
               </div>
             )}
           </Link>
           {!collapsed && (
             <div className="mt-3 bg-primary/20 rounded-lg px-3 py-1.5 text-xs">
               <Store className="inline h-3 w-3 mr-1" />
-              <span className="font-medium">Mağaza: PraktikTap</span>
+              <span className="font-medium">Mağaza: BiralStore</span>
               <p className="text-[10px] text-white/50 mt-0.5">Canlı görünüş aktivdir</p>
             </div>
           )}

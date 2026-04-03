@@ -60,7 +60,7 @@ const CampaignPage = () => {
             <Button size="lg" variant="outline" className="border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10" onClick={() => document.getElementById('campaign-products')?.scrollIntoView({ behavior: 'smooth' })}>
               Kampaniyaya bax
             </Button>
-            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold" onClick={() => { navigator.clipboard.writeText('PRAKTIK10'); toast.success('PRAKTIK10 kupon kodu kopyalandı! Checkout-da istifadə edin.'); }}>
+            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold" onClick={() => { navigator.clipboard.writeText('BIRAL10'); toast.success('BIRAL10 kupon kodu kopyalandı! Checkout-da istifadə edin.'); }}>
               Kuponu götür
             </Button>
           </div>
@@ -72,12 +72,12 @@ const CampaignPage = () => {
         <div className="bg-card rounded-xl border p-6 flex flex-col sm:flex-row items-center justify-between gap-4 max-w-xl mx-auto">
           <div>
             <p className="text-sm text-muted-foreground">Endirim kuponu</p>
-            <p className="text-2xl font-bold tracking-wider mt-1">PRAKTIK10</p>
+            <p className="text-2xl font-bold tracking-wider mt-1">BIRAL10</p>
           </div>
           <Button
             variant="outline"
             onClick={() => {
-              navigator.clipboard.writeText('PRAKTIK10');
+              navigator.clipboard.writeText('BIRAL10');
               toast.success('Kupon kodu kopyalandı!');
             }}
           >

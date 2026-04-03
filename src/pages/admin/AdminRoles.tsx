@@ -6,11 +6,11 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Textarea } from '@/components/ui/textarea';
 
 const team = [
-  { name: 'Emin Həsənov', email: 'emin@praktiktap.az', role: 'Admin', status: 'Aktiv', color: 'bg-primary' },
-  { name: 'Aysel Quliyeva', email: 'aysel@praktiktap.az', role: 'Content Manager', status: 'Aktiv', color: 'bg-green-500' },
-  { name: 'Ləman Əliyeva', email: 'leman@praktiktap.az', role: 'Logistik', status: 'Aktiv', color: 'bg-amber-500' },
-  { name: 'Kamran İsmayılov', email: 'kamran@praktiktap.az', role: 'Dəstək', status: 'Aktiv', color: 'bg-purple-500' },
-  { name: 'Nigar Əhmədova', email: 'nigar@praktiktap.az', role: 'Viewer', status: 'Deaktiv', color: 'bg-gray-400' },
+  { name: 'Emin Həsənov', email: 'emin@biral.store', role: 'Admin', status: 'Aktiv', color: 'bg-primary' },
+  { name: 'Aysel Quliyeva', email: 'aysel@biral.store', role: 'Content Manager', status: 'Aktiv', color: 'bg-green-500' },
+  { name: 'Ləman Əliyeva', email: 'leman@biral.store', role: 'Logistik', status: 'Aktiv', color: 'bg-amber-500' },
+  { name: 'Kamran İsmayılov', email: 'kamran@biral.store', role: 'Dəstək', status: 'Aktiv', color: 'bg-purple-500' },
+  { name: 'Nigar Əhmədova', email: 'nigar@biral.store', role: 'Viewer', status: 'Deaktiv', color: 'bg-gray-400' },
 ];
 
 const modules = ['Dashboard', 'Məhsullar', 'Kateqoriyalar', 'Səhifə Builder', 'Kampaniyalar', 'Müştərilər', 'Sifarişlər', 'Çatdırılma', 'Dəstək', 'Brend', 'Rollar'];

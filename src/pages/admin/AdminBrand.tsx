@@ -30,16 +30,16 @@ const AdminBrand = () => (
           <div className="space-y-4">
             <div>
               <Label className="text-xs">Mağaza adı</Label>
-              <Input defaultValue="PraktikTap" />
+              <Input defaultValue="BiralStore" />
             </div>
             <div>
               <Label className="text-xs">Slogan</Label>
-              <Input defaultValue="Praktik alış, sürətli çatdırılma" />
+              <Input defaultValue="Innovativ həllər, premium keyfiyyət" />
             </div>
             <div>
               <Label className="text-xs mb-2 block">Logo</Label>
               <div className="bg-primary rounded-lg h-20 flex items-center justify-center">
-                <span className="text-white font-bold text-xl">PraktikTap</span>
+                <span className="text-white font-bold text-xl">BiralStore</span>
               </div>
               <Button size="sm" variant="outline" className="text-xs mt-2 w-full"><Upload className="h-3 w-3 mr-1" />Logo yüklə</Button>
             </div>
@@ -68,8 +68,8 @@ const AdminBrand = () => (
         <div className="bg-white rounded-xl border border-border p-5 shadow-sm">
           <h2 className="font-bold mb-3">SEO & default meta</h2>
           <div className="space-y-3">
-            <div><Label className="text-xs">Default title</Label><Input defaultValue="PraktikTap — Praktik məhsullar, sürətli çatdırılma" /></div>
-            <div><Label className="text-xs">Meta description</Label><Textarea defaultValue="Mətbəx, bağça, maşın və ev üçün praktik məhsullar. Güvənli ödəniş, sürətli çatdırılma." rows={3} /></div>
+            <div><Label className="text-xs">Default title</Label><Input defaultValue="BiralStore | Innovativ Ev Həlləri və Premium Aksesuarlar" /></div>
+            <div><Label className="text-xs">Meta description</Label><Textarea defaultValue="Həyat keyfiyyətinizi artıran innovativ texnologiyalar və premium ev aksesuarları. Sürətli çatdırılma, təhlükəsiz ödəniş." rows={3} /></div>
             <div><Label className="text-xs">OG Image</Label><Button size="sm" variant="outline" className="w-full text-xs"><Upload className="h-3 w-3 mr-1" />Şəkil yüklə</Button></div>
           </div>
         </div>
@@ -77,10 +77,10 @@ const AdminBrand = () => (
         <div className="bg-white rounded-xl border border-border p-5 shadow-sm">
           <h2 className="font-bold mb-3">Əlaqə və sosial</h2>
           <div className="space-y-3">
-            <div><Label className="text-xs">Email</Label><Input defaultValue="info@praktiktap.az" /></div>
+            <div><Label className="text-xs">Email</Label><Input defaultValue="info@biral.store" /></div>
             <div><Label className="text-xs">Telefon</Label><Input defaultValue="+994 50 123 45 67" /></div>
-            <div><Label className="text-xs">Instagram</Label><Input defaultValue="@praktiktap" /></div>
-            <div><Label className="text-xs">Facebook</Label><Input defaultValue="fb.com/praktiktap" /></div>
+            <div><Label className="text-xs">Instagram</Label><Input defaultValue="@biral.store" /></div>
+            <div><Label className="text-xs">Facebook</Label><Input defaultValue="fb.com/biralstore" /></div>
           </div>
         </div>
 

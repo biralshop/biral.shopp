@@ -16,8 +16,8 @@ interface LayoutProps {
 const Layout = ({ 
   children, 
   showCategoryNav = true,
-  title = "BiralStore - Praktik Məhsullar Mağazası",
-  description = "Gündəlik həyatı asanlaşdıran praktik məhsullar. Mətbəx, baxça, həyət və maşın aksesuarları. Sürətli çatdırılma, təhlükəsiz ödəniş."
+  title = "BiralStore | Innovativ Ev Həlləri və Premium Aksesuarlar",
+  description = "Həyat keyfiyyətinizi artıran innovativ texnologiyalar və premium ev aksesuarları. Azərbaycanın ən etibarlı onlayn mağazası."
 }: LayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden">

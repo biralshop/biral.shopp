@@ -26,16 +26,16 @@ export default function BlogList() {
   return (
     <Layout>
       <Helmet>
-        <title>Faydalı Məqalələr - BiralStore</title>
-        <meta name="description" content="Eviniz, avtomobiliniz və gündəlik həyatınız üçün ən faydalı məsləhətlər və praktik həllər." />
-        <meta property="og:title" content="Faydalı Məqalələr - BiralStore" />
-        <meta property="og:description" content="Eviniz, avtomobiliniz və gündəlik həyatınız üçün ən faydalı məsləhətlər və praktik həllər." />
+        <title>İnnovativ Məsləhətlər və Bloq - BiralStore</title>
+        <meta name="description" content="Eviniz, avtomobiliniz və müasir həyat tərzi üçün ən faydalı məsləhətlər və innovativ həllər." />
+        <meta property="og:title" content="İnnovativ Məsləhətlər və Bloq - BiralStore" />
+        <meta property="og:description" content="Eviniz, avtomobiliniz və müasir həyat tərzi üçün ən faydalı məsləhətlər və innovativ həllər." />
       </Helmet>
       
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h1 className="text-3xl lg:text-5xl font-extrabold mb-4">Faydalı Məsləhətlər</h1>
-          <p className="text-muted-foreground text-lg">Gündəlik həyatınızı asanlaşdıracaq praktik bloq yazıları</p>
+          <h1 className="text-3xl lg:text-5xl font-extrabold mb-4">İnnovativ Məsləhətlər</h1>
+          <p className="text-muted-foreground text-lg">Müasir həyat tərzinizi təkmilləşdirəcək faydalı və innovativ məqalələr</p>
         </div>
 
         {loading ? (

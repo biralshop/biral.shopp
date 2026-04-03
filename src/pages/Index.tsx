@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
 import ProductCard from '@/components/ProductCard';
 import { Product, categories } from '@/data/products';
@@ -10,6 +11,23 @@ import { useState, useEffect } from 'react';
 const Homepage = () => {
   const [featured, setFeatured] = useState<Product[]>([]);
 
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "BiralStore",
+    "url": "https://biral.store",
+    "logo": "https://biral.store/logo-circle.png",
+    "sameAs": [
+      "https://www.facebook.com/biralstore",
+      "https://www.instagram.com/biral.store"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+994-XX-XXX-XX-XX",
+      "contactType": "customer service"
+    }
+  };
+
   useEffect(() => {
     productsAPI.getAll({ limit: '8' })
       .then(({ products }) => setFeatured(products))
@@ -21,15 +39,19 @@ const Homepage = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(orgSchema)}</script>
+      </Helmet>
+      
       {/* Hero */}
       <section className="bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 py-16 md:py-24 text-center">
           <div className="max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
-              Gündəlik həyatınız üçün ən yaxşı məhsullar
+              Həyat Keyfiyyətinizi Artıran Innovativ Ev Həlləri
             </h1>
             <p className="mt-6 text-primary-foreground/90 text-lg md:text-xl leading-relaxed">
-              Mətbəxdən baxçaya, həyətdən maşına — viral tapıntılar və sübut olunmuş keyfiyyət bir yerdə. BiralStore ilə həyatınızı asanlaşdırın.
+              Müasir texnologiyalar və premium aksesuarlarla həyatınızı daha komfortlu edin. Viral tapıntılar və sübut olunmuş keyfiyyət BiralStore-da.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
               <Link to="/kateqoriyalar">
@@ -105,7 +127,7 @@ const Homepage = () => {
       <section className="container mx-auto px-4 py-10">
         <div className="bg-primary text-primary-foreground rounded-2xl p-6 md:p-8 text-center overflow-hidden">
           <h2 className="text-xl md:text-3xl font-bold">İlk sifarişinizə 10% endirim!</h2>
-          <p className="mt-2 text-primary-foreground/80 text-sm md:text-base">PRAKTIK10 kodunu istifadə edin</p>
+          <p className="mt-2 text-primary-foreground/80 text-sm md:text-base">BIRAL10 kodunu istifadə edin</p>
           <Link to="/kampaniyalar">
             <Button className="mt-4 bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">Kampaniyaya bax</Button>
           </Link>
