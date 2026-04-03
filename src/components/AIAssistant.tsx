@@ -42,6 +42,8 @@ const AIAssistant = () => {
     setInput('');
     setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
     setIsLoading(true);
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 40000); // 40 seconds timeout
 
     try {
       // Determine the API URL automatically based on hostname
@@ -53,6 +55,7 @@ const AIAssistant = () => {
       const response = await fetch(`${apiUrl}/ai/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        signal: controller.signal,
         body: JSON.stringify({ 
           messages: messages.concat({ role: 'user', content: userMessage }).map(m => ({
             role: m.role,
@@ -61,7 +64,9 @@ const AIAssistant = () => {
         })
       });
 
+      clearTimeout(timeoutId);
       const data = await response.json();
+      
       if (response.ok && data.message) {
         setMessages(prev => [...prev, { role: 'assistant', content: data.message }]);
       } else {
@@ -69,8 +74,14 @@ const AIAssistant = () => {
         throw new Error(errorMsg);
       }
     } catch (error: any) {
+      clearTimeout(timeoutId);
       console.error('BiralAI Error:', error);
-      const displayError = error.message || 'Kiçik bir xəta baş verdi.';
+      
+      let displayError = error.message || 'Kiçik bir xəta baş verdi.';
+      if (error.name === 'AbortError') {
+        displayError = 'Server çox gec cavab verir (Timeout). Zəhmət olmasa yenidən cəhd edin.';
+      }
+
       setMessages(prev => [...prev, { 
         role: 'assistant', 
         content: `Bağışlayın, problem yarandı: "${displayError}". Zəhmət olmasa bir az sonra yenidən yoxlayın.` 
