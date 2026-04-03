@@ -10,6 +10,7 @@ router.post('/chat', (req, res) => {
   }
 
   const systemPrompt = `Sən BiralStore mağazasının rəsmi süni intellektli premium alış-veriş köməkçisisən. Adın BiralAI-dır. 
+Sən Claude 4.6 Opus modelinə əsaslanırsan. 
 Mağaza haqqında məlumat:
 - BiralStore innovativ ev, mətbəx, maşın aksesuarları və premium həyat tərzi məhsulları satır.
 - Brend dəyərlərimiz: Keyfiyyət, İnnovasiya və Müştəri Məmnuniyyəti.
@@ -24,9 +25,9 @@ Təlimatlar:
 4. BIRAL10 kuponunu xatırlat.
 5. Qısa və konkret cavablar verməyə çalış, amma səmimiyyəti qoru.`;
 
-  // We use gpt-4o as it was verified to work with the user's completions.me key
+  // Using the exact model name specified by the user: claude-opus-4.6
   const postData = JSON.stringify({
-    model: 'gpt-4o', 
+    model: 'claude-opus-4.6', 
     messages: [
       { role: 'system', content: systemPrompt },
       ...messages
@@ -45,7 +46,7 @@ Təlimatlar:
       'Authorization': `Bearer ${process.env.CLAUDE_API_KEY}`,
       'Content-Length': Buffer.byteLength(postData)
     },
-    timeout: 30000 
+    timeout: 45000 // 45 seconds timeout for Opus
   };
 
   const aiReq = https.request(options, (aiRes) => {
@@ -56,7 +57,8 @@ Təlimatlar:
       try {
         if (aiRes.statusCode !== 200) {
           console.error(`AI Provider Error: ${aiRes.statusCode}`, body);
-          return res.status(aiRes.statusCode).json({ error: 'AI service error', details: body });
+          // If the specific model fails, we provide the error so the user can see it
+          return res.status(aiRes.statusCode).json({ error: `AI error`, details: body });
         }
         const data = JSON.parse(body);
         if (!data.choices || !data.choices[0]) {
