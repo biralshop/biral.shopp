@@ -62,13 +62,19 @@ const AIAssistant = () => {
       });
 
       const data = await response.json();
-      if (data.message) {
+      if (response.ok && data.message) {
         setMessages(prev => [...prev, { role: 'assistant', content: data.message }]);
       } else {
-        throw new Error('No response');
+        const errorMsg = data.error || data.details || 'Bilinməyən xəta';
+        throw new Error(errorMsg);
       }
-    } catch (error) {
-      setMessages(prev => [...prev, { role: 'assistant', content: 'Üzr istəyirəm, kiçik bir xəta baş verdi. Zəhmət olmasa bir az sonra yenidən yoxlayın.' }]);
+    } catch (error: any) {
+      console.error('BiralAI Error:', error);
+      const displayError = error.message || 'Kiçik bir xəta baş verdi.';
+      setMessages(prev => [...prev, { 
+        role: 'assistant', 
+        content: `Bağışlayın, problem yarandı: "${displayError}". Zəhmət olmasa bir az sonra yenidən yoxlayın.` 
+      }]);
     } finally {
       setIsLoading(false);
     }
