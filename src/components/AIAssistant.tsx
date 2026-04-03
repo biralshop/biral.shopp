@@ -71,7 +71,8 @@ const AIAssistant = () => {
         setMessages(prev => [...prev, { role: 'assistant', content: data.message }]);
       } else {
         const errorMsg = data.error || 'Xəta';
-        const errorDetails = data.details || data.raw ? JSON.stringify(data.raw).substring(0, 100) : 'Əlavə məlumat yoxdur';
+        const rawString = data.raw ? JSON.stringify(data.raw) : '';
+        const errorDetails = data.details || (rawString ? rawString.substring(0, 150) : 'Əlavə məlumat yoxdur');
         throw new Error(`${errorMsg}: ${errorDetails}`);
       }
     } catch (error: any) {
