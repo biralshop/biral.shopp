@@ -70,8 +70,9 @@ const AIAssistant = () => {
       if (response.ok && data.message) {
         setMessages(prev => [...prev, { role: 'assistant', content: data.message }]);
       } else {
-        const errorMsg = data.error || data.details || 'Bilinməyən xəta';
-        throw new Error(errorMsg);
+        const errorMsg = data.error || 'Xəta';
+        const errorDetails = data.details || data.raw ? JSON.stringify(data.raw).substring(0, 100) : 'Əlavə məlumat yoxdur';
+        throw new Error(`${errorMsg}: ${errorDetails}`);
       }
     } catch (error: any) {
       clearTimeout(timeoutId);
