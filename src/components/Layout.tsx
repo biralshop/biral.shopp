@@ -6,6 +6,7 @@ import CategoryNav from './CategoryNav';
 import Footer from './Footer';
 import MobileBottomNav from './MobileBottomNav';
 import AIAssistant from './AIAssistant';
+import SalesSpecialist from './SalesSpecialist';
 
 interface LayoutProps {
   children: ReactNode;
@@ -36,6 +37,7 @@ const Layout = ({
       <main className="flex-1 pb-16 md:pb-0">{children}</main>
       <Footer />
       <MobileBottomNav />
+      <SalesSpecialist />
       <AIAssistant />
     </div>
   );

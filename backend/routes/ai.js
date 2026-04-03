@@ -3,33 +3,44 @@ const router = express.Router();
 const https = require('https');
 
 router.post('/chat', (req, res) => {
-  const { messages } = req.body;
+  const { messages, persona } = req.body;
   
   if (!process.env.CLAUDE_API_KEY) {
     return res.status(500).json({ error: 'AI API Key not configured' });
   }
 
-  const systemPrompt = `Sən BiralStore mağazasının rəsmi süni intellektli premium alış-veriş köməkçisisən. Adın BiralAI-dır. 
-Mağaza haqqında məlumat:
-- BiralStore innovativ ev, mətbəx, maşın aksesuarları və premium həyat tərzi məhsulları satır.
-- Brend dəyərlərimiz: Keyfiyyət, İnnovasiya və Müştəri Məmnuniyyəti.
-- Aktiv kupon: "BIRAL10" (ilk sifarişə 10% endirim).
-- Çatdırılma: Bakı daxili 1-2 gün, sürətli və təhlükəsiz.
-- Saytın rəsmi domeni: biral.store.
+  // Define System Prompts for different personas
+  const SUPPORT_PROMPT = `Sən BiralStore mağazasının rəsmi Dəstək Xidməti botusan. 
+Sənin vəzifən YALNIZ sifariş statusu, çatdırılma yubanması, endirim kodları və ümumi texniki suallara cavab verməkdir.
 
-Təlimatlar:
-1. Müştərilərlə hər zaman professional, nəzakətli və premium tərzdə danış.
-2. Suallara Azərbaycan dilində cavab ver (əgər müştəri başqa dildə yazmasa).
-3. Məhsul tövsiyə edərkən onların həyatını necə asanlaşdıracağını vurğula.
-4. BIRAL10 kuponunu xatırlat.
-5. Qısa və konkret cavablar verməyə çalış, amma səmimiyyəti qoru.`;
+KRİTİK TƏLİMAT:
+Əgər müştəri məhsul axtarırsa, məhsul tövsiyəsi istəyirsə və ya "Filan məhsul varmı?" kimi suallar verirsə, YALNIZ və YALNIZ bu cavabı ver:
+"BIRALbot-a göndərdim indi bu dəqiqə cavab verəcək"
+Başqa heç nə yazma.`;
 
-  // Using gpt-4o as it is verified to be active and working for your completions.me account.
-  // This provides immediate high-quality AI assistance for your customers.
+  const SALES_PROMPT = `Sən BiralStore mağazasının professional Satış Mütəxəssisisən. Sən qara kostyumlu, səliqəli və elit bir satış mütəxəssisisən.
+Sənin vəzifən müştərinin ehtiyaclarına uyğun ən yaxşı məhsulları tapmaq və tövsiyə etməkdir.
+
+TƏLİMATLAR:
+1. Müştəriyə məhsul tapdıqda onu [[PRODUCT:id]] formatında cavabına əlavə et. 
+2. Müştəri ilə çox nəzakətli və satış odaklı danış.
+3. BIRAL10 kuponunu xatırlada bilərsən.
+
+Məhsul Kataloqumuz (Simplifed):
+- id: 1 - Silikon Mətbəx Alətləri Dəsti (29.99 AZN)
+- id: 2 - Avtomatik Bitki Sulama Sistemi (18.50 AZN)
+- id: 4 - Universal Maşın Telefon Tutucusu (12.99 AZN)
+- id: 6 - Solar Baxça İşıqları (22.99 AZN)
+- id: 9 - Elektrikli Bibər Dəyirmanı (19.99 AZN)
+- id: 10 - Simsiz Maşın Tozsoran (34.99 AZN)
+- id: 12 - Maqnitli Bıçaq Tutucusu (11.99 AZN)`;
+
+  const currentSystemPrompt = persona === 'sales' ? SALES_PROMPT : SUPPORT_PROMPT;
+
   const postData = JSON.stringify({
     model: 'gpt-4o', 
     messages: [
-      { role: 'system', content: systemPrompt },
+      { role: 'system', content: currentSystemPrompt },
       ...messages
     ],
     temperature: 0.7,
@@ -56,19 +67,9 @@ Təlimatlar:
     aiRes.on('end', () => {
       try {
         if (aiRes.statusCode !== 200) {
-          console.error(`AI Provider Error: ${aiRes.statusCode}`, body);
-          let errorInfo = 'Xəta baş verdi';
-          try {
-             const errJson = JSON.parse(body);
-             errorInfo = errJson.error?.message || body;
-          } catch(e) { errorInfo = body; }
-          
-          return res.status(aiRes.statusCode).json({ error: `AI error`, details: errorInfo });
+          return res.status(aiRes.statusCode).json({ error: 'AI service error', details: body });
         }
         const data = JSON.parse(body);
-        if (!data.choices || !data.choices[0]) {
-          return res.status(500).json({ error: 'Unexpected response format' });
-        }
         res.json({ message: data.choices[0].message.content });
       } catch (e) {
         res.status(500).json({ error: 'Failed to parse AI response' });

@@ -68,7 +68,14 @@ const AIAssistant = () => {
       const data = await response.json();
       
       if (response.ok && data.message) {
-        setMessages(prev => [...prev, { role: 'assistant', content: data.message }]);
+        const aiMessage: Message = { role: 'assistant', content: data.message };
+        setMessages(prev => [...prev, aiMessage]);
+
+        // Handle Redirect to Sales Bot
+        if (data.message.includes("BIRALbot-a göndərdim indi bu dəqiqə cavab verəcək")) {
+          // Trigger global event for Sales Bot
+          window.dispatchEvent(new CustomEvent('activateBiralBot'));
+        }
       } else {
         const errorMsg = data.error || 'Xəta';
         const rawString = data.raw ? JSON.stringify(data.raw) : '';
