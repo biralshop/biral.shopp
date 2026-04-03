@@ -24,8 +24,8 @@ const AddressesTab = () => {
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
       return stored ? JSON.parse(stored) : [
-        { id: '1', label: 'Ev', name: 'Kamran Məmmədov', phone: '+994 50 123 45 67', city: 'Bakı', address: 'Nizami küç. 42, mənzil 15', isDefault: true },
-        { id: '2', label: 'İş', name: 'Kamran Məmmədov', phone: '+994 50 123 45 67', city: 'Bakı', address: 'Atatürk pr. 108, ofis 302', isDefault: false },
+        { id: '1', label: 'Ev', name: 'Müştəri Məkan', phone: '+994 55 200 10 10', city: 'Bakı', address: 'Nizami küç. 42, mənzil 15', isDefault: true },
+        { id: '2', label: 'İş', name: 'Müştəri Məkan', phone: '+994 55 200 10 10', city: 'Bakı', address: 'Atatürk pr. 108, ofis 302', isDefault: false },
       ];
     } catch { return []; }
   });

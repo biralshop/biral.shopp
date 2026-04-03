@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { categories } from '@/data/products';
+import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -42,21 +43,27 @@ const Footer = () => {
           {/* Contact */}
           <div>
             <h4 className="font-semibold mb-3">Əlaqə</h4>
-            <ul className="space-y-2 text-sm text-primary-foreground/70">
-              <li>
+            <ul className="space-y-3 text-sm text-primary-foreground/70">
+              <li className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-primary" />
                 <a href="tel:+994501234567" className="hover:text-primary-foreground transition-colors">
-                  📞 +994 50 123 45 67
+                  +994 50 123 45 67
                 </a>
               </li>
-              <li>
-                <a href="mailto:info@biralstore.az" className="hover:text-primary-foreground transition-colors">
-                  ✉️ info@biralstore.az
+              <li className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-primary" />
+                <a href="mailto:info@biral.store" className="hover:text-primary-foreground transition-colors">
+                  info@biral.store
                 </a>
               </li>
-              <li>📍 Bakı, Azərbaycan</li>
-              <li>
+              <li className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-primary" />
+                <span>Bakı, Azərbaycan</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <MessageCircle className="w-4 h-4 text-primary" />
                 <a href="https://wa.me/994501234567" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground transition-colors">
-                  💬 WhatsApp
+                  WhatsApp ilə əlaqə
                 </a>
               </li>
             </ul>

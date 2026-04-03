@@ -78,7 +78,7 @@ const AdminBrand = () => (
           <h2 className="font-bold mb-3">Əlaqə və sosial</h2>
           <div className="space-y-3">
             <div><Label className="text-xs">Email</Label><Input defaultValue="info@biral.store" /></div>
-            <div><Label className="text-xs">Telefon</Label><Input defaultValue="+994 50 123 45 67" /></div>
+            <div><Label className="text-xs">Telefon</Label><Input defaultValue="+994 55 200 10 10" /></div>
             <div><Label className="text-xs">Instagram</Label><Input defaultValue="@biral.store" /></div>
             <div><Label className="text-xs">Facebook</Label><Input defaultValue="fb.com/biralstore" /></div>
           </div>

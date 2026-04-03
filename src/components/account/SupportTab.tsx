@@ -67,7 +67,7 @@ const SupportTab = () => {
           <div className="bg-primary/10 rounded-full p-2.5"><Phone className="h-5 w-5 text-primary" /></div>
           <div>
             <p className="text-sm font-semibold">Telefon</p>
-            <p className="text-xs text-muted-foreground">+994 50 123 45 67</p>
+            <p className="text-xs text-muted-foreground">+994 55 200 10 10</p>
           </div>
         </a>
         <a href="https://wa.me/994501234567" target="_blank" rel="noopener noreferrer" className="bg-card rounded-xl border border-border shadow-sm p-4 flex items-center gap-3 hover:border-green-500 transition-colors">

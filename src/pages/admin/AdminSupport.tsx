@@ -42,7 +42,7 @@ const savedReplies = [
 
 const channels = [
   { name: 'Email', enabled: true, desc: 'support@biral.store' },
-  { name: 'WhatsApp', enabled: true, desc: '+994 50 123 45 67' },
+  { name: 'WhatsApp', enabled: true, desc: '+994 55 200 10 10' },
   { name: 'SMS', enabled: true, desc: 'Bildiriş kanalı' },
   { name: 'Push notification', enabled: false, desc: 'Mobil tətbiq' },
 ];
