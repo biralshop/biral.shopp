@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { motion } from 'framer-motion';
 
 const Header = () => {
   const { totalItems } = useCart();
@@ -88,12 +89,34 @@ const Header = () => {
           </Sheet>
 
           {/* Logo */}
-          <Link to="/" className="shrink-0 flex items-center">
-            <img src="/logo-circle.png" alt="1Al Store" className="h-10 md:h-14 w-auto" />
+          <Link to="/" className="shrink-0 flex items-center relative group">
+            <img src="/logo-circle.png" alt="1Al Store" className="h-10 md:h-14 w-auto relative z-10" />
+            
+            {/* The Header Bot (Between Logo and Search) */}
+            <motion.div 
+              initial={{ x: -20, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              className="hidden md:block absolute -right-12 bottom-0 w-20 h-20 pointer-events-none z-0"
+            >
+              <motion.img 
+                src="/biralbot-sales.png" 
+                alt="Biral Bot"
+                className="w-full h-full object-contain"
+                animate={{ 
+                  rotate: [0, -5, 5, -5, 0],
+                  y: [0, -2, 0]
+                }}
+                transition={{ 
+                  duration: 5, 
+                  repeat: Infinity,
+                  ease: "easeInOut" 
+                }}
+              />
+            </motion.div>
           </Link>
 
           {/* Nav links desktop */}
-          <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">
+          <nav className="hidden lg:flex items-center gap-6 text-sm font-medium ml-12">
             <Link to="/" className="text-foreground/80 hover:text-primary transition-colors">Ana səhifə</Link>
             <Link to="/kateqoriyalar" className="text-foreground/80 hover:text-primary transition-colors">Kateqoriyalar</Link>
             <Link to="/kampaniyalar" className="text-foreground/80 hover:text-primary transition-colors flex items-center gap-1">
@@ -104,8 +127,21 @@ const Header = () => {
         </div>
 
           {/* Center Section: Search */}
-          <div className="flex-[2] max-w-2xl px-4 hidden md:flex justify-center">
-            <form onSubmit={handleSearch} className="w-full">
+          <div className="flex-[2] max-w-2xl px-4 hidden md:flex justify-center relative">
+            {/* Visual connector: Leaning Bot peeking from left */}
+            <motion.div 
+              className="absolute -left-10 bottom-0 w-24 h-24 hidden xl:block z-20 pointer-events-none"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+            >
+              <img 
+                src="/biralbot-sales.png" 
+                alt="Biral Bot Leaning" 
+                className="w-full h-full object-contain transform -scale-x-100 opacity-90" 
+              />
+            </motion.div>
+            
+            <form onSubmit={handleSearch} className="w-full relative z-10">
               <div className="relative w-full">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input
