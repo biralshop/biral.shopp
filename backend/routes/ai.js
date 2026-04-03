@@ -71,7 +71,11 @@ Təlimatlar:
     res.json({ message: data.choices[0].message.content });
   } catch (error) {
     console.error('AI Route Error:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    res.status(500).json({ 
+      error: 'Backend Error', 
+      details: error.message || 'Bilinməyən daxili xəta',
+      stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
+    });
   }
 });
 
