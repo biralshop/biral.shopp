@@ -5,6 +5,7 @@ import Header from './Header';
 import CategoryNav from './CategoryNav';
 import Footer from './Footer';
 import MobileBottomNav from './MobileBottomNav';
+import AIAssistant from './AIAssistant';
 
 interface LayoutProps {
   children: ReactNode;
@@ -35,6 +36,7 @@ const Layout = ({
       <main className="flex-1 pb-16 md:pb-0">{children}</main>
       <Footer />
       <MobileBottomNav />
+      <AIAssistant />
     </div>
   );
 };
